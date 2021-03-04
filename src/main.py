@@ -13,26 +13,6 @@ from allowed_parameters import AllowedProgrammingLanguages, AllowedDateRanges, A
 app = FastAPI()
 
 
-# # https://github.com/trending?since=daily
-
-# @app.get("/repositories")
-# def repositories():
-#     """ Returns data about trending daily repositories regardless
-#     of spoken language or programming language. """
-#     URL = "https://github.com/trending"
-
-#     return "data"
-
-# def url_generator(prog_lang=None, since="daily", spoken_lang=None):
-#     base_url = "https://github.com/trending"
-
-#     base_url = f"https://github.com/trending/{prog_lang}"
-#     base_url = f"https://github.com/trending"
-#     base_url = f"https://github.com/trending"
-
-#     return base_url + url_end
-
-
 @app.get("/repositories")
 def repositories(since: AllowedDateRanges = None, spoken_lang: AllowedSpokenLanguages = None):
     """ Returns data about trending repos. Search can be more specific. """

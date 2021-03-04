@@ -4,18 +4,9 @@ from dataclasses import dataclass
 from typing import Dict
 import typing
 import requests
-# from requests.models import HTTPError
 from pprint import pprint
 from bs4 import BeautifulSoup, element
 
-
-# def request_html(URL: str) -> str:
-#     """ Returns HTML from a requested URL. """
-#     try:
-#         resp = requests.get(URL)
-#     except HTTPError as he:
-#         print(he)
-#     return resp.text
 
 
 def filter_articles(html: str) -> str:
@@ -59,23 +50,15 @@ def repo_extraction(matches: element.ResultSet, since: str = "daily") -> typing.
     """ Data about trending repositories are extracted
     from html enclosed by article-tags. """
 
-    # soup = BeautifulSoup(articles_html, 'html.parser')
-    # articles_match = soup.find_all('article', class_='Box-row')
-
     trending_repos_data = []
     for rank, repo in enumerate(matches):
-
-        # repositories ranking
-        # repo_data = {}
 
         # repository URL
         rel_url = repo.h1.a['href']
         repo_url = "https://github.com" + rel_url
-        # repo_data["repo_URL"] = repo_url
 
         # projectname
         proj_name = repo_url.split('/')[-1]
-        # repo_data["projectname"] = proj_name
 
         # description
         description_match = repo.find(
@@ -84,27 +67,21 @@ def repo_extraction(matches: element.ResultSet, since: str = "daily") -> typing.
             description = description_match.text.strip()
         else:
             description = None
-        # repo_data["description"] = description
 
         # language
         repo_lang = repo.find('span', itemprop="programmingLanguage")
         if repo_lang:
-            # repo_data["proj_language"] = repo_lang.text
             repo_lang_val = repo_lang.text
         else:
-            # repo_data["proj_language"] = None
             repo_lang_val = None
 
         # since-stars:
         match2 = repo.find('span', class_='d-inline-block float-sm-right')
         if match2:
             stars_today = match2.text.split()[0]
-        # else:
-        #     stars_today = None
             if ',' in stars_today:
                 stars_today = stars_today.replace(',', '')
             stars_today = int(stars_today)
-        # repo_data[f"stars_in_range"] = int(stars_today)
 
         # total stars
         tot_stars = repo.find('a', href=f"{rel_url}/stargazers")
@@ -114,7 +91,6 @@ def repo_extraction(matches: element.ResultSet, since: str = "daily") -> typing.
             if ',' in tot_stars:
                 tot_stars = tot_stars.replace(',', '')
             tot_stars = int(tot_stars)
-        # repo_data["total_stars"] = int(tot_stars)
 
         repo_data = {
             'rank': rank + 1,
@@ -220,3 +196,21 @@ pprint(data)
 
 # data = TrendingData.from_developers()
 # data = TrendingData.from_repositories()
+
+
+
+
+# from typing import Optional
+
+# @dataclass
+# class Repository:
+#     rank: int
+#     URL: str
+#     proj_name: str
+#     since_data_range: str
+#     total_stars: int
+#     description: Optional[str] = None
+#     language: Optional[str] = None
+#     since_stars: Optional[int] = None
+
+
