@@ -1,108 +1,105 @@
-
-from enum import Enum
-from fastapi import FastAPI, params
-from typing import Optional
-from pprint import pprint
+"""Github-Trending-API
+===================
+API serves data about trending github repositories/developers.
+"""
+# Copyright (c) 2021, Niklas Tiede.
+# All rights reserved. Distributed under the MIT License.
 
 import requests
-from condensed import soup_matches, filter_articles, repo_extraction, dev_extraction
+from fastapi import FastAPI
 
-from allowed_parameters import AllowedProgrammingLanguages, AllowedDateRanges, AllowedSpokenLanguages
-
+from allowed_parameters import (
+    AllowedDateRanges, 
+    AllowedProgrammingLanguages,
+    AllowedSpokenLanguages
+    )
+from scraper import (
+    dev_extraction, 
+    filter_articles, 
+    repo_extraction,
+    soup_matches
+    )
 
 app = FastAPI()
 
 
-@app.get("/repositories")
-def repositories(since: AllowedDateRanges = None, spoken_lang: AllowedSpokenLanguages = None):
-    """ Returns data about trending repos. Search can be more specific. """
 
+@app.get("/about")
+def about():
+    """ Returns information on how to use the API. """
+    return "This API serves information about trending repositories/developers. Docs can be called by adding '/docs' to the URL"
+
+
+@app.get("/")
+def repositories(since: AllowedDateRanges = None, spoken_lang: AllowedSpokenLanguages = None):
+    """ Returns data about trending repositories (all programming languages). """
     payload = {}
     if since:
+        since_value = since._value_
         payload["since"] = since._value_
+    else:
+        since_value = "daily"
     if spoken_lang:
         payload["spoken_lang"] = spoken_lang._value_
-
     resp = requests.get(
         "https://github.com/trending", params=payload)
-
     articles_html = filter_articles(resp.text)
     matches = soup_matches(articles_html)
-    data = repo_extraction(matches, since=since._value_)
+    data = repo_extraction(matches, since=since_value)
     return data
 
-# @app.get("/developers")
-# def repositories(since: AllowedDateRanges = None):
-#     """ Returns data about trending repos. Search can be more specific. """
 
-#     payload = {}
-#     if since:
-#         payload["since"] = since._value_
-
-#     resp = requests.get(
-#         "https://github.com/trending/developers", params=payload)
-
-#     articles_html = filter_articles(resp.text)
-#     matches = soup_matches(articles_html)
-#     data = dev_extraction(matches)
-#     return data
-
-
-# @app.get("/repositories/{prog_lang}")
-# def repositories(prog_lang: AllowedProgrammingLanguages, since: AllowedDateRanges = None, spoken_lang: AllowedSpokenLanguages = None):
-#     """ Returns data about trending repos. Search can be more specific. """
-
-#     payload = {}
-#     if since:
-#         payload["since"] = since._value_
-#     if spoken_lang:
-#         payload["spoken_lang"] = spoken_lang._value_
-
-#     print('payload:', payload)
-#     resp = requests.get(
-#         f"https://github.com/trending/{prog_lang}", params=payload)
-
-#     articles_html = filter_articles(resp.text)
-#     matches = soup_matches(articles_html)
-#     data = repo_extraction(matches, since=since._value_)
-#     return data
+@app.get("/developers")
+def repositories(since: AllowedDateRanges = None):
+    """ Returns data about trending developers (all programming languages). """
+    payload = {}
+    if since:
+        since_value = since._value_
+        payload["since"] = since._value_
+    else:
+        since_value = "daily"
+    resp = requests.get(
+        "https://github.com/trending/developers", params=payload)
+    articles_html = filter_articles(resp.text)
+    matches = soup_matches(articles_html)
+    data = dev_extraction(matches, since=since_value)
+    return data
 
 
-# @app.get("/developers/{prog_lang}")
-# def repositories(prog_lang: AllowedProgrammingLanguages, since: AllowedDateRanges = None):
-#     """ Returns data about trending repos. Search can be more specific. """
+@app.get("/{prog_lang}")
+def repositories_lang_spec(prog_lang: AllowedProgrammingLanguages, since: AllowedDateRanges = None, spoken_lang: AllowedSpokenLanguages = None):
+    """ Returns data about trending repositories. A specific programming language can be added as path parameter to specify search. """
+    payload = {}
+    if since:
+        since_value = since._value_
+        payload["since"] = since._value_
+    else:
+        since_value = "daily"
+    if spoken_lang:
+        payload["spoken_lang"] = spoken_lang._value_
+    resp = requests.get(
+        f"https://github.com/trending/{prog_lang}", params=payload)
+    articles_html = filter_articles(resp.text)
+    matches = soup_matches(articles_html)
+    data = repo_extraction(matches, since=since_value)
+    return data
 
-#     payload = {}
-#     if AllowedDateRanges:
-#         payload["since"] = since._value_
 
-#     resp = requests.get(
-#         f"https://github.com/trending/{prog_lang}", params=payload)
+@app.get("/developers/{prog_lang}")
+def repositories_lang_spec(prog_lang: AllowedProgrammingLanguages, since: AllowedDateRanges = None):
+    """ Returns data about trending developers. A specific programming language 
+    can be added as path parameter to specify search.  
+    """
+    payload = {}
+    if since:
+        since_value = since._value_
+        payload["since"] = since._value_
+    else:
+        since_value = "daily"
+    resp = requests.get(
+        f"https://github.com/trending/{prog_lang}", params=payload)
+    articles_html = filter_articles(resp.text)
+    matches = soup_matches(articles_html)
+    data = dev_extraction(matches, since=since_value)
+    return data
 
-#     articles_html = filter_articles(resp.text)
-#     matches = soup_matches(articles_html)
-#     data = dev_extraction(matches, since='daily')
-#     return data
-
-
-# @app.get("/about")
-# def about():
-#     """ Returns information on how to use the API. """
-#     return "This API serves information about trending repositories/developers."
-
-# @app.get("/")
-# def index(limit: int = 2, sort: Optional[bool] = None):
-#     """ Returns all data. """
-#     if sort:
-#         return f"some sorted data, sort: {sort}"
-#     if limit and limit <= len(data):
-#         return data[:limit]
-#     else:
-#         return data
-
-# @app.get("/{ID}")
-# def index(ID: int):
-#     """ Returns specific datapoint by ID. """
-#     for datapoint in data:
-#         if datapoint.get("ID") == ID:
-#             return datapoint

@@ -1,12 +1,17 @@
+"""HTML scraper
+============
+filters article-tags enclosed html and scrapes data.
+"""
+# Copyright (c) 2021, Niklas Tiede.
+# All rights reserved. Distributed under the MIT License.
 
-from dataclasses import dataclass
-
-from typing import Dict
 import typing
-import requests
+from dataclasses import dataclass
 from pprint import pprint
-from bs4 import BeautifulSoup, element
+from typing import Dict
 
+import requests
+from bs4 import BeautifulSoup, element
 
 
 def filter_articles(html: str) -> str:
@@ -130,7 +135,6 @@ def dev_extraction(matches: element.ResultSet, since: str) -> typing.List[Dict]:
 
         # some devs have a popular repo, soem not:
         if repo.article:
-            print('article existing')
             popular_repo = repo.article.h1.a.text.strip()
             popular_repo_url = "https://github.com" + repo.article.h1.a['href']
 
@@ -143,7 +147,6 @@ def dev_extraction(matches: element.ResultSet, since: str) -> typing.List[Dict]:
             popular_repo = None
             popular_repo_url = None
             repo_description = None
-            print('article not existing')
 
         devs_data = {
             'rank': rank + 1,
@@ -161,14 +164,13 @@ def dev_extraction(matches: element.ResultSet, since: str) -> typing.List[Dict]:
     return trending_devs_data
 
 
-payload = {'since': 'daily'}
-print('payload:', payload)
-resp = requests.get("https://github.com/trending/scala", params=payload)
+# payload = {'since': 'daily'}
+# resp = requests.get("https://github.com/trending/scala", params=payload)
 
-articles_html = filter_articles(resp.text)
-matches = soup_matches(articles_html)
-data = repo_extraction(matches, since='weekly')
-pprint(data)
+# articles_html = filter_articles(resp.text)
+# matches = soup_matches(articles_html)
+# data = repo_extraction(matches, since='weekly')
+
 
 
 # class TrendingData():
@@ -212,5 +214,3 @@ pprint(data)
 #     description: Optional[str] = None
 #     language: Optional[str] = None
 #     since_stars: Optional[int] = None
-
-

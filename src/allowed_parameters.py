@@ -1,3 +1,9 @@
+"""Allowed Parameters
+===================
+path and query parameters which are allowed to use.
+"""
+# Copyright (c) 2021, Niklas Tiede.
+# All rights reserved. Distributed under the MIT License.
 
 from enum import Enum
 
@@ -108,7 +114,7 @@ class AllowedSpokenLanguages(str, Enum):
     Lingala = 'ln'
     Lao = 'lo'
     Lithuanian = 'lt'
-    Luba-Katanga = 'lu'
+    Luba_Katanga = 'lu'
     Latvian = 'lv'
     Manx = 'gv'
     Macedonian = 'mk'
@@ -222,7 +228,6 @@ class AllowedProgrammingLanguages(str, Enum):
     agda = "agda"
     ags_script = "ags-script"
     al = "al"
-    al = "al"
     alloy = "alloy"
     alpine_abuild = "alpine-abuild"
     altium_designer = "altium-designer"
@@ -266,7 +271,6 @@ class AllowedProgrammingLanguages(str, Enum):
     boogie = "boogie"
     brainfuck = "brainfuck"
     brightscript = "brightscript"
-    zeek = "zeek"
     c = "c"
     c_23 = "c%23"
     c_objdump = "c-objdump"
@@ -280,7 +284,6 @@ class AllowedProgrammingLanguages(str, Enum):
     chuck = "chuck"
     cirru = "cirru"
     clarion = "clarion"
-    classic_asp = "classic-asp"
     clean = "clean"
     click = "click"
     clips = "clips"
@@ -738,7 +741,6 @@ class AllowedProgrammingLanguages(str, Enum):
     vim_help_file = "vim-help-file"
     vim_script = "vim-script"
     vim_snippet = "vim-snippet"
-    visual_basic_net = "visual-basic-.net"
     visual_basic_net = "visual-basic-.net"
     volt = "volt"
     vue = "vue"

@@ -1,3 +1,9 @@
+"""data scraper for selectable parameters
+======================================
+Script for collecting data about spoken/programming languages.
+"""
+# Copyright (c) 2021, Niklas Tiede.
+# All rights reserved. Distributed under the MIT License.
 
 # create enum class: 
 # 1. copy html of selectable programming langauges/ spoken langauges and paste into .html file each
