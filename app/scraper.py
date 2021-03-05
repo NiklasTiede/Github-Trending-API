@@ -1,0 +1,178 @@
+"""HTML scraper
+============
+filters article-tags enclosed html and scrapes data.
+"""
+# Copyright (c) 2021, Niklas Tiede.
+# All rights reserved. Distributed under the MIT License.
+
+import typing
+from dataclasses import dataclass
+from pprint import pprint
+from typing import Dict
+
+import requests
+from bs4 import BeautifulSoup, element
+
+
+def filter_articles(html: str) -> str:
+    """ Filters html out, which is not enclosed by article-tags.
+    Github trending contains up to 25 repositories/developers.
+
+    why filtering HTML instead of using beautifulsoup directly?
+    Beautifulsoup skips many articles!
+    """
+    all_html = html.split("\n")
+
+    # count number of article tags within the document (varies from 0 to 50):
+    article_tags = 0
+    for line in all_html:
+        if "article" in line:
+            article_tags += 1
+
+    # copy HTML enclosed by first and last article-tag:
+    articles_html, is_Article_HTML = [], False
+    counter = 0
+    for line in all_html:
+        if "article" in line:
+            article_tags -= 1
+            is_Article_HTML = True
+        if is_Article_HTML:
+            articles_html.append(line)
+        if not article_tags:
+            is_Article_HTML = False
+
+    return "".join(articles_html)
+
+
+#######
+def soup_matches(articles_html: str) -> element.ResultSet:
+    """ refactoring code, can be used for repos and developers. """
+    soup = BeautifulSoup(articles_html, 'html.parser')
+    return soup.find_all('article', class_='Box-row')
+
+
+def repo_extraction(matches: element.ResultSet, since: str = "daily") -> typing.List[Dict]:
+    """ Data about trending repositories are extracted
+    from html enclosed by article-tags. """
+
+    trending_repos_data = []
+    for rank, repo in enumerate(matches):
+
+        # repository URL
+        rel_url = repo.h1.a['href']
+        repo_url = "https://github.com" + rel_url
+
+        # projectname
+        proj_name = repo_url.split('/')[-1]
+
+        # description
+        description_match = repo.find(
+            'p', class_="col-9 color-text-secondary my-1 pr-4")
+        if description_match:
+            description = description_match.text.strip()
+        else:
+            description = None
+
+        # language
+        repo_lang = repo.find('span', itemprop="programmingLanguage")
+        if repo_lang:
+            repo_lang_val = repo_lang.text
+        else:
+            repo_lang_val = None
+
+        # since-stars:
+        match2 = repo.find('span', class_='d-inline-block float-sm-right')
+        if match2:
+            stars_today = match2.text.split()[0]
+            if ',' in stars_today:
+                stars_today = stars_today.replace(',', '')
+            stars_today = int(stars_today)
+        else:
+            stars_today = None
+
+        # total stars
+        tot_stars = repo.find('a', href=f"{rel_url}/stargazers")
+        if tot_stars:
+            tot_stars = tot_stars.text.strip()
+
+            if ',' in tot_stars:
+                tot_stars = tot_stars.replace(',', '')
+            tot_stars = int(tot_stars)
+        else:
+            tot_stars = None
+
+        repo_data = {
+            'rank': rank + 1,
+            'URL': repo_url,
+            'name': proj_name,
+            'description': description,
+            'language': repo_lang_val,
+            'since_stars': stars_today,
+            'since_data_range': since,
+            'total_stars': tot_stars,
+        }
+
+        trending_repos_data.append(repo_data)
+
+    return trending_repos_data
+
+
+def dev_extraction(matches: element.ResultSet, since: str) -> typing.List[Dict]:
+    """ Data about trending repositories are extracted
+    from html enclosed by article-tags. """
+
+    trending_devs_data = []
+    for rank, repo in enumerate(matches):
+
+        # dev accounts URL
+        rel_url = repo.div.a['href']
+        dev_url = "https://github.com" + rel_url
+
+        # devs account name
+        acc_name = rel_url.strip('/')
+
+        # devs full name
+        full_name = repo.h1.a.text.strip()
+
+        # url to the devs tiny avatar
+        avatar_url = repo.img['src']
+
+        # some devs have a popular repo, soem not:
+        if repo.article:
+            popular_repo = repo.article.h1.a.text.strip()
+            popular_repo_url = "https://github.com" + repo.article.h1.a['href']
+
+            if repo.article.find('div', class_='f6 color-text-secondary mt-1'):
+                repo_description = repo.article.find(
+                    'div', class_='f6 color-text-secondary mt-1').text.strip()
+            else:
+                repo_description = None
+        else:
+            popular_repo = None
+            popular_repo_url = None
+            repo_description = None
+
+        devs_data = {
+            'rank': rank + 1,
+            'URL': dev_url,
+            'account_name': acc_name,
+            'full_name': full_name,
+            'mini_avatar_URL': avatar_url,
+            'popular_repo': popular_repo,
+            'popular_repo_url': popular_repo_url,
+            'repo_description': repo_description,
+            'since_data_range': since,
+        }
+        trending_devs_data.append(devs_data)
+
+    return trending_devs_data
+
+
+
+if __name__ == "__main__":
+    payload = {'since': 'daily'}
+    resp = requests.get("https://github.com/trending/developers/python", params=payload)
+    articles_html = filter_articles(resp.text)
+    matches = soup_matches(articles_html)
+    data = dev_extraction(matches, since='daily')
+    pprint(data[:3])
