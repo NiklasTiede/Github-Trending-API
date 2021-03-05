@@ -37,18 +37,22 @@ def repositories(since: AllowedDateRanges = None, spoken_lang: AllowedSpokenLang
     """ Returns data about trending repositories (all programming languages). """
     payload = {}
     if since:
-        since_value = since._value_
-        payload["since"] = since._value_
+        since_val = since._value_
+        payload["since"] = since_val
     else:
-        since_value = "daily"
+        since_val = "daily"
     if spoken_lang:
         payload["spoken_lang"] = spoken_lang._value_
-    resp = requests.get(
+    try:
+        resp = requests.get(
         "https://github.com/trending", params=payload)
+    except requests.exceptions.RequestException as e:
+        return e
     articles_html = filter_articles(resp.text)
     matches = soup_matches(articles_html)
-    data = repo_extraction(matches, since=since_value)
+    data = repo_extraction(matches, since=since_val)
     return data
+
 
 
 @app.get("/developers")
@@ -56,15 +60,18 @@ def developers(since: AllowedDateRanges = None):
     """ Returns data about trending developers (all programming languages). """
     payload = {}
     if since:
-        since_value = since._value_
-        payload["since"] = since._value_
+        since_val = since._value_
+        payload["since"] = since_val
     else:
-        since_value = "daily"
-    resp = requests.get(
+        since_val = "daily"
+    try:
+        resp = requests.get(
         "https://github.com/trending/developers", params=payload)
+    except requests.exceptions.RequestException as e:
+        return e
     articles_html = filter_articles(resp.text)
     matches = soup_matches(articles_html)
-    data = dev_extraction(matches, since=since_value)
+    data = dev_extraction(matches, since=since_val)
     return data
 
 
@@ -73,17 +80,20 @@ def repositories_lang_spec(prog_lang: AllowedProgrammingLanguages, since: Allowe
     """ Returns data about trending repositories. A specific programming language can be added as path parameter to specify search. """
     payload = {}
     if since:
-        since_value = since._value_
-        payload["since"] = since_value
+        since_val = since._value_
+        payload["since"] = since_val
     else:
-        since_value = "daily"
+        since_val = "daily"
     if spoken_lang:
         payload["spoken_lang"] = spoken_lang._value_
-    resp = requests.get(
+    try:
+        resp = requests.get(
         f"https://github.com/trending/{prog_lang}", params=payload)
+    except requests.exceptions.RequestException as e:
+        return e
     articles_html = filter_articles(resp.text)
     matches = soup_matches(articles_html)
-    data = repo_extraction(matches, since=since_value)
+    data = repo_extraction(matches, since=since_val)
     return data
 
 
@@ -94,15 +104,18 @@ def developers_lang_spec(prog_lang: AllowedProgrammingLanguages, since: AllowedD
     """
     payload = {}
     if since:
-        since_value = since._value_
-        payload["since"] = since_value
+        since_val = since._value_
+        payload["since"] = since_val
     else:
-        since_value = "daily"
-    resp = requests.get(
+        since_val = "daily"
+    try:
+        resp = requests.get(
         f"https://github.com/trending/developers/{prog_lang}", params=payload)
+    except requests.exceptions.RequestException as e:
+        return e
     articles_html = filter_articles(resp.text)
     matches = soup_matches(articles_html)
-    data = dev_extraction(matches, since=since_value)
+    data = dev_extraction(matches, since=since_val)
     return data
 
 
