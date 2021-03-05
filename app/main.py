@@ -7,6 +7,7 @@ API serves data about trending github repositories/developers.
 
 import requests
 from fastapi import FastAPI
+import uvicorn
 
 from allowed_parameters import (
     AllowedDateRanges, 
@@ -103,3 +104,5 @@ def developers_lang_spec(prog_lang: AllowedProgrammingLanguages, since: AllowedD
     data = dev_extraction(matches, since=since_value)
     return data
 
+if __name__ == "__main__":
+    uvicorn.run(app, port=8000, host="0.0.0.0")
