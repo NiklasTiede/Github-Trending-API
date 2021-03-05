@@ -28,6 +28,7 @@ app = FastAPI()
 @app.get("/about")
 def about():
     """ Returns information on how to use the API. """
+    # return {"this": "is"}
     return "This API serves information about trending repositories/developers. Docs can be called by adding '/docs' to the URL"
 
 
@@ -103,6 +104,7 @@ def developers_lang_spec(prog_lang: AllowedProgrammingLanguages, since: AllowedD
     matches = soup_matches(articles_html)
     data = dev_extraction(matches, since=since_value)
     return data
+
 
 if __name__ == "__main__":
     uvicorn.run(app, port=8000, host="0.0.0.0")

@@ -4,10 +4,10 @@ import setuptools
 
 setuptools.setup(
     name="github-trending-api",
-    version="0.1.0",
+    version="1.0.0",
     author="Niklas Tiede",
     author_email="niklastiede2@gmail.com",
-    description="trending repositories/developers (github) API",
+    description="trending github repositories/developers API",
     long_description=pathlib.Path("README.md").read_text(encoding="utf-8"),
     long_description_content_type="text/markdown",
     url="https://github.com/NiklasTiede/Github-Trending-API",
@@ -23,6 +23,7 @@ setuptools.setup(
     extras_require={
         "dev": [
             "pytest",
+            "mypy",
         ],
     },
     platforms="linux",
