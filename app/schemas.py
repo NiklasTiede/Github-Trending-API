@@ -1,3 +1,9 @@
+"""Schemas
+===================
+schemas for repositories/developers.
+"""
+# Copyright (c) 2021, Niklas Tiede.
+# All rights reserved. Distributed under the MIT License.
 
 
 from typing import Optional
@@ -72,3 +78,4 @@ class Developer:
 #     description: Optional[str] = None
 #     language: Optional[str] = None
 #     since_stars: Optional[int] = None
+
