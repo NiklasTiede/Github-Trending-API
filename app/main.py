@@ -38,6 +38,7 @@ def help():
         "redoc": f"http://{this_apis_domain}/redoc",
     }
 
+
 @app.get("/repositories")
 async def trending_repositories(
     since: AllowedDateRanges = None, spoken_lang: AllowedSpokenLanguages = None
