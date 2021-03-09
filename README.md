@@ -1,5 +1,5 @@
 <p align="center">
-  <img  align="center" height="200" src="docs/tmp.png" />
+  <img  align="center" height="140" src="docs/tmp.png" />
 <p>
 
 [comment]: <> (# https://shields.io/)
