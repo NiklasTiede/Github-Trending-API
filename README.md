@@ -14,7 +14,7 @@
 ...written in Python!
 </p>
 
-The motivation behind this API for me was to learn web scraping and how to create an API. It is based on the idea of [github-trending-api](https://github.com/huchenme/github-trending-api) except that this one is written in python and it is available :wink:!
+The motivation behind this API for me was to learn web scraping and how to create an API. It is based on the idea of the [github-trending-api](https://github.com/huchenme/github-trending-api) except that this one is written in python and it is available :wink:!
 
 This project runs on Python 3.9 and uses...
 
@@ -26,14 +26,13 @@ This project runs on Python 3.9 and uses...
 
 <h1 id="example" ><img src="docs/example.png" width="34px"#> Examples</h1>
 
-FastAPI has a fantastic built-in documentation, it can be reached on the `/docs` or `/redocs` route. 
+FastAPI has a fantastic built-in documentation, it can be reached on the `/docs` or `/redocs` route. Data about trending repositories/developers are provided via the `/repositories` and `/developers` routes. 
 
-Two examples to visualize how a repositories/developers reponse body looks like:
+Here are two examples to illustrate the data you can request from this API. 
 
-repositories
+### An Array of Trending Repositories
 
 ```json
-❯ http -b http://gh-trending.com/repositories
 [
   {
     "rank": 1,
@@ -53,11 +52,6 @@ repositories
         "url": "https://github.com/hoadlck",
         "avatar": "https://avatars.githubusercontent.com/u/1666888?s=40&v=4"
       },
-      {
-        "username": "sdushantha",
-        "url": "https://github.com/sdushantha",
-        "avatar": "https://avatars.githubusercontent.com/u/27065646?s=40&v=4"
-      },
       ...
     ]
   },
@@ -65,10 +59,9 @@ repositories
 ]
 ```
 
-developers:
+### An Array of Trending Developers
 
 ```json
-❯ http -b http://gh-trending.com/repositories
 [
   {
     "rank": 1,
@@ -87,33 +80,30 @@ developers:
 ]
 ```
 
-<h1 id="how-to-use-spasco" ><img src="docs/tutorial.png" width="27px"#> How to use Github-Trending-API</h1>
+<h1 id="how-to-use-spasco" ><img src="docs/tutorial.png" width="27px"#> How to</h1>
 
-fastAPI offers a nice documentation, so visit it and explore the API.
+FastAPI provides a nice built-in documentation, so feel free to visit and explore the [API](https:gh-trending.com) by yourself. The endpoints are similar to the routes on github:
 
-The endpoints are similar to the routes on github:
+- a path parameter for the programming language can be used to limit the scope of the search to this language
+- a query parameter for the date range (`since`) let you select the trending projects within the specified period of time (daily, weekly or monthly)
+- moreover, repositories can be limited to a spoken language (`spoken_lang`)
 
-a path parameter is used for the programming language
-a query parameter is used for the date range and the spoken language
+Here are some examples. Repositories can be queried for 3 parameters...
 
-example:
-repositories?since=weekly&spoken_lang=en  -> returns all repos with a weekly daterange and english language
-repositories/python?since=monthly  -> return als repos using python, with a monthly daterange.
+| example                                               | pogramming lang    | date range         | spoken lang        |
+| ----------------------------------------------------- | ------------------ | ------------------ | ------------------ |
+| [/repositories](https://gh-trending.com/repositories) | :x:                | :x:                | :x:                |
+| [/repositories?since=weekly]()                        | :x:                | :heavy_check_mark: | :x:                |
+| [/repositories/python]()                              | :heavy_check_mark: | :x:                | :x:                |
+| [/repositories/python?since=monthly]()                | :heavy_check_mark: | :heavy_check_mark: | :x:                |
+| [/repositories/python?since=weekly&spoken_lang=zh]()  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
+...whereas developers can only be queried for 2 parameters.
 
+| example                          | pogramming lang    | date range         |
+| -------------------------------- | ------------------ | ------------------ |
+| [/developers]()                  | :x:                | :x:                |
+| [/developers?since=weekly]()     | :x:                | :heavy_check_mark: |
+| [/developers/c++]()              | :heavy_check_mark: | :x:                |
+| [/developers/c++?since=weekly]() | :heavy_check_mark: | :heavy_check_mark: |
 
-same applies for the developers endpoint, but here you cannot select the spoken language.
-
-http://gh-trending.com/developers?since=weekly&spoken_lang=en
-
-
-
-
-Path and Query parameters:
-
-
-```console
-❯ spasco --help
-usage: spasco [-s [search_value]] [-n [new_value]] [-p [pattern_only]] 
-
-```
