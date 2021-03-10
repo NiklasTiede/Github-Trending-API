@@ -1,5 +1,6 @@
-
-<h1 align="center">Github Trending API</h1>
+<p align="center">
+<img src="docs/trending.png" width="500">
+</p>
 
 
 [comment]: <> (# https://shields.io/)
