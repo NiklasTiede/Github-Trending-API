@@ -130,7 +130,7 @@ Here are some examples. Repositories can be queried for 3 parameters...
 | [/developers/c++]()              | :heavy_check_mark: | :x:                |
 | [/developers/c++?since=weekly]() | :heavy_check_mark: | :heavy_check_mark: |
 
-## Running from Source
+<!-- ## Running from Source
 
 you can 
 
@@ -146,6 +146,6 @@ python app/main.py
 ## ToDo
 
 - [ ] limit requests to 2 per second
-
+ -->
 
 
