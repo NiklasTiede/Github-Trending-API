@@ -19,6 +19,7 @@ setuptools.setup(
         "uvicorn",
         "requests",
         "beautifulsoup4",
+        "aiohttp",
     ],
     extras_require={
         "dev": [

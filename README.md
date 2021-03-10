@@ -3,13 +3,35 @@
 </p>
 
 
-[comment]: <> (# https://shields.io/)
 
-[comment]: <> ([![license]&#40;https://img.shields.io/conda/&#41;]&#40;&#41; # https://shields.io/category/license)
+<p id="Icons" align="center">
 
-[comment]: <> ([![codecov]&#40;https://img.shields.io/&#41;]&#40;https://codecov.io/&#41; # https://shields.io/category/coverage)
+  <!-- <a alt="Uptime Robot Status" href="">
+    <img src="" />
+  </a> -->
 
-[comment]: <> (![total lines]&#40;https://img.shields.io/&#41; # https://shields.io/category/size)
+  <!-- <a alt="dockr build" href="">
+    <img src="" />
+  </a> -->
+
+  <a alt="Issues" href="">
+    <img src="https://img.shields.io/github/issues/NiklasTiede/Github-Trending-API" />
+  </a>
+
+  <!-- <a alt="Github Release" href="">
+    <img src="" />
+  </a> -->
+
+  <!-- <a alt="codecov" href="">
+    <img src="" />
+  </a> -->
+
+  <a alt="License" href="">
+    <img src="https://img.shields.io/github/license/NiklasTiede/Github-Trending-API" />
+  </a>
+
+</p>
+
 
 <p align="center">
 ...written in Python!
@@ -25,13 +47,13 @@ This project runs on Python 3.9 and uses...
 - uvicorn | *ASGI server*
 
 
-<h1 id="example" ><img src="docs/example.png" width="34px"#> Examples</h1>
+<h1><img src="docs/example.png" width="30px"#> Examples</h1>
 
 FastAPI has a fantastic built-in documentation, it can be reached on the `/docs` or `/redocs` route. Data about trending repositories/developers are provided via the `/repositories` and `/developers` routes. 
 
-Here are two examples to illustrate the data you can request from this API. 
+Here are two examples to illustrate the data you can request from this API.  
 
-### An Array of Trending Repositories
+## Trending Repositories
 
 ```json
 [
@@ -60,7 +82,7 @@ Here are two examples to illustrate the data you can request from this API.
 ]
 ```
 
-### An Array of Trending Developers
+## Trending Developers
 
 ```json
 [
@@ -81,7 +103,7 @@ Here are two examples to illustrate the data you can request from this API.
 ]
 ```
 
-<h1 id="how-to-use-spasco" ><img src="docs/tutorial.png" width="27px"#> How to</h1>
+<h1><img src="docs/tutorial.png" width="25px"#> How to Use</h1>
 
 FastAPI provides a nice built-in documentation, so feel free to visit and explore the [API](https:gh-trending.com) by yourself. The endpoints are similar to the routes on github:
 
@@ -107,4 +129,23 @@ Here are some examples. Repositories can be queried for 3 parameters...
 | [/developers?since=weekly]()     | :x:                | :heavy_check_mark: |
 | [/developers/c++]()              | :heavy_check_mark: | :x:                |
 | [/developers/c++?since=weekly]() | :heavy_check_mark: | :heavy_check_mark: |
+
+## Running from Source
+
+you can 
+
+```
+❯ git clone
+cd xx
+python app/main.py
+
+❯ docker build
+
+```
+
+## ToDo
+
+- [ ] limit requests to 2 per second
+
+
 
