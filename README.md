@@ -3,12 +3,10 @@
 </p>
 
 
-![status](https://img.shields.io/uptimerobot/status/m787484641-cc42e583e4fe0a25564a29e1?style=flat-square)
-
 <p id="Icons" align="center">
 
-  <a alt="Uptime Robot Status" href="https://img.shields.io/uptimerobot/status/m787484641-cc42e583e4fe0a25564a29e1?style=flat-square">
-    <img src="https://img.shields.io/uptimerobot/status/m787484641-cc42e583e4fe0a25564a29e1?style=flat-square" />
+  <a alt="Uptime Robot Status" href="https://stats.uptimerobot.com/5KMN7t0E5M">
+    <img src="https://img.shields.io/uptimerobot/status/m787484641-cc42e583e4fe0a25564a29e1" />
   </a>
 
   <!-- <a alt="dockr build" href="">
