@@ -135,7 +135,7 @@ Here are some examples. Repositories can be queried for 3 parameters...
 
 ## Running from Source
 
-YOu can easily clone the project and run it locally:
+You can easily clone the project and run it locally:
 
 ```
 ❯ git clone
