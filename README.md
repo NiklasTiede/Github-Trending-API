@@ -133,22 +133,20 @@ Here are some examples. Repositories can be queried for 3 parameters...
 | [/developers/c++](https://gh-trending-api.herokuapp.com/developers/c++)                           | :heavy_check_mark: | :x:                |
 | [/developers/c++?since=weekly](https://gh-trending-api.herokuapp.com/developers/c++?since=weekly) | :heavy_check_mark: | :heavy_check_mark: |
 
-<!-- ## Running from Source
+## Running from Source
 
-You can run 
+YOu can easily clone the project and run it locally:
 
 ```
 ❯ git clone
-cd xx
-python app/main.py
-
-❯ docker build
-
+❯ cd Github-Trending-API
+❯ uvicorn app.main:app --host 0.0.0.0 --port 5000 --reload
 ```
 
-## ToDo
+Or pull the [docker image](https://hub.docker.com/r/niklastiede/github-trending-api) and run it:
 
-- [ ] limit requests to 1 per second
- -->
-
+```
+❯ docker pull niklastiede/github-trending-api:1.0.0
+❯ docker run -p 5000:5000 niklastiede/github-trending-api:1.0.0
+```
 
