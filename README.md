@@ -16,13 +16,13 @@
     <img src="" />
   </a> -->
 
-  <a alt="Issues" href="">
+  <a alt="Issues" href="https://github.com/NiklasTiede/Github-Trending-API/releases">
     <img src="https://img.shields.io/github/issues/NiklasTiede/Github-Trending-API" />
   </a>
 
-  <!-- <a alt="Github Release" href="">
-    <img src="" />
-  </a> -->
+  <a alt="Github Release" href="">
+    <img src="https://img.shields.io/github/v/release/NiklasTiede/Github-Trending-API" />
+  </a>
 
   <!-- <a alt="codecov" href="">
     <img src="" />
