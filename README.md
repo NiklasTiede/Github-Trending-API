@@ -103,7 +103,7 @@ This project runs on Python 3.9 and uses...
 - fastAPI | *web framework*
 - uvicorn | *ASGI server*
 
-See  <a href="https://stats.uptimerobot.com/5KMN7t0E5M" target="_blank">UptimeRobot</a> to ensure yourself that this API is reliable.
+See [UptimeRobot](https://stats.uptimerobot.com/5KMN7t0E5M) to ensure yourself that this API is reliable.
 
 
 <h1><img src="docs/tutorial.png" width="25px"#> How to Use</h1>
