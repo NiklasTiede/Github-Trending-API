@@ -19,6 +19,4 @@ RUN apk add --update --no-cache --virtual .build-deps \
 
 COPY ./app ./app
 
-# ENTRYPOINT [ "python" ]
-
-CMD [ "python", "app/main.py" ]
+CMD ["uvicorn", "--host", "0.0.0.0", "--port", "5000", "app.main:app"]
