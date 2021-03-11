@@ -2,6 +2,9 @@
 <img src="docs/trending.png" width="500">
 </p>
 
+<p align="center">
+...written in Python!
+</p>
 
 <p id="Icons" align="center">
 
@@ -31,10 +34,6 @@
 
 </p>
 
-
-<p align="center">
-...written in Python!
-</p>
 
 
 <h1><img src="docs/example.png" width="30px"#> Examples</h1>
@@ -93,6 +92,8 @@ Data you can retrieve from this API.
 ]
 ```
 
+---
+
 The motivation behind this API for me was to learn web scraping and how to create an API. It is based on the idea of the [github-trending-api](https://github.com/huchenme/github-trending-api) except that this one is written in python and it is available :wink:!
 
 This project runs on Python 3.9 and uses...
@@ -102,6 +103,7 @@ This project runs on Python 3.9 and uses...
 - fastAPI | *web framework*
 - uvicorn | *ASGI server*
 
+See [uptime](https://stats.uptimerobot.com/5KMN7t0E5M) to ensure yourself that this API is reliable.
 
 
 <h1><img src="docs/tutorial.png" width="25px"#> How to Use</h1>

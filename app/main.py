@@ -40,6 +40,11 @@ def help():
     }
 
 
+@app.get('/favicon.ico')
+def favicon():
+    return fastapi.responses.RedirectResponse(url='/static/img/favicon.ico')
+
+
 @app.get("/repositories")
 async def trending_repositories(
     since: AllowedDateRanges = None, spoken_lang: AllowedSpokenLanguages = None
