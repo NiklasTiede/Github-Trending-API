@@ -26,17 +26,17 @@ from app.scraping import (
 app = fastapi.FastAPI()
 
 
-this_apis_domain = "gh-trending.com"
+this_apis_domain = "https://gh-trending-api.herokuapp.com"
 
 
 @app.get("/")
 def help():
     """ API endpoints and documentation. """
     return {
-        "repositories": f"http://{this_apis_domain}/repositories",
-        "developers": f"http://{this_apis_domain}/developers",
-        "docs": f"http://{this_apis_domain}/docs",
-        "redoc": f"http://{this_apis_domain}/redoc",
+        "repositories": f"{this_apis_domain}/repositories",
+        "developers": f"{this_apis_domain}/developers",
+        "docs": f"{this_apis_domain}/docs",
+        "redoc": f"{this_apis_domain}/redoc",
     }
 
 

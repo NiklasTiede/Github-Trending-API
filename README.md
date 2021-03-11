@@ -3,7 +3,6 @@
 </p>
 
 
-
 <p id="Icons" align="center">
 
   <!-- <a alt="Uptime Robot Status" href="">
@@ -37,25 +36,15 @@
 ...written in Python!
 </p>
 
-The motivation behind this API for me was to learn web scraping and how to create an API. It is based on the idea of the [github-trending-api](https://github.com/huchenme/github-trending-api) except that this one is written in python and it is available :wink:!
-
-This project runs on Python 3.9 and uses...
-
-- beautifulsoup4 | *scraping*
-- aiohttp | *async GET requests*
-- fastAPI | *web framework*
-- uvicorn | *ASGI server*
-
 
 <h1><img src="docs/example.png" width="30px"#> Examples</h1>
 
-FastAPI has a fantastic built-in documentation, it can be reached on the `/docs` or `/redocs` route. Data about trending repositories/developers are provided via the `/repositories` and `/developers` routes. 
-
-Here are two examples to illustrate the data you can request from this API.  
+Data you can retrieve from this API. 
 
 ## Trending Repositories
 
 ```json
+❯ curl -X GET "https://gh-trending-api.herokuapp.com/developers" -H  "accept: application/json"
 [
   {
     "rank": 1,
@@ -85,6 +74,7 @@ Here are two examples to illustrate the data you can request from this API.
 ## Trending Developers
 
 ```json
+❯ curl -X GET "https://gh-trending-api.herokuapp.com/repositories" -H  "accept: application/json"
 [
   {
     "rank": 1,
@@ -103,9 +93,20 @@ Here are two examples to illustrate the data you can request from this API.
 ]
 ```
 
+The motivation behind this API for me was to learn web scraping and how to create an API. It is based on the idea of the [github-trending-api](https://github.com/huchenme/github-trending-api) except that this one is written in python and it is available :wink:!
+
+This project runs on Python 3.9 and uses...
+
+- beautifulsoup4 | *scraping*
+- aiohttp | *async GET requests*
+- fastAPI | *web framework*
+- uvicorn | *ASGI server*
+
+
+
 <h1><img src="docs/tutorial.png" width="25px"#> How to Use</h1>
 
-FastAPI provides a nice built-in documentation, so feel free to visit and explore the [API](https:gh-trending.com) by yourself. The endpoints are similar to the routes on github:
+FastAPI has a fantastic built-in documentation, so feel free to visit and explore the [API](https://gh-trending-api.herokuapp.com) by yourself. Data about trending repositories/developers are provided via the `/repositories` and `/developers` routes. The endpoints are similar to the routes on github. 
 
 - a path parameter for the programming language can be used to limit the scope of the search to this language
 - a query parameter for the date range (`since`) let you select the trending projects within the specified period of time (daily, weekly or monthly)
@@ -113,26 +114,26 @@ FastAPI provides a nice built-in documentation, so feel free to visit and explor
 
 Here are some examples. Repositories can be queried for 3 parameters...
 
-| example                                               | pogramming lang    | date range         | spoken lang        |
-| ----------------------------------------------------- | ------------------ | ------------------ | ------------------ |
-| [/repositories](https://gh-trending.com/repositories) | :x:                | :x:                | :x:                |
-| [/repositories?since=weekly]()                        | :x:                | :heavy_check_mark: | :x:                |
-| [/repositories/python]()                              | :heavy_check_mark: | :x:                | :x:                |
-| [/repositories/python?since=monthly]()                | :heavy_check_mark: | :heavy_check_mark: | :x:                |
-| [/repositories/python?since=weekly&spoken_lang=zh]()  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| example                                                                                                                                   | pogramming lang    | date range         | spoken lang        |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------ | ------------------ |
+| [/repositories](https://gh-trending-api.herokuapp.com/repositories)                                                                       | :x:                | :x:                | :x:                |
+| [/repositories?since=weekly](https://gh-trending-api.herokuapp.com/repositories?since=weekly)                                             | :x:                | :heavy_check_mark: | :x:                |
+| [/repositories/python](https://gh-trending-api.herokuapp.com/repositories/python)                                                         | :heavy_check_mark: | :x:                | :x:                |
+| [/repositories/python?since=monthly](https://gh-trending-api.herokuapp.com/repositories/python?since=monthly)                             | :heavy_check_mark: | :heavy_check_mark: | :x:                |
+| [/repositories/python?since=weekly&spoken_lang=zh](https://gh-trending-api.herokuapp.com/repositories/python?since=weekly&spoken_lang=zh) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 ...whereas developers can only be queried for 2 parameters.
 
-| example                          | pogramming lang    | date range         |
-| -------------------------------- | ------------------ | ------------------ |
-| [/developers]()                  | :x:                | :x:                |
-| [/developers?since=weekly]()     | :x:                | :heavy_check_mark: |
-| [/developers/c++]()              | :heavy_check_mark: | :x:                |
-| [/developers/c++?since=weekly]() | :heavy_check_mark: | :heavy_check_mark: |
+| example                                                                                           | pogramming lang    | date range         |
+| ------------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
+| [/developers](https://gh-trending-api.herokuapp.com/developers)                                   | :x:                | :x:                |
+| [/developers?since=weekly](https://gh-trending-api.herokuapp.com/developers?since=weekly)         | :x:                | :heavy_check_mark: |
+| [/developers/c++](https://gh-trending-api.herokuapp.com/developers/c++)                           | :heavy_check_mark: | :x:                |
+| [/developers/c++?since=weekly](https://gh-trending-api.herokuapp.com/developers/c++?since=weekly) | :heavy_check_mark: | :heavy_check_mark: |
 
 <!-- ## Running from Source
 
-you can 
+You can run 
 
 ```
 ❯ git clone
@@ -145,7 +146,7 @@ python app/main.py
 
 ## ToDo
 
-- [ ] limit requests to 2 per second
+- [ ] limit requests to 1 per second
  -->
 
 
