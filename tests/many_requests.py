@@ -8,7 +8,7 @@ import aiohttp
 import ssl
 
 
-the_url = "http://0.0.0.0:8000/repositories/c++?since=weekly"
+the_url = "http://127.0.0.1:8000/repositories/c++?since=weekly"
 
 
 url_list = list([the_url]*10)
