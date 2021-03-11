@@ -10,12 +10,12 @@ import asyncio
 import fastapi
 import uvicorn
 
-from allowed_parameters import (
+from app.allowed_parameters import (
     AllowedDateRanges,
     AllowedProgrammingLanguages,
     AllowedSpokenLanguages,
 )
-from scraping import (
+from app.scraping import (
     filter_articles,
     get_request,
     make_soup,
@@ -27,6 +27,7 @@ app = fastapi.FastAPI()
 
 
 this_apis_domain = "gh-trending.com"
+
 
 @app.get("/")
 def help():

@@ -19,6 +19,6 @@ RUN apk add --update --no-cache --virtual .build-deps \
 
 COPY ./app ./app
 
-ENTRYPOINT [ "python" ]
+# ENTRYPOINT [ "python" ]
 
-CMD [ "app/main.py" ]
+CMD [ "python", "app/main.py" ]
