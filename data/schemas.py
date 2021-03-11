@@ -14,25 +14,40 @@ from dataclasses import dataclass
 @dataclass
 class Repository:
     rank: int
-    URL: str
-    proj_name: str
-    since_data_range: str
-    total_stars: int
-    description: Optional[str] = None
+    username: str
+    repositoryName: str
+    url: str
+    since: str
+    StarsSince: int
+    totalStars: int
+    forks: int
     language: Optional[str] = None
-    since_stars: Optional[int] = None
+    languageColor: Optional[str] = None
+    description: Optional[str] = None
+    builtBy: Optional[BuiltBy] = None
+
+
+@dataclass
+class BuiltBy:
+    username: int
+    url: str
+    avatar: str
 
 
 # schema of developer data:
 @dataclass
 class Developer:
     rank: int
-    URL: str
     account_name: str
+    URL: str
     since_data_range: str
-    mini_avatar_URL: Optional[str] = None
     full_name: Optional[str] = None
+    mini_avatar_URL: Optional[str] = None
     popular_repo: Optional[str] = None
+
+
+@dataclass
+class popularRepository:
     popular_repo_url: Optional[str] = None
     repo_description: Optional[int] = None
 
@@ -62,20 +77,3 @@ class Developer:
 
 # data = TrendingData.from_developers()
 # data = TrendingData.from_repositories()
-
-
-
-
-# from typing import Optional
-
-# @dataclass
-# class Repository:
-#     rank: int
-#     URL: str
-#     proj_name: str
-#     since_data_range: str
-#     total_stars: int
-#     description: Optional[str] = None
-#     language: Optional[str] = None
-#     since_stars: Optional[int] = None
-

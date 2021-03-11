@@ -19,6 +19,4 @@ RUN apk add --update --no-cache --virtual .build-deps \
 
 COPY ./app ./app
 
-# CMD ["uvicorn", "--host", "0.0.0.0", "--port", "5000", "app.main:app"]
 CMD uvicorn app.main:app --host 0.0.0.0 --port $PORT
-# CMD gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app

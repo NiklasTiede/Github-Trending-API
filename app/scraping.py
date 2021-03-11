@@ -95,14 +95,16 @@ def scraping_repositories(
         total_stars = int(raw_total_stars)
 
         # forks
-        raw_forks = stars_built_section.a.findNextSibling("a").get_text(strip=True)
+        raw_forks = stars_built_section.a.findNextSibling(
+            "a").get_text(strip=True)
         if "," in raw_forks:
             raw_forks = raw_forks.replace(",", "")
         forks = int(raw_forks)
 
         # stars in period
         raw_stars_since = (
-            stars_built_section.find("span", class_="d-inline-block float-sm-right")
+            stars_built_section.find(
+                "span", class_="d-inline-block float-sm-right")
             .get_text(strip=True)
             .split()[0]
         )
@@ -111,14 +113,17 @@ def scraping_repositories(
         stars_since = int(raw_stars_since)
 
         # builtby
-        built_section = stars_built_section.find("span", class_="d-inline-block mr-3")
+        built_section = stars_built_section.find(
+            "span", class_="d-inline-block mr-3")
         if built_section:
-            contributors = stars_built_section.find("span", class_="d-inline-block mr-3").find_all("a")
+            contributors = stars_built_section.find(
+                "span", class_="d-inline-block mr-3").find_all("a")
             built_by = []
             for contributor in contributors:
                 contrib_data = {}
                 contrib_data["username"] = contributor["href"].strip("/")
-                contrib_data["url"] = "https://github.com" + contributor["href"]
+                contrib_data["url"] = "https://github.com" + \
+                    contributor["href"]
                 contrib_data["avatar"] = contributor.img["src"]
                 built_by.append(dict(contrib_data))
         repositories = {
@@ -131,7 +136,7 @@ def scraping_repositories(
             "languageColor": lang_color,
             "totalStars": total_stars,
             "forks": forks,
-            "StarsSince": stars_since,
+            "starsSince": stars_since,
             "since": since,
             "builtBy": built_by,
         }
@@ -168,7 +173,8 @@ def scraping_developers(matches: bs4.element.ResultSet, since: str) -> typing.Li
             pop_repo = match.article.h1.a
             repo_name = pop_repo.get_text(strip=True)
             repo_url = "https://github.com" + pop_repo["href"]
-            descrippo = match.article.find("div", class_="f6 color-text-secondary mt-1")
+            descrippo = match.article.find(
+                "div", class_="f6 color-text-secondary mt-1")
             if descrippo:
                 repo_description = descrippo.get_text(strip=True)
             else:
