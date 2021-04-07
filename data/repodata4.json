@@ -1,0 +1,887 @@
+[
+    {
+        "rank": 1,
+        "username": "knutwurst",
+        "repositoryName": "Marlin-2-0-x-Anycubic-i3-MEGA-S",
+        "url": "https://github.com/knutwurst/Marlin-2-0-x-Anycubic-i3-MEGA-S",
+        "description": "Marlin 2.0.x Version for Anycubic i3 MEGA M/S/X with Anycubic TFT or the \"new\" DGUS Clone TFT - Now also with BLTouch!",
+        "language": "C++",
+        "languageColor": "#f34b7d",
+        "totalStars": 187,
+        "forks": 47,
+        "starsSince": 1,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "knutwurst",
+                "url": "https://github.com/knutwurst",
+                "avatar": "https://avatars.githubusercontent.com/u/36196269?s=40&v=4"
+            },
+            {
+                "username": "bodeme",
+                "url": "https://github.com/bodeme",
+                "avatar": "https://avatars.githubusercontent.com/u/857204?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 2,
+        "username": "jens-maus",
+        "repositoryName": "RaspberryMatic",
+        "url": "https://github.com/jens-maus/RaspberryMatic",
+        "description": "\ud83c\udfe0A lightweight, buildroot-based Linux operating system alternative for your CCU3, ELV-Charly or for running your IoT \"HomeMatic CCU\" as a virtual appliance (using ESXi, Proxmox, VirtualBox, Docker/OCI, Kubernetes/K8s, Home Assistant, etc.) or on your own RaspberryPi, Tinkerboard, etc. SBC devices...",
+        "language": "JavaScript",
+        "languageColor": "#f1e05a",
+        "totalStars": 817,
+        "forks": 110,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "jens-maus",
+                "url": "https://github.com/jens-maus",
+                "avatar": "https://avatars.githubusercontent.com/u/5887769?s=40&v=4"
+            },
+            {
+                "username": "jp112sdl",
+                "url": "https://github.com/jp112sdl",
+                "avatar": "https://avatars.githubusercontent.com/u/18190139?s=40&v=4"
+            },
+            {
+                "username": "angelnu",
+                "url": "https://github.com/angelnu",
+                "avatar": "https://avatars.githubusercontent.com/u/4406403?s=40&v=4"
+            },
+            {
+                "username": "HMside",
+                "url": "https://github.com/HMside",
+                "avatar": "https://avatars.githubusercontent.com/u/13312068?s=40&v=4"
+            },
+            {
+                "username": "theimo1221",
+                "url": "https://github.com/theimo1221",
+                "avatar": "https://avatars.githubusercontent.com/u/20605452?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 3,
+        "username": "mediathekview",
+        "repositoryName": "mediathekviewweb",
+        "url": "https://github.com/mediathekview/mediathekviewweb",
+        "description": "Eine Weboberfl\u00e4che als Alternative zum Java-Client",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 553,
+        "forks": 43,
+        "starsSince": 1,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "bagbag",
+                "url": "https://github.com/bagbag",
+                "avatar": "https://avatars.githubusercontent.com/u/4116942?s=40&v=4"
+            },
+            {
+                "username": "Wikinaut",
+                "url": "https://github.com/Wikinaut",
+                "avatar": "https://avatars.githubusercontent.com/u/1151915?s=40&v=4"
+            },
+            {
+                "username": "casaper",
+                "url": "https://github.com/casaper",
+                "avatar": "https://avatars.githubusercontent.com/u/5822656?s=40&v=4"
+            },
+            {
+                "username": "coveritytest",
+                "url": "https://github.com/coveritytest",
+                "avatar": "https://avatars.githubusercontent.com/u/7345039?s=40&v=4"
+            },
+            {
+                "username": "simon04",
+                "url": "https://github.com/simon04",
+                "avatar": "https://avatars.githubusercontent.com/u/782446?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 4,
+        "username": "OfficeDev",
+        "repositoryName": "office-js-docs-reference.de-de",
+        "url": "https://github.com/OfficeDev/office-js-docs-reference.de-de",
+        "description": "Onboarding Office JS docs reference for German",
+        "language": "PowerShell",
+        "languageColor": "#012456",
+        "totalStars": 2,
+        "forks": 2,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "olprod",
+                "url": "https://github.com/olprod",
+                "avatar": "https://avatars.githubusercontent.com/u/16075726?s=40&v=4"
+            },
+            {
+                "username": "OfficeGSX",
+                "url": "https://github.com/OfficeGSX",
+                "avatar": "https://avatars.githubusercontent.com/u/16706698?s=40&v=4"
+            },
+            {
+                "username": "VSC-Service-Account",
+                "url": "https://github.com/VSC-Service-Account",
+                "avatar": "https://avatars.githubusercontent.com/u/20963210?s=40&v=4"
+            },
+            {
+                "username": "olprod2",
+                "url": "https://github.com/olprod2",
+                "avatar": "https://avatars.githubusercontent.com/u/39825074?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 5,
+        "username": "rdmtc",
+        "repositoryName": "RedMatic",
+        "url": "https://github.com/rdmtc/RedMatic",
+        "description": "Node-RED packaged as Addon for the Homematic CCU3 and RaspberryMatic\ud83e\udd39\u200d\u2642\ufe0f",
+        "language": "HTML",
+        "languageColor": "#e34c26",
+        "totalStars": 412,
+        "forks": 26,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "hobbyquaker",
+                "url": "https://github.com/hobbyquaker",
+                "avatar": "https://avatars.githubusercontent.com/u/2503307?s=40&v=4"
+            },
+            {
+                "username": "psi-4ward",
+                "url": "https://github.com/psi-4ward",
+                "avatar": "https://avatars.githubusercontent.com/u/1191572?s=40&v=4"
+            },
+            {
+                "username": "Hypnos3",
+                "url": "https://github.com/Hypnos3",
+                "avatar": "https://avatars.githubusercontent.com/u/12692680?s=40&v=4"
+            },
+            {
+                "username": "wernersv",
+                "url": "https://github.com/wernersv",
+                "avatar": "https://avatars.githubusercontent.com/u/22543570?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 6,
+        "username": "VoronDesign",
+        "repositoryName": "Voron-0",
+        "url": "https://github.com/VoronDesign/Voron-0",
+        "description": "Voron 0 CoreXY 3D Printer design",
+        "language": null,
+        "languageColor": null,
+        "totalStars": 187,
+        "forks": 75,
+        "starsSince": 2,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "nemgrea",
+                "url": "https://github.com/nemgrea",
+                "avatar": "https://avatars.githubusercontent.com/u/52015997?s=40&v=4"
+            },
+            {
+                "username": "FHeilmann",
+                "url": "https://github.com/FHeilmann",
+                "avatar": "https://avatars.githubusercontent.com/u/4352664?s=40&v=4"
+            },
+            {
+                "username": "john--",
+                "url": "https://github.com/john--",
+                "avatar": "https://avatars.githubusercontent.com/u/6664180?s=40&v=4"
+            },
+            {
+                "username": "doowrednu",
+                "url": "https://github.com/doowrednu",
+                "avatar": "https://avatars.githubusercontent.com/u/40931727?s=40&v=4"
+            },
+            {
+                "username": "meteyou",
+                "url": "https://github.com/meteyou",
+                "avatar": "https://avatars.githubusercontent.com/u/8167632?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 7,
+        "username": "sifive",
+        "repositoryName": "benchmark-dhrystone",
+        "url": "https://github.com/sifive/benchmark-dhrystone",
+        "description": "\"DHRYSTONE\" Benchmark Program by Reinhold P. Weicker",
+        "language": "C",
+        "languageColor": "#555555",
+        "totalStars": 17,
+        "forks": 2,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "bsousi5",
+                "url": "https://github.com/bsousi5",
+                "avatar": "https://avatars.githubusercontent.com/u/35707615?s=40&v=4"
+            },
+            {
+                "username": "nategraff-sifive",
+                "url": "https://github.com/nategraff-sifive",
+                "avatar": "https://avatars.githubusercontent.com/u/40771426?s=40&v=4"
+            },
+            {
+                "username": "reclusejack",
+                "url": "https://github.com/reclusejack",
+                "avatar": "https://avatars.githubusercontent.com/u/19731768?s=40&v=4"
+            },
+            {
+                "username": "jstraus59",
+                "url": "https://github.com/jstraus59",
+                "avatar": "https://avatars.githubusercontent.com/u/10142791?s=40&v=4"
+            },
+            {
+                "username": "palmer-dabbelt",
+                "url": "https://github.com/palmer-dabbelt",
+                "avatar": "https://avatars.githubusercontent.com/u/1383006?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 8,
+        "username": "snaptec",
+        "repositoryName": "openWB",
+        "url": "https://github.com/snaptec/openWB",
+        "description": "openWB - die modulare Wallbox",
+        "language": "PHP",
+        "languageColor": "#4F5D95",
+        "totalStars": 132,
+        "forks": 101,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "snaptec",
+                "url": "https://github.com/snaptec",
+                "avatar": "https://avatars.githubusercontent.com/u/36848507?s=40&v=4"
+            },
+            {
+                "username": "benderl",
+                "url": "https://github.com/benderl",
+                "avatar": "https://avatars.githubusercontent.com/u/7837691?s=40&v=4"
+            },
+            {
+                "username": "MiOrt",
+                "url": "https://github.com/MiOrt",
+                "avatar": "https://avatars.githubusercontent.com/u/31467468?s=40&v=4"
+            },
+            {
+                "username": "dj3mu",
+                "url": "https://github.com/dj3mu",
+                "avatar": "https://avatars.githubusercontent.com/u/41773089?s=40&v=4"
+            },
+            {
+                "username": "DetMoerk",
+                "url": "https://github.com/DetMoerk",
+                "avatar": "https://avatars.githubusercontent.com/u/76627235?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 9,
+        "username": "jnk22",
+        "repositoryName": "kodinerds-iptv",
+        "url": "https://github.com/jnk22/kodinerds-iptv",
+        "description": "Kodinerds IPTV - Freie und legale Streams f\u00fcr Kodi",
+        "language": "Python",
+        "languageColor": "#3572A5",
+        "totalStars": 323,
+        "forks": 104,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "jnk22",
+                "url": "https://github.com/jnk22",
+                "avatar": "https://avatars.githubusercontent.com/u/24391401?s=40&v=4"
+            },
+            {
+                "username": "schelmo",
+                "url": "https://github.com/schelmo",
+                "avatar": "https://avatars.githubusercontent.com/u/47602?s=40&v=4"
+            },
+            {
+                "username": "silberjohnny",
+                "url": "https://github.com/silberjohnny",
+                "avatar": "https://avatars.githubusercontent.com/u/72339328?s=40&v=4"
+            },
+            {
+                "username": "plata",
+                "url": "https://github.com/plata",
+                "avatar": "https://avatars.githubusercontent.com/u/3973260?s=40&v=4"
+            },
+            {
+                "username": "SkyBird1980",
+                "url": "https://github.com/SkyBird1980",
+                "avatar": "https://avatars.githubusercontent.com/u/4501443?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 10,
+        "username": "Clever",
+        "repositoryName": "launch-gen",
+        "url": "https://github.com/Clever/launch-gen",
+        "description": "Generate config package from launch YML file",
+        "language": "Go",
+        "languageColor": "#00ADD8",
+        "totalStars": null,
+        "forks": null,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "nathanleiby",
+                "url": "https://github.com/nathanleiby",
+                "avatar": "https://avatars.githubusercontent.com/u/102242?s=40&v=4"
+            },
+            {
+                "username": "johnhuangclever",
+                "url": "https://github.com/johnhuangclever",
+                "avatar": "https://avatars.githubusercontent.com/u/13126257?s=40&v=4"
+            },
+            {
+                "username": "mcab",
+                "url": "https://github.com/mcab",
+                "avatar": "https://avatars.githubusercontent.com/u/4522043?s=40&v=4"
+            },
+            {
+                "username": "rgarcia",
+                "url": "https://github.com/rgarcia",
+                "avatar": "https://avatars.githubusercontent.com/u/72655?s=40&v=4"
+            },
+            {
+                "username": "taylor-sutton",
+                "url": "https://github.com/taylor-sutton",
+                "avatar": "https://avatars.githubusercontent.com/u/53235026?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 11,
+        "username": "victorkifer",
+        "repositoryName": "clicker",
+        "url": "https://github.com/victorkifer/clicker",
+        "description": "Wireless Presenter for Android and iOS, supports Windows, Linux and OS X",
+        "language": null,
+        "languageColor": null,
+        "totalStars": 40,
+        "forks": 5,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "victorkifer",
+                "url": "https://github.com/victorkifer",
+                "avatar": "https://avatars.githubusercontent.com/u/5956780?s=40&v=4"
+            },
+            {
+                "username": "franckgaga",
+                "url": "https://github.com/franckgaga",
+                "avatar": "https://avatars.githubusercontent.com/u/34136215?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 12,
+        "username": "openucx",
+        "repositoryName": "ucx",
+        "url": "https://github.com/openucx/ucx",
+        "description": "Unified Communication X (mailing list -https://elist.ornl.gov/mailman/listinfo/ucx-group)",
+        "language": "C",
+        "languageColor": "#555555",
+        "totalStars": 479,
+        "forks": 214,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "yosefe",
+                "url": "https://github.com/yosefe",
+                "avatar": "https://avatars.githubusercontent.com/u/2255631?s=40&v=4"
+            },
+            {
+                "username": "dmitrygx",
+                "url": "https://github.com/dmitrygx",
+                "avatar": "https://avatars.githubusercontent.com/u/11650339?s=40&v=4"
+            },
+            {
+                "username": "evgeny-leksikov",
+                "url": "https://github.com/evgeny-leksikov",
+                "avatar": "https://avatars.githubusercontent.com/u/15216359?s=40&v=4"
+            },
+            {
+                "username": "brminich",
+                "url": "https://github.com/brminich",
+                "avatar": "https://avatars.githubusercontent.com/u/14221180?s=40&v=4"
+            },
+            {
+                "username": "shamisp",
+                "url": "https://github.com/shamisp",
+                "avatar": "https://avatars.githubusercontent.com/u/2236120?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 13,
+        "username": "freeCodeCamp",
+        "repositoryName": "boilerplate-project-exercisetracker",
+        "url": "https://github.com/freeCodeCamp/boilerplate-project-exercisetracker",
+        "description": "A boilerplate for a freeCodeCamp project.",
+        "language": "HTML",
+        "languageColor": "#e34c26",
+        "totalStars": 13,
+        "forks": 386,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "abhijeetps",
+                "url": "https://github.com/abhijeetps",
+                "avatar": "https://avatars.githubusercontent.com/u/20141002?s=40&v=4"
+            },
+            {
+                "username": "arturjzapater",
+                "url": "https://github.com/arturjzapater",
+                "avatar": "https://avatars.githubusercontent.com/u/43502485?s=40&v=4"
+            },
+            {
+                "username": "huyenltnguyen",
+                "url": "https://github.com/huyenltnguyen",
+                "avatar": "https://avatars.githubusercontent.com/u/25715018?s=40&v=4"
+            },
+            {
+                "username": "jeremies",
+                "url": "https://github.com/jeremies",
+                "avatar": "https://avatars.githubusercontent.com/u/18210819?s=40&v=4"
+            },
+            {
+                "username": "JosephLivengood",
+                "url": "https://github.com/JosephLivengood",
+                "avatar": "https://avatars.githubusercontent.com/u/13642392?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 14,
+        "username": "universam1",
+        "repositoryName": "iSpindel",
+        "url": "https://github.com/universam1/iSpindel",
+        "description": "electronic Hydrometer",
+        "language": "C++",
+        "languageColor": "#f34b7d",
+        "totalStars": 626,
+        "forks": 265,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "universam1",
+                "url": "https://github.com/universam1",
+                "avatar": "https://avatars.githubusercontent.com/u/10851289?s=40&v=4"
+            },
+            {
+                "username": "DottoreTozzi",
+                "url": "https://github.com/DottoreTozzi",
+                "avatar": "https://avatars.githubusercontent.com/u/25089732?s=40&v=4"
+            },
+            {
+                "username": "FernandoGarcia",
+                "url": "https://github.com/FernandoGarcia",
+                "avatar": "https://avatars.githubusercontent.com/u/2778501?s=40&v=4"
+            },
+            {
+                "username": "MarcoCLA",
+                "url": "https://github.com/MarcoCLA",
+                "avatar": "https://avatars.githubusercontent.com/u/11422360?s=40&v=4"
+            },
+            {
+                "username": "cwilling",
+                "url": "https://github.com/cwilling",
+                "avatar": "https://avatars.githubusercontent.com/u/2267182?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 15,
+        "username": "ChimeraCoder",
+        "repositoryName": "tokenbucket",
+        "url": "https://github.com/ChimeraCoder/tokenbucket",
+        "description": "A Go implementation of the token bucket scheduling algorithm",
+        "language": "Go",
+        "languageColor": "#00ADD8",
+        "totalStars": 36,
+        "forks": 4,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "ChimeraCoder",
+                "url": "https://github.com/ChimeraCoder",
+                "avatar": "https://avatars.githubusercontent.com/u/376414?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 16,
+        "username": "ChimeraCoder",
+        "repositoryName": "anaconda",
+        "url": "https://github.com/ChimeraCoder/anaconda",
+        "description": "A Go client library for the Twitter 1.1 API",
+        "language": "Go",
+        "languageColor": "#00ADD8",
+        "totalStars": 1081,
+        "forks": 251,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "ChimeraCoder",
+                "url": "https://github.com/ChimeraCoder",
+                "avatar": "https://avatars.githubusercontent.com/u/376414?s=40&v=4"
+            },
+            {
+                "username": "azr",
+                "url": "https://github.com/azr",
+                "avatar": "https://avatars.githubusercontent.com/u/1024852?s=40&v=4"
+            },
+            {
+                "username": "muesli",
+                "url": "https://github.com/muesli",
+                "avatar": "https://avatars.githubusercontent.com/u/146378?s=40&v=4"
+            },
+            {
+                "username": "joeblubaugh",
+                "url": "https://github.com/joeblubaugh",
+                "avatar": "https://avatars.githubusercontent.com/u/1951900?s=40&v=4"
+            },
+            {
+                "username": "cention-mujibur-rahman",
+                "url": "https://github.com/cention-mujibur-rahman",
+                "avatar": "https://avatars.githubusercontent.com/u/1875512?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 17,
+        "username": "Zettelkasten-Team",
+        "repositoryName": "Zettelkasten",
+        "url": "https://github.com/Zettelkasten-Team/Zettelkasten",
+        "description": "Zettelkasten-Developer-Builds",
+        "language": "Java",
+        "languageColor": "#b07219",
+        "totalStars": 343,
+        "forks": 50,
+        "starsSince": 1,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "sjPlot",
+                "url": "https://github.com/sjPlot",
+                "avatar": "https://avatars.githubusercontent.com/u/4901179?s=40&v=4"
+            },
+            {
+                "username": "Elmari",
+                "url": "https://github.com/Elmari",
+                "avatar": "https://avatars.githubusercontent.com/u/1381848?s=40&v=4"
+            },
+            {
+                "username": "apps/transifex-integration",
+                "url": "https://github.com/apps/transifex-integration",
+                "avatar": "https://avatars.githubusercontent.com/in/18568?s=40&v=4"
+            },
+            {
+                "username": "heussd",
+                "url": "https://github.com/heussd",
+                "avatar": "https://avatars.githubusercontent.com/u/887095?s=40&v=4"
+            },
+            {
+                "username": "RalfBarkow",
+                "url": "https://github.com/RalfBarkow",
+                "avatar": "https://avatars.githubusercontent.com/u/1205477?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 18,
+        "username": "kancotdiq",
+        "repositoryName": "ipcs",
+        "url": "https://github.com/kancotdiq/ipcs",
+        "description": "IPCam-Scanner Versi 2",
+        "language": "Python",
+        "languageColor": "#3572A5",
+        "totalStars": 197,
+        "forks": 151,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "kancotdiq",
+                "url": "https://github.com/kancotdiq",
+                "avatar": "https://avatars.githubusercontent.com/u/39845384?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 19,
+        "username": "RPiList",
+        "repositoryName": "specials",
+        "url": "https://github.com/RPiList/specials",
+        "description": "Schutz vor Fakeshops, Werbung, Tracking und anderen Angriffen aus dem Internet",
+        "language": "Shell",
+        "languageColor": "#89e051",
+        "totalStars": 562,
+        "forks": 139,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "RPiList",
+                "url": "https://github.com/RPiList",
+                "avatar": "https://avatars.githubusercontent.com/u/56664851?s=40&v=4"
+            },
+            {
+                "username": "BulldozerPete",
+                "url": "https://github.com/BulldozerPete",
+                "avatar": "https://avatars.githubusercontent.com/u/61943052?s=40&v=4"
+            },
+            {
+                "username": "Zelo72",
+                "url": "https://github.com/Zelo72",
+                "avatar": "https://avatars.githubusercontent.com/u/62211544?s=40&v=4"
+            },
+            {
+                "username": "joestr",
+                "url": "https://github.com/joestr",
+                "avatar": "https://avatars.githubusercontent.com/u/20691668?s=40&v=4"
+            },
+            {
+                "username": "MoweME",
+                "url": "https://github.com/MoweME",
+                "avatar": "https://avatars.githubusercontent.com/u/20139023?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 20,
+        "username": "libunwind",
+        "repositoryName": "libunwind",
+        "url": "https://github.com/libunwind/libunwind",
+        "description": "libunwind official github repo",
+        "language": "C",
+        "languageColor": "#555555",
+        "totalStars": 456,
+        "forks": 135,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "rantala",
+                "url": "https://github.com/rantala",
+                "avatar": "https://avatars.githubusercontent.com/u/65591?s=40&v=4"
+            },
+            {
+                "username": "adsharma",
+                "url": "https://github.com/adsharma",
+                "avatar": "https://avatars.githubusercontent.com/u/658691?s=40&v=4"
+            },
+            {
+                "username": "unkadoug",
+                "url": "https://github.com/unkadoug",
+                "avatar": "https://avatars.githubusercontent.com/u/24907337?s=40&v=4"
+            },
+            {
+                "username": "kostikbel",
+                "url": "https://github.com/kostikbel",
+                "avatar": "https://avatars.githubusercontent.com/u/2607252?s=40&v=4"
+            },
+            {
+                "username": "zwelch-mgc",
+                "url": "https://github.com/zwelch-mgc",
+                "avatar": "https://avatars.githubusercontent.com/u/3936990?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 21,
+        "username": "KiyoshiHirayama",
+        "repositoryName": "misc",
+        "url": "https://github.com/KiyoshiHirayama/misc",
+        "description": null,
+        "language": null,
+        "languageColor": null,
+        "totalStars": 1,
+        "forks": 135,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "KiyoshiHirayama",
+                "url": "https://github.com/KiyoshiHirayama",
+                "avatar": "https://avatars.githubusercontent.com/u/1856783?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 22,
+        "username": "falloutdurham",
+        "repositoryName": "beginners-pytorch-deep-learning",
+        "url": "https://github.com/falloutdurham/beginners-pytorch-deep-learning",
+        "description": "Repository for scripts and notebooks from the book: Programming PyTorch for Deep Learning",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 202,
+        "forks": 127,
+        "starsSince": 1,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "falloutdurham",
+                "url": "https://github.com/falloutdurham",
+                "avatar": "https://avatars.githubusercontent.com/u/97861?s=40&v=4"
+            },
+            {
+                "username": "MarcusFra",
+                "url": "https://github.com/MarcusFra",
+                "avatar": "https://avatars.githubusercontent.com/u/21024809?s=40&v=4"
+            },
+            {
+                "username": "NickLalo",
+                "url": "https://github.com/NickLalo",
+                "avatar": "https://avatars.githubusercontent.com/u/36871227?s=40&v=4"
+            },
+            {
+                "username": "pavelanni",
+                "url": "https://github.com/pavelanni",
+                "avatar": "https://avatars.githubusercontent.com/u/579418?s=40&v=4"
+            },
+            {
+                "username": "rcpsilva",
+                "url": "https://github.com/rcpsilva",
+                "avatar": "https://avatars.githubusercontent.com/u/15973642?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 23,
+        "username": "rphl",
+        "repositoryName": "corona-widget",
+        "url": "https://github.com/rphl/corona-widget",
+        "description": "COVID-19 Inzidenz-Widget f\u00fcr iOS innerhalb Deutschlands\ud83c\udde9\ud83c\uddea(Kreis/Stadt + Bundesland + Trend)",
+        "language": "JavaScript",
+        "languageColor": "#f1e05a",
+        "totalStars": 452,
+        "forks": 80,
+        "starsSince": 2,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "rphl",
+                "url": "https://github.com/rphl",
+                "avatar": "https://avatars.githubusercontent.com/u/97642?s=40&v=4"
+            },
+            {
+                "username": "TiborAdk",
+                "url": "https://github.com/TiborAdk",
+                "avatar": "https://avatars.githubusercontent.com/u/33345266?s=40&v=4"
+            },
+            {
+                "username": "TheSpirit",
+                "url": "https://github.com/TheSpirit",
+                "avatar": "https://avatars.githubusercontent.com/u/6056918?s=40&v=4"
+            },
+            {
+                "username": "gliden",
+                "url": "https://github.com/gliden",
+                "avatar": "https://avatars.githubusercontent.com/u/19516505?s=40&v=4"
+            },
+            {
+                "username": "pasrom",
+                "url": "https://github.com/pasrom",
+                "avatar": "https://avatars.githubusercontent.com/u/32713472?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 24,
+        "username": "zhaobozhen",
+        "repositoryName": "LibChecker",
+        "url": "https://github.com/zhaobozhen/LibChecker",
+        "description": "An app to view libraries used in apps in your device.",
+        "language": "Kotlin",
+        "languageColor": "#F18E33",
+        "totalStars": 469,
+        "forks": 43,
+        "starsSince": 7,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "zhaobozhen",
+                "url": "https://github.com/zhaobozhen",
+                "avatar": "https://avatars.githubusercontent.com/u/25247117?s=40&v=4"
+            },
+            {
+                "username": "bigQY",
+                "url": "https://github.com/bigQY",
+                "avatar": "https://avatars.githubusercontent.com/u/52437374?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 25,
+        "username": "fave77",
+        "repositoryName": "pbchess",
+        "url": "https://github.com/fave77/pbchess",
+        "description": "An open-sourced free online chess platform",
+        "language": "JavaScript",
+        "languageColor": "#f1e05a",
+        "totalStars": 19,
+        "forks": 44,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "fave77",
+                "url": "https://github.com/fave77",
+                "avatar": "https://avatars.githubusercontent.com/u/32795458?s=40&v=4"
+            },
+            {
+                "username": "Coder-Srinivas",
+                "url": "https://github.com/Coder-Srinivas",
+                "avatar": "https://avatars.githubusercontent.com/u/59244289?s=40&v=4"
+            },
+            {
+                "username": "Subhra264",
+                "url": "https://github.com/Subhra264",
+                "avatar": "https://avatars.githubusercontent.com/u/59690052?s=40&v=4"
+            },
+            {
+                "username": "snyk-bot",
+                "url": "https://github.com/snyk-bot",
+                "avatar": "https://avatars.githubusercontent.com/u/19733683?s=40&v=4"
+            },
+            {
+                "username": "OmkarPh",
+                "url": "https://github.com/OmkarPh",
+                "avatar": "https://avatars.githubusercontent.com/u/48476025?s=40&v=4"
+            }
+        ]
+    }
+]

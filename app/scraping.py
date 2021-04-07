@@ -79,7 +79,6 @@ def scraping_repositories(
         # language and color
         progr_language = match.find("span", itemprop="programmingLanguage")
         if progr_language:
-            # lang_soup = match.find("span", itemprop="programmingLanguage")
             language = progr_language.get_text(strip=True)
             lang_color_tag = match.find("span", class_="repo-language-color")
             lang_color = lang_color_tag["style"].split()[-1]
@@ -89,28 +88,48 @@ def scraping_repositories(
         stars_built_section = match.div.findNextSibling("div")
 
         # total stars:
-        raw_total_stars = stars_built_section.a.get_text(strip=True)
-        if "," in raw_total_stars:
-            raw_total_stars = raw_total_stars.replace(",", "")
-        total_stars = int(raw_total_stars)
+        if stars_built_section.a:
+            raw_total_stars = stars_built_section.a.get_text(strip=True)
+            if "," in raw_total_stars:
+                raw_total_stars = raw_total_stars.replace(",", "")
+        if raw_total_stars:
+            try:
+                total_stars = int(raw_total_stars)
+            except ValueError as VE:
+                print(VE)
+        else:
+            total_stars = None
 
         # forks
-        raw_forks = stars_built_section.a.findNextSibling(
-            "a").get_text(strip=True)
-        if "," in raw_forks:
-            raw_forks = raw_forks.replace(",", "")
-        forks = int(raw_forks)
+        if stars_built_section.a.findNextSibling("a"):
+            raw_forks = stars_built_section.a.findNextSibling("a").get_text(strip=True)
+            if "," in raw_forks:
+                raw_forks = raw_forks.replace(",", "")
+        if raw_forks:
+            try:
+                forks = int(raw_forks)
+            except ValueError as VE:
+                print(VE)
+        else:
+            forks = None
 
         # stars in period
-        raw_stars_since = (
-            stars_built_section.find(
-                "span", class_="d-inline-block float-sm-right")
-            .get_text(strip=True)
-            .split()[0]
-        )
-        if "," in raw_stars_since:
-            raw_stars_since = raw_stars_since.replace(",", "")
-        stars_since = int(raw_stars_since)
+        if stars_built_section.find("span", class_="d-inline-block float-sm-right"):
+            raw_stars_since = (
+                stars_built_section.find(
+                    "span", class_="d-inline-block float-sm-right")
+                .get_text(strip=True)
+                .split()[0]
+            )
+            if "," in raw_stars_since:
+                raw_stars_since = raw_stars_since.replace(",", "")
+        if raw_stars_since:
+            try:
+                stars_since = int(raw_stars_since)
+            except ValueError as VE:
+                print(VE)
+        else:
+            stars_since = None
 
         # builtby
         built_section = stars_built_section.find(
@@ -160,29 +179,26 @@ def scraping_developers(matches: bs4.element.ResultSet, since: str) -> typing.Li
         username = rel_url.strip("/")
 
         # developers full name
-        name = match.h1.a.get_text(strip=True)
+        name = match.h1.a.get_text(strip=True) if match.h1.a else None
 
         # avatar url of developer
-        if match.img:
-            avatar = match.img["src"]
-        else:
-            avatar = None
+        avatar = match.img["src"] if match.img else None
 
         # data about developers popular repo:
         if match.article:
+            raw_description = match.article.find("div", class_="f6 color-text-secondary mt-1")
+            repo_description = raw_description.get_text(strip=True) if raw_description else None
             pop_repo = match.article.h1.a
-            repo_name = pop_repo.get_text(strip=True)
-            repo_url = "https://github.com" + pop_repo["href"]
-            descrippo = match.article.find(
-                "div", class_="f6 color-text-secondary mt-1")
-            if descrippo:
-                repo_description = descrippo.get_text(strip=True)
+            if pop_repo:
+                repo_name = pop_repo.get_text(strip=True)
+                repo_url = "https://github.com" + pop_repo["href"]
             else:
-                repo_description = None
+                repo_name = None
+                repo_url = None
         else:
+            repo_description = None
             repo_name = None
             repo_url = None
-            repo_description = None
 
         one_developer = {
             "rank": rank + 1,

@@ -1,0 +1,982 @@
+[
+    {
+        "rank": 1,
+        "username": "benawad",
+        "repositoryName": "dogehouse",
+        "url": "https://github.com/benawad/dogehouse",
+        "description": "Taking voice conversations to the moon\ud83d\ude80",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 6692,
+        "forks": 999,
+        "starsSince": 65,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "benawad",
+                "url": "https://github.com/benawad",
+                "avatar": "https://avatars.githubusercontent.com/u/7872329?s=40&v=4"
+            },
+            {
+                "username": "nadirabbas",
+                "url": "https://github.com/nadirabbas",
+                "avatar": "https://avatars.githubusercontent.com/u/38838675?s=40&v=4"
+            },
+            {
+                "username": "amitojsingh366",
+                "url": "https://github.com/amitojsingh366",
+                "avatar": "https://avatars.githubusercontent.com/u/35400192?s=40&v=4"
+            },
+            {
+                "username": "ityonemo",
+                "url": "https://github.com/ityonemo",
+                "avatar": "https://avatars.githubusercontent.com/u/1219073?s=40&v=4"
+            },
+            {
+                "username": "overlisted",
+                "url": "https://github.com/overlisted",
+                "avatar": "https://avatars.githubusercontent.com/u/66535446?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 2,
+        "username": "angular",
+        "repositoryName": "angular-cli",
+        "url": "https://github.com/angular/angular-cli",
+        "description": "CLI tool for Angular",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 24373,
+        "forks": 10692,
+        "starsSince": 0,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "renovate-bot",
+                "url": "https://github.com/renovate-bot",
+                "avatar": "https://avatars.githubusercontent.com/u/25180681?s=40&v=4"
+            },
+            {
+                "username": "clydin",
+                "url": "https://github.com/clydin",
+                "avatar": "https://avatars.githubusercontent.com/u/19598772?s=40&v=4"
+            },
+            {
+                "username": "filipesilva",
+                "url": "https://github.com/filipesilva",
+                "avatar": "https://avatars.githubusercontent.com/u/4172079?s=40&v=4"
+            },
+            {
+                "username": "hansl",
+                "url": "https://github.com/hansl",
+                "avatar": "https://avatars.githubusercontent.com/u/681969?s=40&v=4"
+            },
+            {
+                "username": "Brocco",
+                "url": "https://github.com/Brocco",
+                "avatar": "https://avatars.githubusercontent.com/u/1565117?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 3,
+        "username": "liquity",
+        "repositoryName": "liquity",
+        "url": "https://github.com/liquity/liquity",
+        "description": "Decentralized Borrowing Protocol",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 35,
+        "forks": 23,
+        "starsSince": 1,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "danielattilasimon",
+                "url": "https://github.com/danielattilasimon",
+                "avatar": "https://avatars.githubusercontent.com/u/60874270?s=40&v=4"
+            },
+            {
+                "username": "edmulraney",
+                "url": "https://github.com/edmulraney",
+                "avatar": "https://avatars.githubusercontent.com/u/5167260?s=40&v=4"
+            },
+            {
+                "username": "bingen",
+                "url": "https://github.com/bingen",
+                "avatar": "https://avatars.githubusercontent.com/u/701095?s=40&v=4"
+            },
+            {
+                "username": "RickGriff",
+                "url": "https://github.com/RickGriff",
+                "avatar": "https://avatars.githubusercontent.com/u/32799176?s=40&v=4"
+            },
+            {
+                "username": "ricktobacco",
+                "url": "https://github.com/ricktobacco",
+                "avatar": "https://avatars.githubusercontent.com/u/17416373?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 4,
+        "username": "chakra-ui",
+        "repositoryName": "chakra-ui",
+        "url": "https://github.com/chakra-ui/chakra-ui",
+        "description": "\u26a1\ufe0fSimple, Modular & Accessible UI Components for your React Applications",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 16735,
+        "forks": 1322,
+        "starsSince": 54,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "segunadebayo",
+                "url": "https://github.com/segunadebayo",
+                "avatar": "https://avatars.githubusercontent.com/u/6916170?s=40&v=4"
+            },
+            {
+                "username": "with-heart",
+                "url": "https://github.com/with-heart",
+                "avatar": "https://avatars.githubusercontent.com/u/1954752?s=40&v=4"
+            },
+            {
+                "username": "ljosberinn",
+                "url": "https://github.com/ljosberinn",
+                "avatar": "https://avatars.githubusercontent.com/u/29307652?s=40&v=4"
+            },
+            {
+                "username": "TimKolberger",
+                "url": "https://github.com/TimKolberger",
+                "avatar": "https://avatars.githubusercontent.com/u/16899513?s=40&v=4"
+            },
+            {
+                "username": "apps/allcontributors",
+                "url": "https://github.com/apps/allcontributors",
+                "avatar": "https://avatars.githubusercontent.com/in/23186?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 5,
+        "username": "appsmithorg",
+        "repositoryName": "appsmith",
+        "url": "https://github.com/appsmithorg/appsmith",
+        "description": "Build beautiful admin panels, dashboards, and CRUD apps that connect to any API or database. Try it at:https://app.appsmith.comOpen source and self-hosting friendly.",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 3852,
+        "forks": 318,
+        "starsSince": 323,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "mohanarpit",
+                "url": "https://github.com/mohanarpit",
+                "avatar": "https://avatars.githubusercontent.com/u/458946?s=40&v=4"
+            },
+            {
+                "username": "Nikhil-Nandagopal",
+                "url": "https://github.com/Nikhil-Nandagopal",
+                "avatar": "https://avatars.githubusercontent.com/u/3897254?s=40&v=4"
+            },
+            {
+                "username": "hetunandu",
+                "url": "https://github.com/hetunandu",
+                "avatar": "https://avatars.githubusercontent.com/u/12022471?s=40&v=4"
+            },
+            {
+                "username": "trishaanand",
+                "url": "https://github.com/trishaanand",
+                "avatar": "https://avatars.githubusercontent.com/u/8403079?s=40&v=4"
+            },
+            {
+                "username": "riodeuno",
+                "url": "https://github.com/riodeuno",
+                "avatar": "https://avatars.githubusercontent.com/u/103687?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 6,
+        "username": "supabase",
+        "repositoryName": "ui",
+        "url": "https://github.com/supabase/ui",
+        "description": "Supabase UI Library",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 236,
+        "forks": 25,
+        "starsSince": 41,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "MildTomato",
+                "url": "https://github.com/MildTomato",
+                "avatar": "https://avatars.githubusercontent.com/u/8291514?s=40&v=4"
+            },
+            {
+                "username": "thorwebdev",
+                "url": "https://github.com/thorwebdev",
+                "avatar": "https://avatars.githubusercontent.com/u/5748289?s=40&v=4"
+            },
+            {
+                "username": "phamhieu",
+                "url": "https://github.com/phamhieu",
+                "avatar": "https://avatars.githubusercontent.com/u/689843?s=40&v=4"
+            },
+            {
+                "username": "mrkldshv",
+                "url": "https://github.com/mrkldshv",
+                "avatar": "https://avatars.githubusercontent.com/u/47859603?s=40&v=4"
+            },
+            {
+                "username": "kiwicopple",
+                "url": "https://github.com/kiwicopple",
+                "avatar": "https://avatars.githubusercontent.com/u/10214025?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 7,
+        "username": "foambubble",
+        "repositoryName": "foam",
+        "url": "https://github.com/foambubble/foam",
+        "description": "A personal knowledge management and sharing system for VSCode",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 9507,
+        "forks": 377,
+        "starsSince": 18,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "jevakallio",
+                "url": "https://github.com/jevakallio",
+                "avatar": "https://avatars.githubusercontent.com/u/1203949?s=40&v=4"
+            },
+            {
+                "username": "riccardoferretti",
+                "url": "https://github.com/riccardoferretti",
+                "avatar": "https://avatars.githubusercontent.com/u/457005?s=40&v=4"
+            },
+            {
+                "username": "apps/allcontributors",
+                "url": "https://github.com/apps/allcontributors",
+                "avatar": "https://avatars.githubusercontent.com/in/23186?s=40&v=4"
+            },
+            {
+                "username": "jmg-duarte",
+                "url": "https://github.com/jmg-duarte",
+                "avatar": "https://avatars.githubusercontent.com/u/15343819?s=40&v=4"
+            },
+            {
+                "username": "anku255",
+                "url": "https://github.com/anku255",
+                "avatar": "https://avatars.githubusercontent.com/u/22813027?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 8,
+        "username": "FMS-Cat",
+        "repositoryName": "condition",
+        "url": "https://github.com/FMS-Cat/condition",
+        "description": "A 64KB WebGL Intro. Appeared in Revision 2021, PC 64KB Intro Compo",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 246,
+        "forks": 7,
+        "starsSince": 152,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "FMS-Cat",
+                "url": "https://github.com/FMS-Cat",
+                "avatar": "https://avatars.githubusercontent.com/u/7824814?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 9,
+        "username": "vscode-icons",
+        "repositoryName": "vscode-icons",
+        "url": "https://github.com/vscode-icons/vscode-icons",
+        "description": "Icons for Visual Studio Code",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 2827,
+        "forks": 587,
+        "starsSince": 5,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "robertohuertasm",
+                "url": "https://github.com/robertohuertasm",
+                "avatar": "https://avatars.githubusercontent.com/u/696981?s=40&v=4"
+            },
+            {
+                "username": "JimiC",
+                "url": "https://github.com/JimiC",
+                "avatar": "https://avatars.githubusercontent.com/u/1716442?s=40&v=4"
+            },
+            {
+                "username": "jens1o",
+                "url": "https://github.com/jens1o",
+                "avatar": "https://avatars.githubusercontent.com/u/11234139?s=40&v=4"
+            },
+            {
+                "username": "KingDarBoja",
+                "url": "https://github.com/KingDarBoja",
+                "avatar": "https://avatars.githubusercontent.com/u/30560560?s=40&v=4"
+            },
+            {
+                "username": "Gama11",
+                "url": "https://github.com/Gama11",
+                "avatar": "https://avatars.githubusercontent.com/u/2620907?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 10,
+        "username": "OhMyGuus",
+        "repositoryName": "BetterCrewLink",
+        "url": "https://github.com/OhMyGuus/BetterCrewLink",
+        "description": "Free, open, Among Us Proximity Chat",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 217,
+        "forks": 37,
+        "starsSince": 6,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "OhMyGuus",
+                "url": "https://github.com/OhMyGuus",
+                "avatar": "https://avatars.githubusercontent.com/u/12090928?s=40&v=4"
+            },
+            {
+                "username": "MatadorProBr",
+                "url": "https://github.com/MatadorProBr",
+                "avatar": "https://avatars.githubusercontent.com/u/71022656?s=40&v=4"
+            },
+            {
+                "username": "Ornamus",
+                "url": "https://github.com/Ornamus",
+                "avatar": "https://avatars.githubusercontent.com/u/4063272?s=40&v=4"
+            },
+            {
+                "username": "ottomated",
+                "url": "https://github.com/ottomated",
+                "avatar": "https://avatars.githubusercontent.com/u/31470743?s=40&v=4"
+            },
+            {
+                "username": "kszczek",
+                "url": "https://github.com/kszczek",
+                "avatar": "https://avatars.githubusercontent.com/u/41654542?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 11,
+        "username": "codex-team",
+        "repositoryName": "editor.js",
+        "url": "https://github.com/codex-team/editor.js",
+        "description": "A block-styled editor with clean JSON output",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 15022,
+        "forks": 1130,
+        "starsSince": 20,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "khaydarov",
+                "url": "https://github.com/khaydarov",
+                "avatar": "https://avatars.githubusercontent.com/u/6507765?s=40&v=4"
+            },
+            {
+                "username": "gohabereg",
+                "url": "https://github.com/gohabereg",
+                "avatar": "https://avatars.githubusercontent.com/u/23050529?s=40&v=4"
+            },
+            {
+                "username": "neSpecc",
+                "url": "https://github.com/neSpecc",
+                "avatar": "https://avatars.githubusercontent.com/u/3684889?s=40&v=4"
+            },
+            {
+                "username": "talyguryn",
+                "url": "https://github.com/talyguryn",
+                "avatar": "https://avatars.githubusercontent.com/u/15259299?s=40&v=4"
+            },
+            {
+                "username": "hata6502",
+                "url": "https://github.com/hata6502",
+                "avatar": "https://avatars.githubusercontent.com/u/7702653?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 12,
+        "username": "stream-labs",
+        "repositoryName": "streamlabs-obs",
+        "url": "https://github.com/stream-labs/streamlabs-obs",
+        "description": "Free and open source streaming software built on OBS and Electron.",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 2681,
+        "forks": 451,
+        "starsSince": 4,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "andycreeth",
+                "url": "https://github.com/andycreeth",
+                "avatar": "https://avatars.githubusercontent.com/u/3180181?s=40&v=4"
+            },
+            {
+                "username": "SLOBS-Release",
+                "url": "https://github.com/SLOBS-Release",
+                "avatar": "https://avatars.githubusercontent.com/u/48929251?s=40&v=4"
+            },
+            {
+                "username": "gettinToasty",
+                "url": "https://github.com/gettinToasty",
+                "avatar": "https://avatars.githubusercontent.com/u/20602520?s=40&v=4"
+            },
+            {
+                "username": "holiber",
+                "url": "https://github.com/holiber",
+                "avatar": "https://avatars.githubusercontent.com/u/3768346?s=40&v=4"
+            },
+            {
+                "username": "EddyGharbi",
+                "url": "https://github.com/EddyGharbi",
+                "avatar": "https://avatars.githubusercontent.com/u/23488691?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 13,
+        "username": "vendure-ecommerce",
+        "repositoryName": "vendure",
+        "url": "https://github.com/vendure-ecommerce/vendure",
+        "description": "A headless GraphQL ecommerce framework for the modern web",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 1969,
+        "forks": 303,
+        "starsSince": 4,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "michaelbromley",
+                "url": "https://github.com/michaelbromley",
+                "avatar": "https://avatars.githubusercontent.com/u/6275952?s=40&v=4"
+            },
+            {
+                "username": "chladog",
+                "url": "https://github.com/chladog",
+                "avatar": "https://avatars.githubusercontent.com/u/15977485?s=40&v=4"
+            },
+            {
+                "username": "hendrik-advantitge",
+                "url": "https://github.com/hendrik-advantitge",
+                "avatar": "https://avatars.githubusercontent.com/u/67062780?s=40&v=4"
+            },
+            {
+                "username": "thomas-advantitge",
+                "url": "https://github.com/thomas-advantitge",
+                "avatar": "https://avatars.githubusercontent.com/u/66438062?s=40&v=4"
+            },
+            {
+                "username": "lsimone",
+                "url": "https://github.com/lsimone",
+                "avatar": "https://avatars.githubusercontent.com/u/3266650?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 14,
+        "username": "danilowoz",
+        "repositoryName": "react-content-loader",
+        "url": "https://github.com/danilowoz/react-content-loader",
+        "description": "\u26aaSVG-Powered component to easily create skeleton loadings.",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 10785,
+        "forks": 378,
+        "starsSince": 12,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "danilowoz",
+                "url": "https://github.com/danilowoz",
+                "avatar": "https://avatars.githubusercontent.com/u/4838076?s=40&v=4"
+            },
+            {
+                "username": "apps/dependabot",
+                "url": "https://github.com/apps/dependabot",
+                "avatar": "https://avatars.githubusercontent.com/in/29110?s=40&v=4"
+            },
+            {
+                "username": "omBratteng",
+                "url": "https://github.com/omBratteng",
+                "avatar": "https://avatars.githubusercontent.com/u/1681525?s=40&v=4"
+            },
+            {
+                "username": "alexkirsz",
+                "url": "https://github.com/alexkirsz",
+                "avatar": "https://avatars.githubusercontent.com/u/1621758?s=40&v=4"
+            },
+            {
+                "username": "AjayPoshak",
+                "url": "https://github.com/AjayPoshak",
+                "avatar": "https://avatars.githubusercontent.com/u/7375457?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 15,
+        "username": "drawrowfly",
+        "repositoryName": "tiktok-scraper",
+        "url": "https://github.com/drawrowfly/tiktok-scraper",
+        "description": "TikTok Scraper. Download video posts, collect user/trend/hashtag/music feed metadata, sign URL and etc.",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 1285,
+        "forks": 280,
+        "starsSince": 2,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "drawrowfly",
+                "url": "https://github.com/drawrowfly",
+                "avatar": "https://avatars.githubusercontent.com/u/4154851?s=40&v=4"
+            },
+            {
+                "username": "tnoetzel",
+                "url": "https://github.com/tnoetzel",
+                "avatar": "https://avatars.githubusercontent.com/u/1002744?s=40&v=4"
+            },
+            {
+                "username": "weavewillG",
+                "url": "https://github.com/weavewillG",
+                "avatar": "https://avatars.githubusercontent.com/u/3567257?s=40&v=4"
+            },
+            {
+                "username": "trodiz",
+                "url": "https://github.com/trodiz",
+                "avatar": "https://avatars.githubusercontent.com/u/59777673?s=40&v=4"
+            },
+            {
+                "username": "43081j",
+                "url": "https://github.com/43081j",
+                "avatar": "https://avatars.githubusercontent.com/u/5677153?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 16,
+        "username": "aws-amplify",
+        "repositoryName": "amplify-js",
+        "url": "https://github.com/aws-amplify/amplify-js",
+        "description": "A declarative JavaScript library for application development using cloud services.",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 7947,
+        "forks": 1631,
+        "starsSince": 3,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "powerful23",
+                "url": "https://github.com/powerful23",
+                "avatar": "https://avatars.githubusercontent.com/u/11042868?s=40&v=4"
+            },
+            {
+                "username": "mlabieniec",
+                "url": "https://github.com/mlabieniec",
+                "avatar": "https://avatars.githubusercontent.com/u/1417045?s=40&v=4"
+            },
+            {
+                "username": "jordanranz",
+                "url": "https://github.com/jordanranz",
+                "avatar": "https://avatars.githubusercontent.com/u/3868826?s=40&v=4"
+            },
+            {
+                "username": "haverchuck",
+                "url": "https://github.com/haverchuck",
+                "avatar": "https://avatars.githubusercontent.com/u/10621276?s=40&v=4"
+            },
+            {
+                "username": "elorzafe",
+                "url": "https://github.com/elorzafe",
+                "avatar": "https://avatars.githubusercontent.com/u/28815678?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 17,
+        "username": "apollographql",
+        "repositoryName": "apollo-client",
+        "url": "https://github.com/apollographql/apollo-client",
+        "description": "\ud83d\ude80A fully-featured, production ready caching GraphQL client for every UI framework and GraphQL server",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 15914,
+        "forks": 2053,
+        "starsSince": 7,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "benjamn",
+                "url": "https://github.com/benjamn",
+                "avatar": "https://avatars.githubusercontent.com/u/5750?s=40&v=4"
+            },
+            {
+                "username": "hwillson",
+                "url": "https://github.com/hwillson",
+                "avatar": "https://avatars.githubusercontent.com/u/137740?s=40&v=4"
+            },
+            {
+                "username": "helfer",
+                "url": "https://github.com/helfer",
+                "avatar": "https://avatars.githubusercontent.com/u/6569980?s=40&v=4"
+            },
+            {
+                "username": "stubailo",
+                "url": "https://github.com/stubailo",
+                "avatar": "https://avatars.githubusercontent.com/u/448783?s=40&v=4"
+            },
+            {
+                "username": "renovate-bot",
+                "url": "https://github.com/renovate-bot",
+                "avatar": "https://avatars.githubusercontent.com/u/25180681?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 18,
+        "username": "reduxjs",
+        "repositoryName": "cra-template-redux-typescript",
+        "url": "https://github.com/reduxjs/cra-template-redux-typescript",
+        "description": "The official Redux+TS template for Create React App",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 506,
+        "forks": 50,
+        "starsSince": 4,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "markerikson",
+                "url": "https://github.com/markerikson",
+                "avatar": "https://avatars.githubusercontent.com/u/1128784?s=40&v=4"
+            },
+            {
+                "username": "BenLorantfy",
+                "url": "https://github.com/BenLorantfy",
+                "avatar": "https://avatars.githubusercontent.com/u/4398635?s=40&v=4"
+            },
+            {
+                "username": "AlaeddineMessadi",
+                "url": "https://github.com/AlaeddineMessadi",
+                "avatar": "https://avatars.githubusercontent.com/u/10847134?s=40&v=4"
+            },
+            {
+                "username": "nickmccurdy",
+                "url": "https://github.com/nickmccurdy",
+                "avatar": "https://avatars.githubusercontent.com/u/927220?s=40&v=4"
+            },
+            {
+                "username": "msutkowski",
+                "url": "https://github.com/msutkowski",
+                "avatar": "https://avatars.githubusercontent.com/u/784953?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 19,
+        "username": "webdriverio",
+        "repositoryName": "webdriverio",
+        "url": "https://github.com/webdriverio/webdriverio",
+        "description": "Next-gen browser and mobile automation test framework for Node.js",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 6545,
+        "forks": 1885,
+        "starsSince": 4,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "christian-bromann",
+                "url": "https://github.com/christian-bromann",
+                "avatar": "https://avatars.githubusercontent.com/u/731337?s=40&v=4"
+            },
+            {
+                "username": "apps/dependabot-preview",
+                "url": "https://github.com/apps/dependabot-preview",
+                "avatar": "https://avatars.githubusercontent.com/in/2141?s=40&v=4"
+            },
+            {
+                "username": "mgrybyk",
+                "url": "https://github.com/mgrybyk",
+                "avatar": "https://avatars.githubusercontent.com/u/25589559?s=40&v=4"
+            },
+            {
+                "username": "WillBrock",
+                "url": "https://github.com/WillBrock",
+                "avatar": "https://avatars.githubusercontent.com/u/1300981?s=40&v=4"
+            },
+            {
+                "username": "wdio-bot",
+                "url": "https://github.com/wdio-bot",
+                "avatar": "https://avatars.githubusercontent.com/u/72550141?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 20,
+        "username": "jeremybarbet",
+        "repositoryName": "react-native-modalize",
+        "url": "https://github.com/jeremybarbet/react-native-modalize",
+        "description": "A highly customizable modal/bottom sheet that loves scrolling content.",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 1697,
+        "forks": 163,
+        "starsSince": 2,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "jeremybarbet",
+                "url": "https://github.com/jeremybarbet",
+                "avatar": "https://avatars.githubusercontent.com/u/937328?s=40&v=4"
+            },
+            {
+                "username": "apps/renovate",
+                "url": "https://github.com/apps/renovate",
+                "avatar": "https://avatars.githubusercontent.com/in/2740?s=40&v=4"
+            },
+            {
+                "username": "xxsnakerxx",
+                "url": "https://github.com/xxsnakerxx",
+                "avatar": "https://avatars.githubusercontent.com/u/2099820?s=40&v=4"
+            },
+            {
+                "username": "renovate-bot",
+                "url": "https://github.com/renovate-bot",
+                "avatar": "https://avatars.githubusercontent.com/u/25180681?s=40&v=4"
+            },
+            {
+                "username": "archansel",
+                "url": "https://github.com/archansel",
+                "avatar": "https://avatars.githubusercontent.com/u/816817?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 21,
+        "username": "typeorm",
+        "repositoryName": "typeorm",
+        "url": "https://github.com/typeorm/typeorm",
+        "description": "ORM for TypeScript and JavaScript (ES7, ES6, ES5). Supports MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, SAP Hana, WebSQL databases. Works in NodeJS, Browser, Ionic, Cordova and Electron platforms.",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 23716,
+        "forks": 4093,
+        "starsSince": 19,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "pleerock",
+                "url": "https://github.com/pleerock",
+                "avatar": "https://avatars.githubusercontent.com/u/1753397?s=40&v=4"
+            },
+            {
+                "username": "AlexMesser",
+                "url": "https://github.com/AlexMesser",
+                "avatar": "https://avatars.githubusercontent.com/u/17142628?s=40&v=4"
+            },
+            {
+                "username": "daniel-lang",
+                "url": "https://github.com/daniel-lang",
+                "avatar": "https://avatars.githubusercontent.com/u/6500514?s=40&v=4"
+            },
+            {
+                "username": "rustamwin",
+                "url": "https://github.com/rustamwin",
+                "avatar": "https://avatars.githubusercontent.com/u/16498265?s=40&v=4"
+            },
+            {
+                "username": "imnotjames",
+                "url": "https://github.com/imnotjames",
+                "avatar": "https://avatars.githubusercontent.com/u/1551593?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 22,
+        "username": "cdr",
+        "repositoryName": "code-server",
+        "url": "https://github.com/cdr/code-server",
+        "description": "VS Code in the browser",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 41656,
+        "forks": 3295,
+        "starsSince": 39,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "code-asher",
+                "url": "https://github.com/code-asher",
+                "avatar": "https://avatars.githubusercontent.com/u/45609798?s=40&v=4"
+            },
+            {
+                "username": "nhooyr",
+                "url": "https://github.com/nhooyr",
+                "avatar": "https://avatars.githubusercontent.com/u/10180857?s=40&v=4"
+            },
+            {
+                "username": "jsjoeio",
+                "url": "https://github.com/jsjoeio",
+                "avatar": "https://avatars.githubusercontent.com/u/3806031?s=40&v=4"
+            },
+            {
+                "username": "kylecarbs",
+                "url": "https://github.com/kylecarbs",
+                "avatar": "https://avatars.githubusercontent.com/u/7122116?s=40&v=4"
+            },
+            {
+                "username": "apps/dependabot",
+                "url": "https://github.com/apps/dependabot",
+                "avatar": "https://avatars.githubusercontent.com/in/29110?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 23,
+        "username": "jquense",
+        "repositoryName": "yup",
+        "url": "https://github.com/jquense/yup",
+        "description": "Dead simple Object schema validation",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 12994,
+        "forks": 571,
+        "starsSince": 23,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "jquense",
+                "url": "https://github.com/jquense",
+                "avatar": "https://avatars.githubusercontent.com/u/339286?s=40&v=4"
+            },
+            {
+                "username": "apps/renovate",
+                "url": "https://github.com/apps/renovate",
+                "avatar": "https://avatars.githubusercontent.com/in/2740?s=40&v=4"
+            },
+            {
+                "username": "vonagam",
+                "url": "https://github.com/vonagam",
+                "avatar": "https://avatars.githubusercontent.com/u/5790814?s=40&v=4"
+            },
+            {
+                "username": "fakenickels",
+                "url": "https://github.com/fakenickels",
+                "avatar": "https://avatars.githubusercontent.com/u/1283200?s=40&v=4"
+            },
+            {
+                "username": "ctavan",
+                "url": "https://github.com/ctavan",
+                "avatar": "https://avatars.githubusercontent.com/u/508118?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 24,
+        "username": "jshjohnson",
+        "repositoryName": "Choices",
+        "url": "https://github.com/jshjohnson/Choices",
+        "description": "A vanilla JS customisable select box/text input plugin\u26a1\ufe0f",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 4239,
+        "forks": 424,
+        "starsSince": 5,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "jshjohnson",
+                "url": "https://github.com/jshjohnson",
+                "avatar": "https://avatars.githubusercontent.com/u/3064889?s=40&v=4"
+            },
+            {
+                "username": "tinovyatkin",
+                "url": "https://github.com/tinovyatkin",
+                "avatar": "https://avatars.githubusercontent.com/u/5350898?s=40&v=4"
+            },
+            {
+                "username": "maximmig",
+                "url": "https://github.com/maximmig",
+                "avatar": "https://avatars.githubusercontent.com/u/16416101?s=40&v=4"
+            },
+            {
+                "username": "chymz",
+                "url": "https://github.com/chymz",
+                "avatar": "https://avatars.githubusercontent.com/u/1416912?s=40&v=4"
+            },
+            {
+                "username": "JayKid",
+                "url": "https://github.com/JayKid",
+                "avatar": "https://avatars.githubusercontent.com/u/913475?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 25,
+        "username": "pancakeswap",
+        "repositoryName": "pancake-swap-core",
+        "url": "https://github.com/pancakeswap/pancake-swap-core",
+        "description": "Core smart contracts",
+        "language": "TypeScript",
+        "languageColor": "#2b7489",
+        "totalStars": 54,
+        "forks": 171,
+        "starsSince": 1,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "NoahZinsmeister",
+                "url": "https://github.com/NoahZinsmeister",
+                "avatar": "https://avatars.githubusercontent.com/u/3760414?s=40&v=4"
+            },
+            {
+                "username": "danrobinson",
+                "url": "https://github.com/danrobinson",
+                "avatar": "https://avatars.githubusercontent.com/u/1187252?s=40&v=4"
+            },
+            {
+                "username": "haydenadams",
+                "url": "https://github.com/haydenadams",
+                "avatar": "https://avatars.githubusercontent.com/u/9343483?s=40&v=4"
+            },
+            {
+                "username": "moodysalem",
+                "url": "https://github.com/moodysalem",
+                "avatar": "https://avatars.githubusercontent.com/u/7897876?s=40&v=4"
+            },
+            {
+                "username": "mooncakehero",
+                "url": "https://github.com/mooncakehero",
+                "avatar": "https://avatars.githubusercontent.com/u/71623368?s=40&v=4"
+            }
+        ]
+    }
+]

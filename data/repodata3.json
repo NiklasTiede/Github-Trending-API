@@ -1,0 +1,922 @@
+[
+    {
+        "rank": 1,
+        "username": "globalaihub",
+        "repositoryName": "introduction-to-python",
+        "url": "https://github.com/globalaihub/introduction-to-python",
+        "description": null,
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 626,
+        "forks": 1409,
+        "starsSince": 17,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "omercengiz",
+                "url": "https://github.com/omercengiz",
+                "avatar": "https://avatars.githubusercontent.com/u/45544690?s=40&v=4"
+            },
+            {
+                "username": "globalaihub",
+                "url": "https://github.com/globalaihub",
+                "avatar": "https://avatars.githubusercontent.com/u/65072884?s=40&v=4"
+            },
+            {
+                "username": "KutayAkalin",
+                "url": "https://github.com/KutayAkalin",
+                "avatar": "https://avatars.githubusercontent.com/u/32360575?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 2,
+        "username": "Pierian-Data",
+        "repositoryName": "Complete-Python-3-Bootcamp",
+        "url": "https://github.com/Pierian-Data/Complete-Python-3-Bootcamp",
+        "description": "Course Files for Complete Python 3 Bootcamp Course on Udemy",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 15320,
+        "forks": 53706,
+        "starsSince": 83,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "TiVentures",
+                "url": "https://github.com/TiVentures",
+                "avatar": "https://avatars.githubusercontent.com/u/28677216?s=40&v=4"
+            },
+            {
+                "username": "Pierian-Data",
+                "url": "https://github.com/Pierian-Data",
+                "avatar": "https://avatars.githubusercontent.com/u/16237870?s=40&v=4"
+            },
+            {
+                "username": "sprutner",
+                "url": "https://github.com/sprutner",
+                "avatar": "https://avatars.githubusercontent.com/u/3011275?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 3,
+        "username": "data-science-on-aws",
+        "repositoryName": "workshop",
+        "url": "https://github.com/data-science-on-aws/workshop",
+        "description": "AI and Machine Learning with Kubeflow, Amazon EKS, and SageMaker",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 1725,
+        "forks": 555,
+        "starsSince": 6,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "cfregly",
+                "url": "https://github.com/cfregly",
+                "avatar": "https://avatars.githubusercontent.com/u/1438064?s=40&v=4"
+            },
+            {
+                "username": "antje",
+                "url": "https://github.com/antje",
+                "avatar": "https://avatars.githubusercontent.com/u/23338582?s=40&v=4"
+            },
+            {
+                "username": "animetauren",
+                "url": "https://github.com/animetauren",
+                "avatar": "https://avatars.githubusercontent.com/u/1291811?s=40&v=4"
+            },
+            {
+                "username": "ehsanmok",
+                "url": "https://github.com/ehsanmok",
+                "avatar": "https://avatars.githubusercontent.com/u/6980212?s=40&v=4"
+            },
+            {
+                "username": "albertvillanova",
+                "url": "https://github.com/albertvillanova",
+                "avatar": "https://avatars.githubusercontent.com/u/8515462?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 4,
+        "username": "MAIF",
+        "repositoryName": "shapash",
+        "url": "https://github.com/MAIF/shapash",
+        "description": "Shapash makes Machine Learning models transparent and understandable by everyone",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 845,
+        "forks": 122,
+        "starsSince": 21,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "yg79",
+                "url": "https://github.com/yg79",
+                "avatar": "https://avatars.githubusercontent.com/u/41585787?s=40&v=4"
+            },
+            {
+                "username": "MaxGdr",
+                "url": "https://github.com/MaxGdr",
+                "avatar": "https://avatars.githubusercontent.com/u/51989635?s=40&v=4"
+            },
+            {
+                "username": "ThibaudReal",
+                "url": "https://github.com/ThibaudReal",
+                "avatar": "https://avatars.githubusercontent.com/u/48520594?s=40&v=4"
+            },
+            {
+                "username": "GAP01",
+                "url": "https://github.com/GAP01",
+                "avatar": "https://avatars.githubusercontent.com/u/43179647?s=40&v=4"
+            },
+            {
+                "username": "mathisbarthere",
+                "url": "https://github.com/mathisbarthere",
+                "avatar": "https://avatars.githubusercontent.com/u/25695519?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 5,
+        "username": "CompVis",
+        "repositoryName": "taming-transformers",
+        "url": "https://github.com/CompVis/taming-transformers",
+        "description": null,
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 1187,
+        "forks": 112,
+        "starsSince": 7,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "pesser",
+                "url": "https://github.com/pesser",
+                "avatar": "https://avatars.githubusercontent.com/u/2175508?s=40&v=4"
+            },
+            {
+                "username": "rromb",
+                "url": "https://github.com/rromb",
+                "avatar": "https://avatars.githubusercontent.com/u/38811725?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 6,
+        "username": "lmoroney",
+        "repositoryName": "dlaicourse",
+        "url": "https://github.com/lmoroney/dlaicourse",
+        "description": "Notebooks for learning deep learning",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 4851,
+        "forks": 4920,
+        "starsSince": 7,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "lmoroney",
+                "url": "https://github.com/lmoroney",
+                "avatar": "https://avatars.githubusercontent.com/u/1134591?s=40&v=4"
+            },
+            {
+                "username": "juan-coursera",
+                "url": "https://github.com/juan-coursera",
+                "avatar": "https://avatars.githubusercontent.com/u/58723037?s=40&v=4"
+            },
+            {
+                "username": "MarkDaoust",
+                "url": "https://github.com/MarkDaoust",
+                "avatar": "https://avatars.githubusercontent.com/u/1414837?s=40&v=4"
+            },
+            {
+                "username": "italoPontes",
+                "url": "https://github.com/italoPontes",
+                "avatar": "https://avatars.githubusercontent.com/u/13680194?s=40&v=4"
+            },
+            {
+                "username": "himalayanZephyr",
+                "url": "https://github.com/himalayanZephyr",
+                "avatar": "https://avatars.githubusercontent.com/u/42401082?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 7,
+        "username": "onnx",
+        "repositoryName": "models",
+        "url": "https://github.com/onnx/models",
+        "description": "A collection of pre-trained, state-of-the-art models in the ONNX format",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 3356,
+        "forks": 741,
+        "starsSince": 5,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "vinitra",
+                "url": "https://github.com/vinitra",
+                "avatar": "https://avatars.githubusercontent.com/u/72170466?s=40&v=4"
+            },
+            {
+                "username": "mx-iao",
+                "url": "https://github.com/mx-iao",
+                "avatar": "https://avatars.githubusercontent.com/u/33701412?s=40&v=4"
+            },
+            {
+                "username": "prasanthpul",
+                "url": "https://github.com/prasanthpul",
+                "avatar": "https://avatars.githubusercontent.com/u/29621458?s=40&v=4"
+            },
+            {
+                "username": "houseroad",
+                "url": "https://github.com/houseroad",
+                "avatar": "https://avatars.githubusercontent.com/u/30275821?s=40&v=4"
+            },
+            {
+                "username": "jennifererwangg",
+                "url": "https://github.com/jennifererwangg",
+                "avatar": "https://avatars.githubusercontent.com/u/48936552?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 8,
+        "username": "slundberg",
+        "repositoryName": "shap",
+        "url": "https://github.com/slundberg/shap",
+        "description": "A game theoretic approach to explain the output of any machine learning model.",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 12238,
+        "forks": 1813,
+        "starsSince": 22,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "slundberg",
+                "url": "https://github.com/slundberg",
+                "avatar": "https://avatars.githubusercontent.com/u/3740613?s=40&v=4"
+            },
+            {
+                "username": "ryserrao",
+                "url": "https://github.com/ryserrao",
+                "avatar": "https://avatars.githubusercontent.com/u/17132636?s=40&v=4"
+            },
+            {
+                "username": "vivekchettiar",
+                "url": "https://github.com/vivekchettiar",
+                "avatar": "https://avatars.githubusercontent.com/u/68928670?s=40&v=4"
+            },
+            {
+                "username": "imatiach-msft",
+                "url": "https://github.com/imatiach-msft",
+                "avatar": "https://avatars.githubusercontent.com/u/24683184?s=40&v=4"
+            },
+            {
+                "username": "gabrieltseng",
+                "url": "https://github.com/gabrieltseng",
+                "avatar": "https://avatars.githubusercontent.com/u/29063740?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 9,
+        "username": "tensorflow",
+        "repositoryName": "tpu",
+        "url": "https://github.com/tensorflow/tpu",
+        "description": "Reference models and tools for Cloud TPUs.",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 4224,
+        "forks": 1528,
+        "starsSince": 1,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "tensorflower-gardener",
+                "url": "https://github.com/tensorflower-gardener",
+                "avatar": "https://avatars.githubusercontent.com/u/17151892?s=40&v=4"
+            },
+            {
+                "username": "pengchongjin",
+                "url": "https://github.com/pengchongjin",
+                "avatar": "https://avatars.githubusercontent.com/u/39922559?s=40&v=4"
+            },
+            {
+                "username": "allenwang28",
+                "url": "https://github.com/allenwang28",
+                "avatar": "https://avatars.githubusercontent.com/u/9057208?s=40&v=4"
+            },
+            {
+                "username": "frankchn",
+                "url": "https://github.com/frankchn",
+                "avatar": "https://avatars.githubusercontent.com/u/691628?s=40&v=4"
+            },
+            {
+                "username": "mingxingtan",
+                "url": "https://github.com/mingxingtan",
+                "avatar": "https://avatars.githubusercontent.com/u/6027221?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 10,
+        "username": "microsoft",
+        "repositoryName": "QuantumKatas",
+        "url": "https://github.com/microsoft/QuantumKatas",
+        "description": "Tutorials and programming exercises for learning Q# and quantum computing",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 3376,
+        "forks": 878,
+        "starsSince": 10,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "tcNickolas",
+                "url": "https://github.com/tcNickolas",
+                "avatar": "https://avatars.githubusercontent.com/u/10113024?s=40&v=4"
+            },
+            {
+                "username": "vivanwin",
+                "url": "https://github.com/vivanwin",
+                "avatar": "https://avatars.githubusercontent.com/u/25651976?s=40&v=4"
+            },
+            {
+                "username": "anpaz",
+                "url": "https://github.com/anpaz",
+                "avatar": "https://avatars.githubusercontent.com/u/24311286?s=40&v=4"
+            },
+            {
+                "username": "jainvasu631",
+                "url": "https://github.com/jainvasu631",
+                "avatar": "https://avatars.githubusercontent.com/u/47535291?s=40&v=4"
+            },
+            {
+                "username": "jackhyder",
+                "url": "https://github.com/jackhyder",
+                "avatar": "https://avatars.githubusercontent.com/u/22288336?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 11,
+        "username": "NLP-LOVE",
+        "repositoryName": "ML-NLP",
+        "url": "https://github.com/NLP-LOVE/ML-NLP",
+        "description": "\u6b64\u9879\u76ee\u662f\u673a\u5668\u5b66\u4e60(Machine Learning)\u3001\u6df1\u5ea6\u5b66\u4e60(Deep Learning)\u3001NLP\u9762\u8bd5\u4e2d\u5e38\u8003\u5230\u7684\u77e5\u8bc6\u70b9\u548c\u4ee3\u7801\u5b9e\u73b0\uff0c\u4e5f\u662f\u4f5c\u4e3a\u4e00\u4e2a\u7b97\u6cd5\u5de5\u7a0b\u5e08\u5fc5\u4f1a\u7684\u7406\u8bba\u57fa\u7840\u77e5\u8bc6\u3002",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 8496,
+        "forks": 2863,
+        "starsSince": 14,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "NLP-LOVE",
+                "url": "https://github.com/NLP-LOVE",
+                "avatar": "https://avatars.githubusercontent.com/u/52538954?s=40&v=4"
+            },
+            {
+                "username": "TolicWang",
+                "url": "https://github.com/TolicWang",
+                "avatar": "https://avatars.githubusercontent.com/u/16443701?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 12,
+        "username": "CamDavidsonPilon",
+        "repositoryName": "Probabilistic-Programming-and-Bayesian-Methods-for-Hackers",
+        "url": "https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers",
+        "description": "aka \"Bayesian Methods for Hackers\": An introduction to Bayesian methods + probabilistic programming with a computation/understanding-first, mathematics-second point of view. All in pure Python ;)",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 22799,
+        "forks": 7202,
+        "starsSince": 10,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "CamDavidsonPilon",
+                "url": "https://github.com/CamDavidsonPilon",
+                "avatar": "https://avatars.githubusercontent.com/u/884032?s=40&v=4"
+            },
+            {
+                "username": "eli-b",
+                "url": "https://github.com/eli-b",
+                "avatar": "https://avatars.githubusercontent.com/u/834999?s=40&v=4"
+            },
+            {
+                "username": "mmargenot",
+                "url": "https://github.com/mmargenot",
+                "avatar": "https://avatars.githubusercontent.com/u/15113371?s=40&v=4"
+            },
+            {
+                "username": "matthew-mcateer",
+                "url": "https://github.com/matthew-mcateer",
+                "avatar": "https://avatars.githubusercontent.com/u/16986576?s=40&v=4"
+            },
+            {
+                "username": "mikeshwe",
+                "url": "https://github.com/mikeshwe",
+                "avatar": "https://avatars.githubusercontent.com/u/4237498?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 13,
+        "username": "parrt",
+        "repositoryName": "dtreeviz",
+        "url": "https://github.com/parrt/dtreeviz",
+        "description": "A python library for decision tree visualization and model interpretation.",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 1459,
+        "forks": 199,
+        "starsSince": 4,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "parrt",
+                "url": "https://github.com/parrt",
+                "avatar": "https://avatars.githubusercontent.com/u/178777?s=40&v=4"
+            },
+            {
+                "username": "tlapusan",
+                "url": "https://github.com/tlapusan",
+                "avatar": "https://avatars.githubusercontent.com/u/12815158?s=40&v=4"
+            },
+            {
+                "username": "gautamkarnik",
+                "url": "https://github.com/gautamkarnik",
+                "avatar": "https://avatars.githubusercontent.com/u/11342271?s=40&v=4"
+            },
+            {
+                "username": "oegedijk",
+                "url": "https://github.com/oegedijk",
+                "avatar": "https://avatars.githubusercontent.com/u/27999937?s=40&v=4"
+            },
+            {
+                "username": "windisch",
+                "url": "https://github.com/windisch",
+                "avatar": "https://avatars.githubusercontent.com/u/11347180?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 14,
+        "username": "kubernetes",
+        "repositoryName": "community",
+        "url": "https://github.com/kubernetes/community",
+        "description": "Kubernetes community content",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 7921,
+        "forks": 3597,
+        "starsSince": 8,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "k8s-ci-robot",
+                "url": "https://github.com/k8s-ci-robot",
+                "avatar": "https://avatars.githubusercontent.com/u/20407524?s=40&v=4"
+            },
+            {
+                "username": "nikhita",
+                "url": "https://github.com/nikhita",
+                "avatar": "https://avatars.githubusercontent.com/u/16105680?s=40&v=4"
+            },
+            {
+                "username": "spiffxp",
+                "url": "https://github.com/spiffxp",
+                "avatar": "https://avatars.githubusercontent.com/u/49258?s=40&v=4"
+            },
+            {
+                "username": "cblecker",
+                "url": "https://github.com/cblecker",
+                "avatar": "https://avatars.githubusercontent.com/u/1431969?s=40&v=4"
+            },
+            {
+                "username": "bgrant0607",
+                "url": "https://github.com/bgrant0607",
+                "avatar": "https://avatars.githubusercontent.com/u/7725777?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 15,
+        "username": "MicrosoftLearning",
+        "repositoryName": "mslearn-ai900",
+        "url": "https://github.com/MicrosoftLearning/mslearn-ai900",
+        "description": "Lab files for AI-900: Azure AI Fundamentals",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 83,
+        "forks": 93,
+        "starsSince": 1,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "mctjon",
+                "url": "https://github.com/mctjon",
+                "avatar": "https://avatars.githubusercontent.com/u/78703921?s=40&v=4"
+            },
+            {
+                "username": "GraemeMalcolm",
+                "url": "https://github.com/GraemeMalcolm",
+                "avatar": "https://avatars.githubusercontent.com/u/11771134?s=40&v=4"
+            },
+            {
+                "username": "sherzyang",
+                "url": "https://github.com/sherzyang",
+                "avatar": "https://avatars.githubusercontent.com/u/19577448?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 16,
+        "username": "MorvanZhou",
+        "repositoryName": "PyTorch-Tutorial",
+        "url": "https://github.com/MorvanZhou/PyTorch-Tutorial",
+        "description": "Build your neural network easy and fast, \u83ab\u70e6Python\u4e2d\u6587\u6559\u5b66",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 5844,
+        "forks": 2705,
+        "starsSince": 6,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "MorvanZhou",
+                "url": "https://github.com/MorvanZhou",
+                "avatar": "https://avatars.githubusercontent.com/u/19408436?s=40&v=4"
+            },
+            {
+                "username": "keineahnung2345",
+                "url": "https://github.com/keineahnung2345",
+                "avatar": "https://avatars.githubusercontent.com/u/18047300?s=40&v=4"
+            },
+            {
+                "username": "Hierom",
+                "url": "https://github.com/Hierom",
+                "avatar": "https://avatars.githubusercontent.com/u/24288746?s=40&v=4"
+            },
+            {
+                "username": "okdolly-001",
+                "url": "https://github.com/okdolly-001",
+                "avatar": "https://avatars.githubusercontent.com/u/18589970?s=40&v=4"
+            },
+            {
+                "username": "liufuyang",
+                "url": "https://github.com/liufuyang",
+                "avatar": "https://avatars.githubusercontent.com/u/161689?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 17,
+        "username": "aws",
+        "repositoryName": "amazon-sagemaker-examples",
+        "url": "https://github.com/aws/amazon-sagemaker-examples",
+        "description": "Example notebooks that show how to apply machine learning, deep learning and reinforcement learning in Amazon SageMaker",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 5317,
+        "forks": 3955,
+        "starsSince": 3,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "djarpin",
+                "url": "https://github.com/djarpin",
+                "avatar": "https://avatars.githubusercontent.com/u/6025741?s=40&v=4"
+            },
+            {
+                "username": "mvsusp",
+                "url": "https://github.com/mvsusp",
+                "avatar": "https://avatars.githubusercontent.com/u/142074?s=40&v=4"
+            },
+            {
+                "username": "hsl89",
+                "url": "https://github.com/hsl89",
+                "avatar": "https://avatars.githubusercontent.com/u/59583372?s=40&v=4"
+            },
+            {
+                "username": "vrkhare",
+                "url": "https://github.com/vrkhare",
+                "avatar": "https://avatars.githubusercontent.com/u/2994147?s=40&v=4"
+            },
+            {
+                "username": "gurumurthys",
+                "url": "https://github.com/gurumurthys",
+                "avatar": "https://avatars.githubusercontent.com/u/4819529?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 18,
+        "username": "probml",
+        "repositoryName": "pyprobml",
+        "url": "https://github.com/probml/pyprobml",
+        "description": "Python code for \"Machine learning: a probabilistic perspective\" (2nd edition)",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 3097,
+        "forks": 801,
+        "starsSince": 3,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "murphyk",
+                "url": "https://github.com/murphyk",
+                "avatar": "https://avatars.githubusercontent.com/u/4632336?s=40&v=4"
+            },
+            {
+                "username": "mjsML",
+                "url": "https://github.com/mjsML",
+                "avatar": "https://avatars.githubusercontent.com/u/7131192?s=40&v=4"
+            },
+            {
+                "username": "ashishpapanai",
+                "url": "https://github.com/ashishpapanai",
+                "avatar": "https://avatars.githubusercontent.com/u/52123364?s=40&v=4"
+            },
+            {
+                "username": "Duane321",
+                "url": "https://github.com/Duane321",
+                "avatar": "https://avatars.githubusercontent.com/u/19956442?s=40&v=4"
+            },
+            {
+                "username": "animesh-007",
+                "url": "https://github.com/animesh-007",
+                "avatar": "https://avatars.githubusercontent.com/u/53366877?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 19,
+        "username": "fivethirtyeight",
+        "repositoryName": "data",
+        "url": "https://github.com/fivethirtyeight/data",
+        "description": "Data and code behind the articles and graphics at FiveThirtyEight",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 14672,
+        "forks": 9290,
+        "starsSince": 6,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "dmil",
+                "url": "https://github.com/dmil",
+                "avatar": "https://avatars.githubusercontent.com/u/468544?s=40&v=4"
+            },
+            {
+                "username": "andrewflowers",
+                "url": "https://github.com/andrewflowers",
+                "avatar": "https://avatars.githubusercontent.com/u/2692391?s=40&v=4"
+            },
+            {
+                "username": "jayb",
+                "url": "https://github.com/jayb",
+                "avatar": "https://avatars.githubusercontent.com/u/57236?s=40&v=4"
+            },
+            {
+                "username": "ritchieking",
+                "url": "https://github.com/ritchieking",
+                "avatar": "https://avatars.githubusercontent.com/u/2760121?s=40&v=4"
+            },
+            {
+                "username": "atmccann",
+                "url": "https://github.com/atmccann",
+                "avatar": "https://avatars.githubusercontent.com/u/3207713?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 20,
+        "username": "aymericdamien",
+        "repositoryName": "TensorFlow-Examples",
+        "url": "https://github.com/aymericdamien/TensorFlow-Examples",
+        "description": "TensorFlow Tutorial and Examples for Beginners (support TF v1 & v2)",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 40372,
+        "forks": 14948,
+        "starsSince": 12,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "aymericdamien",
+                "url": "https://github.com/aymericdamien",
+                "avatar": "https://avatars.githubusercontent.com/u/10386605?s=40&v=4"
+            },
+            {
+                "username": "normanheckscher",
+                "url": "https://github.com/normanheckscher",
+                "avatar": "https://avatars.githubusercontent.com/u/6240820?s=40&v=4"
+            },
+            {
+                "username": "vra",
+                "url": "https://github.com/vra",
+                "avatar": "https://avatars.githubusercontent.com/u/5562395?s=40&v=4"
+            },
+            {
+                "username": "HosseinSheikhi",
+                "url": "https://github.com/HosseinSheikhi",
+                "avatar": "https://avatars.githubusercontent.com/u/64957461?s=40&v=4"
+            },
+            {
+                "username": "kilarinikhil",
+                "url": "https://github.com/kilarinikhil",
+                "avatar": "https://avatars.githubusercontent.com/u/36819773?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 21,
+        "username": "amueller",
+        "repositoryName": "introduction_to_ml_with_python",
+        "url": "https://github.com/amueller/introduction_to_ml_with_python",
+        "description": "Notebooks and code for the book \"Introduction to Machine Learning with Python\"",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 5360,
+        "forks": 3492,
+        "starsSince": 2,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "amueller",
+                "url": "https://github.com/amueller",
+                "avatar": "https://avatars.githubusercontent.com/u/449558?s=40&v=4"
+            },
+            {
+                "username": "imagejan",
+                "url": "https://github.com/imagejan",
+                "avatar": "https://avatars.githubusercontent.com/u/2033938?s=40&v=4"
+            },
+            {
+                "username": "joaquinvanschoren",
+                "url": "https://github.com/joaquinvanschoren",
+                "avatar": "https://avatars.githubusercontent.com/u/1724503?s=40&v=4"
+            },
+            {
+                "username": "behreth",
+                "url": "https://github.com/behreth",
+                "avatar": "https://avatars.githubusercontent.com/u/43671386?s=40&v=4"
+            },
+            {
+                "username": "qinhanmin2014",
+                "url": "https://github.com/qinhanmin2014",
+                "avatar": "https://avatars.githubusercontent.com/u/12003569?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 22,
+        "username": "ageron",
+        "repositoryName": "handson-ml2",
+        "url": "https://github.com/ageron/handson-ml2",
+        "description": "A series of Jupyter notebooks that walk you through the fundamentals of Machine Learning and Deep Learning in Python using Scikit-Learn, Keras and TensorFlow 2.",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 14477,
+        "forks": 6750,
+        "starsSince": 16,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "ageron",
+                "url": "https://github.com/ageron",
+                "avatar": "https://avatars.githubusercontent.com/u/76661?s=40&v=4"
+            },
+            {
+                "username": "ziembla",
+                "url": "https://github.com/ziembla",
+                "avatar": "https://avatars.githubusercontent.com/u/1266287?s=40&v=4"
+            },
+            {
+                "username": "ibeauregard",
+                "url": "https://github.com/ibeauregard",
+                "avatar": "https://avatars.githubusercontent.com/u/1441192?s=40&v=4"
+            },
+            {
+                "username": "rickiepark",
+                "url": "https://github.com/rickiepark",
+                "avatar": "https://avatars.githubusercontent.com/u/18256853?s=40&v=4"
+            },
+            {
+                "username": "ChrisQlasty",
+                "url": "https://github.com/ChrisQlasty",
+                "avatar": "https://avatars.githubusercontent.com/u/30173915?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 23,
+        "username": "tensorflow",
+        "repositoryName": "examples",
+        "url": "https://github.com/tensorflow/examples",
+        "description": "TensorFlow examples",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 4784,
+        "forks": 4861,
+        "starsSince": 7,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "ziyeqinghan",
+                "url": "https://github.com/ziyeqinghan",
+                "avatar": "https://avatars.githubusercontent.com/u/9292874?s=40&v=4"
+            },
+            {
+                "username": "MarkDaoust",
+                "url": "https://github.com/MarkDaoust",
+                "avatar": "https://avatars.githubusercontent.com/u/1414837?s=40&v=4"
+            },
+            {
+                "username": "lintian06",
+                "url": "https://github.com/lintian06",
+                "avatar": "https://avatars.githubusercontent.com/u/8652095?s=40&v=4"
+            },
+            {
+                "username": "tensorflower-gardener",
+                "url": "https://github.com/tensorflower-gardener",
+                "avatar": "https://avatars.githubusercontent.com/u/17151892?s=40&v=4"
+            },
+            {
+                "username": "wangtz",
+                "url": "https://github.com/wangtz",
+                "avatar": "https://avatars.githubusercontent.com/u/34290063?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 24,
+        "username": "pycaret",
+        "repositoryName": "pycaret",
+        "url": "https://github.com/pycaret/pycaret",
+        "description": "An open-source, low-code machine learning library in Python",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 3148,
+        "forks": 679,
+        "starsSince": 9,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "Yard1",
+                "url": "https://github.com/Yard1",
+                "avatar": "https://avatars.githubusercontent.com/u/10364161?s=40&v=4"
+            },
+            {
+                "username": "pycaret",
+                "url": "https://github.com/pycaret",
+                "avatar": "https://avatars.githubusercontent.com/u/58118658?s=40&v=4"
+            },
+            {
+                "username": "andrinbuerli",
+                "url": "https://github.com/andrinbuerli",
+                "avatar": "https://avatars.githubusercontent.com/u/12028297?s=40&v=4"
+            },
+            {
+                "username": "daikikatsuragawa",
+                "url": "https://github.com/daikikatsuragawa",
+                "avatar": "https://avatars.githubusercontent.com/u/50144563?s=40&v=4"
+            },
+            {
+                "username": "batmanscode",
+                "url": "https://github.com/batmanscode",
+                "avatar": "https://avatars.githubusercontent.com/u/29989939?s=40&v=4"
+            }
+        ]
+    },
+    {
+        "rank": 25,
+        "username": "betterze",
+        "repositoryName": "StyleSpace",
+        "url": "https://github.com/betterze/StyleSpace",
+        "description": "StyleSpace Analysis: Disentangled Controls for StyleGAN Image Generation",
+        "language": "Jupyter Notebook",
+        "languageColor": "#DA5B0B",
+        "totalStars": 29,
+        "forks": 1,
+        "starsSince": 9,
+        "since": "daily",
+        "builtBy": [
+            {
+                "username": "betterze",
+                "url": "https://github.com/betterze",
+                "avatar": "https://avatars.githubusercontent.com/u/8336718?s=40&v=4"
+            }
+        ]
+    }
+]

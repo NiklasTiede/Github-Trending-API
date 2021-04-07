@@ -1,0 +1,197 @@
+[
+    {
+        "rank": 1,
+        "username": "rrrene",
+        "name": "Ren\u00e9 F\u00f6hring",
+        "url": "https://github.com/rrrene",
+        "avatar": "https://avatars.githubusercontent.com/u/311914?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "credo",
+            "description": "A static code analysis tool for the Elixir language with a focus on code consistency and teaching.",
+            "url": "https://github.com/rrrene/credo"
+        }
+    },
+    {
+        "rank": 2,
+        "username": "wojtekmach",
+        "name": "Wojtek Mach",
+        "url": "https://github.com/wojtekmach",
+        "avatar": "https://avatars.githubusercontent.com/u/76071?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "req",
+            "description": "An HTTP client with a focus on composability, built on top of Finch.",
+            "url": "https://github.com/wojtekmach/req"
+        }
+    },
+    {
+        "rank": 3,
+        "username": "maartenvanvliet",
+        "name": "Maarten van Vliet",
+        "url": "https://github.com/maartenvanvliet",
+        "avatar": "https://avatars.githubusercontent.com/u/54566?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "receivex",
+            "description": "Deal with inbound email webhooks",
+            "url": "https://github.com/maartenvanvliet/receivex"
+        }
+    },
+    {
+        "rank": 4,
+        "username": "h4cc",
+        "name": "Julius Beckmann",
+        "url": "https://github.com/h4cc",
+        "avatar": "https://avatars.githubusercontent.com/u/2981491?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "awesome-elixir",
+            "description": "A curated list of amazingly awesome Elixir and Erlang libraries, resources and shiny things. Updates:",
+            "url": "https://github.com/h4cc/awesome-elixir"
+        }
+    },
+    {
+        "rank": 5,
+        "username": "devinus",
+        "name": "Devin Alexander Torres",
+        "url": "https://github.com/devinus",
+        "avatar": "https://avatars.githubusercontent.com/u/4836?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "poison",
+            "description": "An incredibly fast, pure Elixir JSON library",
+            "url": "https://github.com/devinus/poison"
+        }
+    },
+    {
+        "rank": 6,
+        "username": "kelvinst",
+        "name": "Kelvin Stinghen",
+        "url": "https://github.com/kelvinst",
+        "avatar": "https://avatars.githubusercontent.com/u/2791965?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "brolly",
+            "description": null,
+            "url": "https://github.com/kelvinst/brolly"
+        }
+    },
+    {
+        "rank": 7,
+        "username": "Betree",
+        "name": "Benjamin Piouffle",
+        "url": "https://github.com/Betree",
+        "avatar": "https://avatars.githubusercontent.com/u/1556356?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "burnex",
+            "description": "\ud83d\udce8\ud83d\udd25Elixir burner email (temporary address) detector",
+            "url": "https://github.com/Betree/burnex"
+        }
+    },
+    {
+        "rank": 8,
+        "username": "derekkraan",
+        "name": "Derek Kraan",
+        "url": "https://github.com/derekkraan",
+        "avatar": "https://avatars.githubusercontent.com/u/522157?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "delta_crdt_ex",
+            "description": "Use DeltaCrdt to build distributed applications in Elixir",
+            "url": "https://github.com/derekkraan/delta_crdt_ex"
+        }
+    },
+    {
+        "rank": 9,
+        "username": "ericmj",
+        "name": "Eric Meadows-J\u00f6nsson",
+        "url": "https://github.com/ericmj",
+        "avatar": "https://avatars.githubusercontent.com/u/316890?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "decimal",
+            "description": "Arbitrary precision decimal arithmetic",
+            "url": "https://github.com/ericmj/decimal"
+        }
+    },
+    {
+        "rank": 10,
+        "username": "tomtaylor",
+        "name": "Tom Taylor",
+        "url": "https://github.com/tomtaylor",
+        "avatar": "https://avatars.githubusercontent.com/u/565?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "sitemapper",
+            "description": "Fast, stream based XML Sitemap generator in Elixir",
+            "url": "https://github.com/tomtaylor/sitemapper"
+        }
+    },
+    {
+        "rank": 11,
+        "username": "akoutmos",
+        "name": "Alexander Koutmos",
+        "url": "https://github.com/akoutmos",
+        "avatar": "https://avatars.githubusercontent.com/u/4753634?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "prom_ex",
+            "description": "An Elixir Prometheus metrics collection library built on top of Telemetry with accompanying Grafana dashboards",
+            "url": "https://github.com/akoutmos/prom_ex"
+        }
+    },
+    {
+        "rank": 12,
+        "username": "philss",
+        "name": "Philip Sampaio",
+        "url": "https://github.com/philss",
+        "avatar": "https://avatars.githubusercontent.com/u/381213?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "floki",
+            "description": "Floki is a simple HTML parser that enables search for nodes using CSS selectors.",
+            "url": "https://github.com/philss/floki"
+        }
+    },
+    {
+        "rank": 13,
+        "username": "danielberkompas",
+        "name": "Daniel Berkompas",
+        "url": "https://github.com/danielberkompas",
+        "avatar": "https://avatars.githubusercontent.com/u/1186992?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "elasticsearch-elixir",
+            "description": "No-nonsense Elasticsearch library for Elixir",
+            "url": "https://github.com/danielberkompas/elasticsearch-elixir"
+        }
+    },
+    {
+        "rank": 14,
+        "username": "aaronrenner",
+        "name": "Aaron Renner",
+        "url": "https://github.com/aaronrenner",
+        "avatar": "https://avatars.githubusercontent.com/u/120878?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "phx_gen_auth",
+            "description": "An authentication system generator for Phoenix 1.5 applications.",
+            "url": "https://github.com/aaronrenner/phx_gen_auth"
+        }
+    },
+    {
+        "rank": 15,
+        "username": "oestrich",
+        "name": "Eric Oestrich",
+        "url": "https://github.com/oestrich",
+        "avatar": "https://avatars.githubusercontent.com/u/449228?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "ex_venture",
+            "description": "Text based MMORPG engine written in Elixir",
+            "url": "https://github.com/oestrich/ex_venture"
+        }
+    }
+]

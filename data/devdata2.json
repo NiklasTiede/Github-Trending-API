@@ -1,0 +1,327 @@
+[
+    {
+        "rank": 1,
+        "username": "nunomaduro",
+        "name": "Nuno Maduro",
+        "url": "https://github.com/nunomaduro",
+        "avatar": "https://avatars.githubusercontent.com/u/5457236?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "larastan",
+            "description": "\u2697\ufe0fAdds static analysis to Laravel improving developer productivity and code quality",
+            "url": "https://github.com/nunomaduro/larastan"
+        }
+    },
+    {
+        "rank": 2,
+        "username": "1technophile",
+        "name": "Florian",
+        "url": "https://github.com/1technophile",
+        "avatar": "https://avatars.githubusercontent.com/u/12672732?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "OpenMQTTGateway",
+            "description": "MQTT gateway for ESP8266, ESP32, Sonoff RF Bridge or Arduino with bidirectional 433mhz/315mhz/868mhz, Infrared communications, BLE, beacons detection, mi flora, mi jia, LYWSD02, LYWSD03MMC, Mi Scale compatibility, SMS & LORA.",
+            "url": "https://github.com/1technophile/OpenMQTTGateway"
+        }
+    },
+    {
+        "rank": 3,
+        "username": "stephencelis",
+        "name": "Stephen Celis",
+        "url": "https://github.com/stephencelis",
+        "avatar": "https://avatars.githubusercontent.com/u/658?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "SQLite.swift",
+            "description": "A type-safe, Swift-language layer over SQLite3.",
+            "url": "https://github.com/stephencelis/SQLite.swift"
+        }
+    },
+    {
+        "rank": 4,
+        "username": "arvidn",
+        "name": "Arvid Norberg",
+        "url": "https://github.com/arvidn",
+        "avatar": "https://avatars.githubusercontent.com/u/661450?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "libtorrent",
+            "description": "an efficient feature complete C++ bittorrent implementation",
+            "url": "https://github.com/arvidn/libtorrent"
+        }
+    },
+    {
+        "rank": 5,
+        "username": "alexellis",
+        "name": "Alex Ellis",
+        "url": "https://github.com/alexellis",
+        "avatar": "https://avatars.githubusercontent.com/u/6358735?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "k3sup",
+            "description": "bootstrap Kubernetes with k3s over SSH < 1 min\ud83d\ude80",
+            "url": "https://github.com/alexellis/k3sup"
+        }
+    },
+    {
+        "rank": 6,
+        "username": "jrfnl",
+        "name": "Juliette",
+        "url": "https://github.com/jrfnl",
+        "avatar": "https://avatars.githubusercontent.com/u/663378?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": null,
+            "description": null,
+            "url": null
+        }
+    },
+    {
+        "rank": 7,
+        "username": "LekoArts",
+        "name": "Lennart",
+        "url": "https://github.com/LekoArts",
+        "avatar": "https://avatars.githubusercontent.com/u/16143594?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "gatsby-themes",
+            "description": "Get high-quality and customizable Gatsby themes to quickly bootstrap your website! Choose from many professionally created and impressive designs with a wide variety of features and customization options.",
+            "url": "https://github.com/LekoArts/gatsby-themes"
+        }
+    },
+    {
+        "rank": 8,
+        "username": "kevinpapst",
+        "name": "Kevin Papst",
+        "url": "https://github.com/kevinpapst",
+        "avatar": "https://avatars.githubusercontent.com/u/533162?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "kimai2",
+            "description": "Kimai v2 is a web-based multiuser time-tracking application. Free for everyone: freelancers, agencies, companies, organizations - all can track their times, generate invoices and more. SaaS version available athttps://www.kimai.cloud",
+            "url": "https://github.com/kevinpapst/kimai2"
+        }
+    },
+    {
+        "rank": 9,
+        "username": "PySimpleGUI",
+        "name": "PySimpleGUI",
+        "url": "https://github.com/PySimpleGUI",
+        "avatar": "https://avatars.githubusercontent.com/u/46163555?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "PySimpleGUI",
+            "description": "Launched in 2018 Actively developed and supported. Supports tkinter, Qt, WxPython, Remi (in browser). Create custom layout GUI's simply. Python 2.7 & 3 Support. 200+ Demo programs & Cookbook for rapid start. Extensive documentation. Examples using Machine Learning(GUI, OpenCV Integration, Chatterbot), Floating Desktop Widgets, Matplotlib + Pyplo\u2026",
+            "url": "https://github.com/PySimpleGUI/PySimpleGUI"
+        }
+    },
+    {
+        "rank": 10,
+        "username": "edenhill",
+        "name": "Magnus Edenhill",
+        "url": "https://github.com/edenhill",
+        "avatar": "https://avatars.githubusercontent.com/u/524990?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "kafkacat",
+            "description": "Generic command line non-JVM Apache Kafka producer and consumer",
+            "url": "https://github.com/edenhill/kafkacat"
+        }
+    },
+    {
+        "rank": 11,
+        "username": "sdispater",
+        "name": "S\u00e9bastien Eustace",
+        "url": "https://github.com/sdispater",
+        "avatar": "https://avatars.githubusercontent.com/u/555648?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "pendulum",
+            "description": "Python datetimes made easy",
+            "url": "https://github.com/sdispater/pendulum"
+        }
+    },
+    {
+        "rank": 12,
+        "username": "dagar",
+        "name": "Daniel Agar",
+        "url": "https://github.com/dagar",
+        "avatar": "https://avatars.githubusercontent.com/u/84712?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "PX4-Firmware",
+            "description": "PX4 Firmware for PX4FMU autopilot and PX4IO servo / failsafe board",
+            "url": "https://github.com/dagar/PX4-Firmware"
+        }
+    },
+    {
+        "rank": 13,
+        "username": "hassankhan",
+        "name": "Hassan Khan",
+        "url": "https://github.com/hassankhan",
+        "avatar": "https://avatars.githubusercontent.com/u/1781985?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": null,
+            "description": null,
+            "url": null
+        }
+    },
+    {
+        "rank": 14,
+        "username": "muesli",
+        "name": "Christian Muehlhaeuser",
+        "url": "https://github.com/muesli",
+        "avatar": "https://avatars.githubusercontent.com/u/146378?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "duf",
+            "description": "Disk Usage/Free Utility - a better 'df' alternative",
+            "url": "https://github.com/muesli/duf"
+        }
+    },
+    {
+        "rank": 15,
+        "username": "charlax",
+        "name": "Charles-Axel Dein",
+        "url": "https://github.com/charlax",
+        "avatar": "https://avatars.githubusercontent.com/u/120501?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "professional-programming",
+            "description": "A collection of full-stack resources for programmers.",
+            "url": "https://github.com/charlax/professional-programming"
+        }
+    },
+    {
+        "rank": 16,
+        "username": "TooTallNate",
+        "name": "Nathan Rajlich",
+        "url": "https://github.com/TooTallNate",
+        "avatar": "https://avatars.githubusercontent.com/u/71256?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "Java-WebSocket",
+            "description": "A barebones WebSocket client and server implementation written in 100% Java.",
+            "url": "https://github.com/TooTallNate/Java-WebSocket"
+        }
+    },
+    {
+        "rank": 17,
+        "username": "diegomura",
+        "name": "Diego Muracciole",
+        "url": "https://github.com/diegomura",
+        "avatar": "https://avatars.githubusercontent.com/u/5600341?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "react-pdf",
+            "description": "\ud83d\udcc4Create PDF files using React",
+            "url": "https://github.com/diegomura/react-pdf"
+        }
+    },
+    {
+        "rank": 18,
+        "username": "aykevl",
+        "name": "Ayke",
+        "url": "https://github.com/aykevl",
+        "avatar": "https://avatars.githubusercontent.com/u/729697?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": null,
+            "description": null,
+            "url": null
+        }
+    },
+    {
+        "rank": 19,
+        "username": "ahmetb",
+        "name": "Ahmet Alp Balkan",
+        "url": "https://github.com/ahmetb",
+        "avatar": "https://avatars.githubusercontent.com/u/159209?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "kubectx",
+            "description": "Faster way to switch between clusters and namespaces in kubectl",
+            "url": "https://github.com/ahmetb/kubectx"
+        }
+    },
+    {
+        "rank": 20,
+        "username": "kyazdani42",
+        "name": "Kiyan",
+        "url": "https://github.com/kyazdani42",
+        "avatar": "https://avatars.githubusercontent.com/u/23156099?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "nvim-tree.lua",
+            "description": "A file explorer tree for neovim written in lua",
+            "url": "https://github.com/kyazdani42/nvim-tree.lua"
+        }
+    },
+    {
+        "rank": 21,
+        "username": "leoafarias",
+        "name": "Leo Farias",
+        "url": "https://github.com/leoafarias",
+        "avatar": "https://avatars.githubusercontent.com/u/435833?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "fvm",
+            "description": "Flutter Version Management: A simple CLI to manage Flutter SDK versions.",
+            "url": "https://github.com/leoafarias/fvm"
+        }
+    },
+    {
+        "rank": 22,
+        "username": "wojtekmaj",
+        "name": "Wojciech Maj",
+        "url": "https://github.com/wojtekmaj",
+        "avatar": "https://avatars.githubusercontent.com/u/5426427?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "react-pdf",
+            "description": "Display PDFs in your React app as easily as if they were images.",
+            "url": "https://github.com/wojtekmaj/react-pdf"
+        }
+    },
+    {
+        "rank": 23,
+        "username": "JanDeDobbeleer",
+        "name": "Jan De Dobbeleer",
+        "url": "https://github.com/JanDeDobbeleer",
+        "avatar": "https://avatars.githubusercontent.com/u/2492783?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "oh-my-posh",
+            "description": "A prompt theme engine for any shell.",
+            "url": "https://github.com/JanDeDobbeleer/oh-my-posh"
+        }
+    },
+    {
+        "rank": 24,
+        "username": "mwaskom",
+        "name": "Michael Waskom",
+        "url": "https://github.com/mwaskom",
+        "avatar": "https://avatars.githubusercontent.com/u/315810?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "seaborn",
+            "description": "Statistical data visualization using matplotlib",
+            "url": "https://github.com/mwaskom/seaborn"
+        }
+    },
+    {
+        "rank": 25,
+        "username": "RehanSaeed",
+        "name": "Muhammad Rehan Saeed",
+        "url": "https://github.com/RehanSaeed",
+        "avatar": "https://avatars.githubusercontent.com/u/2270364?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "Schema.NET",
+            "description": "Schema.org objects turned into strongly typed C# POCO classes for use in .NET. All classes can be serialized into JSON/JSON-LD and XML, typically used to represent structured data in the head section of html page.",
+            "url": "https://github.com/RehanSaeed/Schema.NET"
+        }
+    }
+]

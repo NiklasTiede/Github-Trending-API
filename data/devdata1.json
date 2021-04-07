@@ -1,0 +1,327 @@
+[
+    {
+        "rank": 1,
+        "username": "PySimpleGUI",
+        "name": "PySimpleGUI",
+        "url": "https://github.com/PySimpleGUI",
+        "avatar": "https://avatars.githubusercontent.com/u/46163555?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "PySimpleGUI",
+            "description": "Launched in 2018 Actively developed and supported. Supports tkinter, Qt, WxPython, Remi (in browser). Create custom layout GUI's simply. Python 2.7 & 3 Support. 200+ Demo programs & Cookbook for rapid start. Extensive documentation. Examples using Machine Learning(GUI, OpenCV Integration, Chatterbot), Floating Desktop Widgets, Matplotlib + Pyplo\u2026",
+            "url": "https://github.com/PySimpleGUI/PySimpleGUI"
+        }
+    },
+    {
+        "rank": 2,
+        "username": "sdispater",
+        "name": "S\u00e9bastien Eustace",
+        "url": "https://github.com/sdispater",
+        "avatar": "https://avatars.githubusercontent.com/u/555648?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "pendulum",
+            "description": "Python datetimes made easy",
+            "url": "https://github.com/sdispater/pendulum"
+        }
+    },
+    {
+        "rank": 3,
+        "username": "charlax",
+        "name": "Charles-Axel Dein",
+        "url": "https://github.com/charlax",
+        "avatar": "https://avatars.githubusercontent.com/u/120501?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "professional-programming",
+            "description": "A collection of full-stack resources for programmers.",
+            "url": "https://github.com/charlax/professional-programming"
+        }
+    },
+    {
+        "rank": 4,
+        "username": "mwaskom",
+        "name": "Michael Waskom",
+        "url": "https://github.com/mwaskom",
+        "avatar": "https://avatars.githubusercontent.com/u/315810?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "seaborn",
+            "description": "Statistical data visualization using matplotlib",
+            "url": "https://github.com/mwaskom/seaborn"
+        }
+    },
+    {
+        "rank": 5,
+        "username": "carltongibson",
+        "name": "Carlton Gibson",
+        "url": "https://github.com/carltongibson",
+        "avatar": "https://avatars.githubusercontent.com/u/64686?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "django-filter",
+            "description": "A generic system for filtering Django QuerySets based on user selections",
+            "url": "https://github.com/carltongibson/django-filter"
+        }
+    },
+    {
+        "rank": 6,
+        "username": "awaelchli",
+        "name": "Adrian W\u00e4lchli",
+        "url": "https://github.com/awaelchli",
+        "avatar": "https://avatars.githubusercontent.com/u/5495193?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "pytorch-lightning-snippets",
+            "description": "A collection of code snippets for my PyTorch Lightning projects",
+            "url": "https://github.com/awaelchli/pytorch-lightning-snippets"
+        }
+    },
+    {
+        "rank": 7,
+        "username": "clalancette",
+        "name": "Chris Lalancette",
+        "url": "https://github.com/clalancette",
+        "avatar": "https://avatars.githubusercontent.com/u/163000?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "pycdlib",
+            "description": "Python library to read and write ISOs",
+            "url": "https://github.com/clalancette/pycdlib"
+        }
+    },
+    {
+        "rank": 8,
+        "username": "rootzoll",
+        "name": "/rootzoll",
+        "url": "https://github.com/rootzoll",
+        "avatar": "https://avatars.githubusercontent.com/u/2472225?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "raspiblitz",
+            "description": "Get your own Bitcoin & Lightning Node running - on a RaspberryPi with a nice LCD",
+            "url": "https://github.com/rootzoll/raspiblitz"
+        }
+    },
+    {
+        "rank": 9,
+        "username": "maximecb",
+        "name": "Maxime Chevalier-Boisvert",
+        "url": "https://github.com/maximecb",
+        "avatar": "https://avatars.githubusercontent.com/u/713766?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "gym-minigrid",
+            "description": "Minimalistic gridworld package for OpenAI Gym",
+            "url": "https://github.com/maximecb/gym-minigrid"
+        }
+    },
+    {
+        "rank": 10,
+        "username": "agronholm",
+        "name": "Alex Gr\u00f6nholm",
+        "url": "https://github.com/agronholm",
+        "avatar": "https://avatars.githubusercontent.com/u/130003?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "apscheduler",
+            "description": "Task scheduling library for Python",
+            "url": "https://github.com/agronholm/apscheduler"
+        }
+    },
+    {
+        "rank": 11,
+        "username": "linusg",
+        "name": "Linus Groh",
+        "url": "https://github.com/linusg",
+        "avatar": "https://avatars.githubusercontent.com/u/19366641?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "rpi-backlight",
+            "description": "\ud83d\udd06A Python module for controlling power and brightness of the official Raspberry Pi 7\" touch display",
+            "url": "https://github.com/linusg/rpi-backlight"
+        }
+    },
+    {
+        "rank": 12,
+        "username": "rbgirshick",
+        "name": "Ross Girshick",
+        "url": "https://github.com/rbgirshick",
+        "avatar": "https://avatars.githubusercontent.com/u/1190634?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "fast-rcnn",
+            "description": "Fast R-CNN",
+            "url": "https://github.com/rbgirshick/fast-rcnn"
+        }
+    },
+    {
+        "rank": 13,
+        "username": "samuelcolvin",
+        "name": "Samuel Colvin",
+        "url": "https://github.com/samuelcolvin",
+        "avatar": "https://avatars.githubusercontent.com/u/4039449?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "pydantic",
+            "description": "Data parsing and validation using Python type hints",
+            "url": "https://github.com/samuelcolvin/pydantic"
+        }
+    },
+    {
+        "rank": 14,
+        "username": "maxnoe",
+        "name": "Maximilian N\u00f6the",
+        "url": "https://github.com/maxnoe",
+        "avatar": "https://avatars.githubusercontent.com/u/5488440?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "pizza2",
+            "description": "Rewrite ofhttps://github.com/maxnoe/pizzausing vue",
+            "url": "https://github.com/maxnoe/pizza2"
+        }
+    },
+    {
+        "rank": 15,
+        "username": "CastagnaIT",
+        "name": "Stefano Gottardo",
+        "url": "https://github.com/CastagnaIT",
+        "avatar": "https://avatars.githubusercontent.com/u/3257156?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "plugin.video.netflix",
+            "description": "InputStream based Netflix plugin for Kodi",
+            "url": "https://github.com/CastagnaIT/plugin.video.netflix"
+        }
+    },
+    {
+        "rank": 16,
+        "username": "rytilahti",
+        "name": "Teemu R.",
+        "url": "https://github.com/rytilahti",
+        "avatar": "https://avatars.githubusercontent.com/u/3705853?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "python-miio",
+            "description": "Python library & console tool for controlling Xiaomi smart appliances",
+            "url": "https://github.com/rytilahti/python-miio"
+        }
+    },
+    {
+        "rank": 17,
+        "username": "hanxiao",
+        "name": "Han Xiao",
+        "url": "https://github.com/hanxiao",
+        "avatar": "https://avatars.githubusercontent.com/u/2041322?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "bert-as-service",
+            "description": "Mapping a variable-length sentence to a fixed-length vector using BERT model",
+            "url": "https://github.com/hanxiao/bert-as-service"
+        }
+    },
+    {
+        "rank": 18,
+        "username": "eirannejad",
+        "name": "Ehsan Iran-Nejad",
+        "url": "https://github.com/eirannejad",
+        "avatar": "https://avatars.githubusercontent.com/u/8197916?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "pyRevit",
+            "description": "Rapid Application Development (RAD) Environment for Autodesk Revit\u00ae",
+            "url": "https://github.com/eirannejad/pyRevit"
+        }
+    },
+    {
+        "rank": 19,
+        "username": "mikedh",
+        "name": "Michael Dawson-Haggerty",
+        "url": "https://github.com/mikedh",
+        "avatar": "https://avatars.githubusercontent.com/u/1403074?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "trimesh",
+            "description": "Python library for loading and using triangular meshes.",
+            "url": "https://github.com/mikedh/trimesh"
+        }
+    },
+    {
+        "rank": 20,
+        "username": "timgrossmann",
+        "name": "Tim Gro\u00dfmann",
+        "url": "https://github.com/timgrossmann",
+        "avatar": "https://avatars.githubusercontent.com/u/16529337?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "InstaPy",
+            "description": "\ud83d\udcf7Instagram Bot - Tool for automated Instagram interactions",
+            "url": "https://github.com/timgrossmann/InstaPy"
+        }
+    },
+    {
+        "rank": 21,
+        "username": "cthoyt",
+        "name": "Charles Tapley Hoyt",
+        "url": "https://github.com/cthoyt",
+        "avatar": "https://avatars.githubusercontent.com/u/5069736?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "cookiecutter-python-package",
+            "description": "A cookiecutter package for an englightened python package",
+            "url": "https://github.com/cthoyt/cookiecutter-python-package"
+        }
+    },
+    {
+        "rank": 22,
+        "username": "rocky",
+        "name": "R. Bernstein",
+        "url": "https://github.com/rocky",
+        "avatar": "https://avatars.githubusercontent.com/u/8851?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "python-uncompyle6",
+            "description": "A cross-version Python bytecode decompiler",
+            "url": "https://github.com/rocky/python-uncompyle6"
+        }
+    },
+    {
+        "rank": 23,
+        "username": "metaodi",
+        "name": "Stefan Oderbolz",
+        "url": "https://github.com/metaodi",
+        "avatar": "https://avatars.githubusercontent.com/u/538415?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "osmapi",
+            "description": "Python wrapper for the OpenStreetMap API",
+            "url": "https://github.com/metaodi/osmapi"
+        }
+    },
+    {
+        "rank": 24,
+        "username": "minimaxir",
+        "name": "Max Woolf",
+        "url": "https://github.com/minimaxir",
+        "avatar": "https://avatars.githubusercontent.com/u/2179708?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "big-list-of-naughty-strings",
+            "description": "The Big List of Naughty Strings is a list of strings which have a high probability of causing issues when used as user-input data.",
+            "url": "https://github.com/minimaxir/big-list-of-naughty-strings"
+        }
+    },
+    {
+        "rank": 25,
+        "username": "dwisiswant0",
+        "name": "dw1",
+        "url": "https://github.com/dwisiswant0",
+        "avatar": "https://avatars.githubusercontent.com/u/25837540?s=96&v=4",
+        "since": "daily",
+        "popularRepository": {
+            "repositoryName": "apkleaks",
+            "description": "Scanning APK file for URIs, endpoints & secrets.",
+            "url": "https://github.com/dwisiswant0/apkleaks"
+        }
+    }
+]
