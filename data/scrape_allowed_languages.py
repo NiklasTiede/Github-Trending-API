@@ -5,7 +5,7 @@ Script for collecting data about spoken/programming languages.
 # Copyright (c) 2021, Niklas Tiede.
 # All rights reserved. Distributed under the MIT License.
 
-# create enum class: 
+# create enum class:
 # 1. copy html of selectable programming langauges/ spoken langauges and paste into .html file each
 # 2. scrape each file by an identifier and the allowed url Parameter
 # 3. write output into stille and copy/paste into enum-classes (allowed_parameters.py)
@@ -14,20 +14,29 @@ Script for collecting data about spoken/programming languages.
 ## programming languages ##
 ###########################
 
-from bs4 import BeautifulSoup, element
+from bs4 import BeautifulSoup
 
-with open('progr_languages.html') as f:
+with open("progr_languages.html") as f:
     y = f.read()
 
-soup = BeautifulSoup(y, 'html.parser')
-coding_langs = soup.find_all('a', role="menuitemradio")
+soup = BeautifulSoup(y, "html.parser")
+coding_langs = soup.find_all("a", role="menuitemradio")
 
 for lang in coding_langs:
     before_lang_name = lang["href"].split("/")[-1].split("?")[0]
 
-    # identifier is not allowed to contain */+/(/)/-/./, digit at the beginning or using a reserved keyword -> using .replace function
-    after_lang_name = before_lang_name.replace('-', '_').replace('+', '_').replace('.', '').replace(',', '').replace('%', '_').replace('*', '_').replace("'", '')
-    
+    # identifier is not allowed to contain */+/(/)/-/./, digit at the beginning or using a
+    # reserved keyword -> using .replace function
+    after_lang_name = (
+        before_lang_name.replace("-", "_")
+        .replace("+", "_")
+        .replace(".", "")
+        .replace(",", "")
+        .replace("%", "_")
+        .replace("*", "_")
+        .replace("'", "")
+    )
+
     if after_lang_name[0].isdigit():
         after_lang_name = "_" + after_lang_name
 
@@ -42,18 +51,17 @@ for lang in coding_langs:
 ## spoken languages ##
 ######################
 
-with open('spoken_languages.html') as f:
+with open("spoken_languages.html") as f:
     y = f.read()
 
-soup = BeautifulSoup(y, 'html.parser')
-x = soup.find_all('a', role="menuitemradio")
+soup = BeautifulSoup(y, "html.parser")
+x = soup.find_all("a", role="menuitemradio")
 
 for lang in x:
     spoken_lang = lang.text.strip()
-    spoken_lang = spoken_lang.replace(',', '').replace(' ', '_')
+    spoken_lang = spoken_lang.replace(",", "").replace(" ", "_")
     abbrev = lang["href"].split("=")[-1]
     heureka = f"    {spoken_lang} = '{abbrev}'\n"
 
     with open("spoken_languages.csv", "a") as fw:
         fw.write(heureka)
-

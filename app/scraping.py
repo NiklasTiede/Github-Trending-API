@@ -1,11 +1,18 @@
-import bs4
+"""Scraping
+===================
+functions to scrape repository/developer data from HTML and store as JSON.
+"""
+# Copyright (c) 2021, Niklas Tiede.
+# All rights reserved. Distributed under the MIT License.
 import typing
+
 import aiohttp
+import bs4
 
 
 async def get_request(*args, **kwargs):
-    """ GET request performed with aiohttp to make
-    asynchronous requests. 
+    """GET request performed with aiohttp to make
+    asynchronous requests.
     """
     try:
         async with aiohttp.ClientSession() as session:
@@ -17,21 +24,21 @@ async def get_request(*args, **kwargs):
 
 def filter_articles(raw_html: str) -> str:
     """Filters html out, which is not enclosed by article-tags.
-    Beautifulsoup is inaccurate and slow when applied on a larger 
+    Beautifulsoup is inaccurate and slow when applied on a larger
     html string, this filtration fixes this.
     """
-    raw_html = raw_html.split("\n")
+    raw_html_lst = raw_html.split("\n")
 
     # count number of article tags within the document (varies from 0 to 50):
     article_tags_count = 0
     tag = "article"
-    for line in raw_html:
+    for line in raw_html_lst:
         if tag in line:
             article_tags_count += 1
 
     # copy HTML enclosed by first and last article-tag:
     articles_arrays, is_article = [], False
-    for line in raw_html:
+    for line in raw_html_lst:
         if tag in line:
             article_tags_count -= 1
             is_article = True
@@ -43,8 +50,8 @@ def filter_articles(raw_html: str) -> str:
 
 
 def make_soup(articles_html: str) -> bs4.element.ResultSet:
-    """ html enclosed by article-tags is converted into a 
-    soup for further data extraction. 
+    """html enclosed by article-tags is converted into a
+    soup for further data extraction.
     """
     soup = bs4.BeautifulSoup(articles_html, "lxml")
     return soup.find_all("article", class_="Box-row")
@@ -53,8 +60,7 @@ def make_soup(articles_html: str) -> bs4.element.ResultSet:
 def scraping_repositories(
     matches: bs4.element.ResultSet, since: str
 ) -> typing.List[typing.Dict]:
-    """ Data about all trending repositories are extracted.
-    """
+    """Data about all trending repositories are extracted."""
     trending_repositories = []
     for rank, match in enumerate(matches):
 
@@ -93,10 +99,11 @@ def scraping_repositories(
             if "," in raw_total_stars:
                 raw_total_stars = raw_total_stars.replace(",", "")
         if raw_total_stars:
+            total_stars: typing.Optional[int]
             try:
                 total_stars = int(raw_total_stars)
-            except ValueError as VE:
-                print(VE)
+            except ValueError as missing_number:
+                print(missing_number)
         else:
             total_stars = None
 
@@ -106,43 +113,43 @@ def scraping_repositories(
             if "," in raw_forks:
                 raw_forks = raw_forks.replace(",", "")
         if raw_forks:
+            forks: typing.Optional[int]
             try:
                 forks = int(raw_forks)
-            except ValueError as VE:
-                print(VE)
+            except ValueError as missing_number:
+                print(missing_number)
         else:
             forks = None
 
         # stars in period
         if stars_built_section.find("span", class_="d-inline-block float-sm-right"):
             raw_stars_since = (
-                stars_built_section.find(
-                    "span", class_="d-inline-block float-sm-right")
+                stars_built_section.find("span", class_="d-inline-block float-sm-right")
                 .get_text(strip=True)
                 .split()[0]
             )
             if "," in raw_stars_since:
                 raw_stars_since = raw_stars_since.replace(",", "")
         if raw_stars_since:
+            stars_since: typing.Optional[int]
             try:
                 stars_since = int(raw_stars_since)
-            except ValueError as VE:
-                print(VE)
+            except ValueError as missing_number:
+                print(missing_number)
         else:
             stars_since = None
 
         # builtby
-        built_section = stars_built_section.find(
-            "span", class_="d-inline-block mr-3")
+        built_section = stars_built_section.find("span", class_="d-inline-block mr-3")
         if built_section:
             contributors = stars_built_section.find(
-                "span", class_="d-inline-block mr-3").find_all("a")
+                "span", class_="d-inline-block mr-3"
+            ).find_all("a")
             built_by = []
             for contributor in contributors:
                 contrib_data = {}
                 contrib_data["username"] = contributor["href"].strip("/")
-                contrib_data["url"] = "https://github.com" + \
-                    contributor["href"]
+                contrib_data["url"] = "https://github.com" + contributor["href"]
                 contrib_data["avatar"] = contributor.img["src"]
                 built_by.append(dict(contrib_data))
         repositories = {
@@ -163,9 +170,10 @@ def scraping_repositories(
     return trending_repositories
 
 
-def scraping_developers(matches: bs4.element.ResultSet, since: str) -> typing.List[typing.Dict]:
-    """ Data about all trending developers are extracted.
-    """
+def scraping_developers(
+    matches: bs4.element.ResultSet, since: str
+) -> typing.List[typing.Dict]:
+    """Data about all trending developers are extracted."""
     all_trending_developers = []
     for rank, match in enumerate(matches):
 
@@ -186,8 +194,12 @@ def scraping_developers(matches: bs4.element.ResultSet, since: str) -> typing.Li
 
         # data about developers popular repo:
         if match.article:
-            raw_description = match.article.find("div", class_="f6 color-text-secondary mt-1")
-            repo_description = raw_description.get_text(strip=True) if raw_description else None
+            raw_description = match.article.find(
+                "div", class_="f6 color-text-secondary mt-1"
+            )
+            repo_description = (
+                raw_description.get_text(strip=True) if raw_description else None
+            )
             pop_repo = match.article.h1.a
             if pop_repo:
                 repo_name = pop_repo.get_text(strip=True)

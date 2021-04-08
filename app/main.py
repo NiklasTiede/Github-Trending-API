@@ -26,17 +26,17 @@ from app.scraping import (
 app = fastapi.FastAPI()
 
 
-this_apis_domain = "https://gh-trending-api.herokuapp.com"
+DOMAIN_NAME = "https://gh-trending-api.herokuapp.com"
 
 
 @app.get("/")
-def help():
+def help_routes():
     """ API endpoints and documentation. """
     return {
-        "repositories": f"{this_apis_domain}/repositories",
-        "developers": f"{this_apis_domain}/developers",
-        "docs": f"{this_apis_domain}/docs",
-        "redoc": f"{this_apis_domain}/redoc",
+        "repositories": f"{DOMAIN_NAME}/repositories",
+        "developers": f"{DOMAIN_NAME}/developers",
+        "docs": f"{DOMAIN_NAME}/docs",
+        "redoc": f"{DOMAIN_NAME}/redoc",
     }
 
 
@@ -49,9 +49,9 @@ async def trending_repositories(
     """
     payload = {"since": "daily"}
     if since:
-        payload["since"] = since._value_
+        payload["since"] = since.value
     if spoken_language_code:
-        payload["spoken_language_code"] = spoken_language_code._value_
+        payload["spoken_language_code"] = spoken_language_code.value
 
     url = "https://github.com/trending"
     sem = asyncio.Semaphore()
@@ -76,9 +76,9 @@ async def trending_repositories_by_progr_language(
     """
     payload = {"since": "daily"}
     if since:
-        payload["since"] = since._value_
+        payload["since"] = since.value
     if spoken_language_code:
-        payload["spoken_language_code"] = spoken_language_code._value_
+        payload["spoken_language_code"] = spoken_language_code.value
 
     url = f"https://github.com/trending/{prog_lang}"
     sem = asyncio.Semaphore()
@@ -99,7 +99,7 @@ async def trending_developers(since: AllowedDateRanges = None):
     """
     payload = {"since": "daily"}
     if since:
-        payload["since"] = since._value_
+        payload["since"] = since.value
 
     url = "https://github.com/trending/developers"
     sem = asyncio.Semaphore()
@@ -122,7 +122,7 @@ async def trending_developers_by_progr_language(
     """
     payload = {"since": "daily"}
     if since:
-        payload["since"] = since._value_
+        payload["since"] = since.value
 
     url = f"https://github.com/trending/developers/{prog_lang}"
     sem = asyncio.Semaphore()

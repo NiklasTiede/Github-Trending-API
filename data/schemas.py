@@ -6,50 +6,59 @@ schemas for repositories/developers.
 # All rights reserved. Distributed under the MIT License.
 
 
-from typing import Optional
 from dataclasses import dataclass
-
-
-# schema of repository data:
-@dataclass
-class Repository:
-    rank: int
-    username: str
-    repositoryName: str
-    url: str
-    since: str
-    StarsSince: int
-    totalStars: int
-    forks: int
-    language: Optional[str] = None
-    languageColor: Optional[str] = None
-    description: Optional[str] = None
-    builtBy: Optional[BuiltBy] = None
+from typing import Optional
 
 
 @dataclass
 class BuiltBy:
+    """Data about developers that build the repository."""
+
     username: int
     url: str
     avatar: str
 
 
+# schema of repository data:
+@dataclass
+class Repository:
+    """Data of a trending repository."""
+
+    rank: int
+    username: str
+    repository_name: str
+    url: str
+    since: str
+    stars_since: int
+    total_stars: int
+    forks: int
+    language: Optional[str] = None
+    language_color: Optional[str] = None
+    description: Optional[str] = None
+    built_by: Optional[BuiltBy] = None
+
+
+@dataclass
+class PopularRepository:
+    """Data about a trending developers popular repository."""
+
+    repository_name: Optional[str] = None
+    url: Optional[str] = None
+    description: Optional[int] = None
+
+
 # schema of developer data:
 @dataclass
 class Developer:
+    """Data about a trending developer."""
+
     rank: int
-    account_name: str
-    URL: str
-    since_data_range: str
-    full_name: Optional[str] = None
-    mini_avatar_URL: Optional[str] = None
-    popular_repo: Optional[str] = None
-
-
-@dataclass
-class popularRepository:
-    popular_repo_url: Optional[str] = None
-    repo_description: Optional[int] = None
+    username: str
+    url: str
+    since: str
+    avatar: Optional[str] = None
+    name: Optional[str] = None
+    popular_repository: Optional[PopularRepository] = None
 
 
 # class TrendingData():

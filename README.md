@@ -1,6 +1,5 @@
-<p align="center">
-<img src="docs/trending.png" width="500">
-</p>
+
+<p align="center"><img src="docs/trending.png" width="500"></p>
 
 <p align="center">
 ...written in Python!
