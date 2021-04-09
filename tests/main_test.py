@@ -3,7 +3,7 @@
 
 from fastapi.testclient import TestClient
 
-from app.main import app, DOMAIN_NAME
+from app.main import DOMAIN_NAME, app
 
 client = TestClient(app)
 

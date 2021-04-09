@@ -41,9 +41,9 @@ from app.scraping import (
 )
 def test_repository_scraping(input_html, expected_json):
     """Tests functions which scrape data about repositories from HTML."""
-    with open(expected_json, "r") as file:
+    with open(expected_json) as file:
         correct_repo_json = json.loads(file.read())
-    with open(input_html, "r") as file:
+    with open(input_html) as file:
         raw_html = file.read()
     articles_html = filter_articles(raw_html)
     soup = make_soup(articles_html)
@@ -55,7 +55,9 @@ def test_repository_scraping(input_html, expected_json):
     "input_html,expected_json",
     [
         pytest.param(
-            "data/devdata1.html", "data/devdata1.json", id="25 developers, normal data."
+            "data/devdata1.html",
+            "data/devdata1.json",
+            id="25 developers, normal data.",
         ),
         pytest.param(
             "data/devdata2.html",
@@ -71,9 +73,9 @@ def test_repository_scraping(input_html, expected_json):
 )
 def test_developer_scraping(input_html, expected_json):
     """Tests functions which scrape data about developers from HTML."""
-    with open(expected_json, "r") as file:
+    with open(expected_json) as file:
         correct_repo_json = json.loads(file.read())
-    with open(input_html, "r") as file:
+    with open(input_html) as file:
         raw_html = file.read()
     articles_html = filter_articles(raw_html)
     soup = make_soup(articles_html)

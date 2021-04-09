@@ -4,13 +4,17 @@ functions to scrape repository/developer data from HTML and store as JSON.
 """
 # Copyright (c) 2021, Niklas Tiede.
 # All rights reserved. Distributed under the MIT License.
-import typing
+
+from typing import Any, Dict, List, Optional, Union
 
 import aiohttp
 import bs4
 
 
-async def get_request(*args, **kwargs):
+async def get_request(
+    *args: str,
+    **kwargs: Dict[str, str],
+) -> Union[str, aiohttp.ClientConnectorError]:
     """GET request performed with aiohttp to make
     asynchronous requests.
     """
@@ -58,8 +62,9 @@ def make_soup(articles_html: str) -> bs4.element.ResultSet:
 
 
 def scraping_repositories(
-    matches: bs4.element.ResultSet, since: str
-) -> typing.List[typing.Dict]:
+    matches: bs4.element.ResultSet,
+    since: str,
+) -> List[Dict[Any, Any]]:
     """Data about all trending repositories are extracted."""
     trending_repositories = []
     for rank, match in enumerate(matches):
@@ -99,7 +104,7 @@ def scraping_repositories(
             if "," in raw_total_stars:
                 raw_total_stars = raw_total_stars.replace(",", "")
         if raw_total_stars:
-            total_stars: typing.Optional[int]
+            total_stars: Optional[int]
             try:
                 total_stars = int(raw_total_stars)
             except ValueError as missing_number:
@@ -109,11 +114,13 @@ def scraping_repositories(
 
         # forks
         if stars_built_section.a.findNextSibling("a"):
-            raw_forks = stars_built_section.a.findNextSibling("a").get_text(strip=True)
+            raw_forks = stars_built_section.a.findNextSibling(
+                "a",
+            ).get_text(strip=True)
             if "," in raw_forks:
                 raw_forks = raw_forks.replace(",", "")
         if raw_forks:
-            forks: typing.Optional[int]
+            forks: Optional[int]
             try:
                 forks = int(raw_forks)
             except ValueError as missing_number:
@@ -124,14 +131,17 @@ def scraping_repositories(
         # stars in period
         if stars_built_section.find("span", class_="d-inline-block float-sm-right"):
             raw_stars_since = (
-                stars_built_section.find("span", class_="d-inline-block float-sm-right")
+                stars_built_section.find(
+                    "span",
+                    class_="d-inline-block float-sm-right",
+                )
                 .get_text(strip=True)
                 .split()[0]
             )
             if "," in raw_stars_since:
                 raw_stars_since = raw_stars_since.replace(",", "")
         if raw_stars_since:
-            stars_since: typing.Optional[int]
+            stars_since: Optional[int]
             try:
                 stars_since = int(raw_stars_since)
             except ValueError as missing_number:
@@ -140,10 +150,14 @@ def scraping_repositories(
             stars_since = None
 
         # builtby
-        built_section = stars_built_section.find("span", class_="d-inline-block mr-3")
+        built_section = stars_built_section.find(
+            "span",
+            class_="d-inline-block mr-3",
+        )
         if built_section:
             contributors = stars_built_section.find(
-                "span", class_="d-inline-block mr-3"
+                "span",
+                class_="d-inline-block mr-3",
             ).find_all("a")
             built_by = []
             for contributor in contributors:
@@ -171,8 +185,9 @@ def scraping_repositories(
 
 
 def scraping_developers(
-    matches: bs4.element.ResultSet, since: str
-) -> typing.List[typing.Dict]:
+    matches: bs4.element.ResultSet,
+    since: str,
+) -> List[Dict[Any, Any]]:
     """Data about all trending developers are extracted."""
     all_trending_developers = []
     for rank, match in enumerate(matches):
@@ -195,10 +210,15 @@ def scraping_developers(
         # data about developers popular repo:
         if match.article:
             raw_description = match.article.find(
-                "div", class_="f6 color-text-secondary mt-1"
+                "div",
+                class_="f6 color-text-secondary mt-1",
             )
             repo_description = (
-                raw_description.get_text(strip=True) if raw_description else None
+                raw_description.get_text(
+                    strip=True,
+                )
+                if raw_description
+                else None
             )
             pop_repo = match.article.h1.a
             if pop_repo:

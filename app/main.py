@@ -6,6 +6,7 @@ API serving data about trending github repositories/developers.
 # All rights reserved. Distributed under the MIT License.
 
 import asyncio
+from typing import Dict, List, Any, Union
 
 import fastapi
 import uvicorn
@@ -30,7 +31,7 @@ DOMAIN_NAME = "https://gh-trending-api.herokuapp.com"
 
 
 @app.get("/")
-def help_routes():
+def help_routes() -> Dict[str, str]:
     """ API endpoints and documentation. """
     return {
         "repositories": f"{DOMAIN_NAME}/repositories",
@@ -42,8 +43,9 @@ def help_routes():
 
 @app.get("/repositories")
 async def trending_repositories(
-    since: AllowedDateRanges = None, spoken_language_code: AllowedSpokenLanguages = None
-):
+    since: AllowedDateRanges = None,
+    spoken_language_code: AllowedSpokenLanguages = None,
+) -> Union[List[Any], str]:
     """Returns data about trending repositories (all programming
     languages, cannot be specified on this endpoint).
     """
@@ -70,7 +72,7 @@ async def trending_repositories_by_progr_language(
     prog_lang: AllowedProgrammingLanguages,
     since: AllowedDateRanges = None,
     spoken_language_code: AllowedSpokenLanguages = None,
-):
+) -> Union[List[Any], str]:
     """Returns data about trending repositories. A specific programming
     language can be added as path parameter to specify search.
     """
@@ -93,7 +95,7 @@ async def trending_repositories_by_progr_language(
 
 
 @app.get("/developers")
-async def trending_developers(since: AllowedDateRanges = None):
+async def trending_developers(since: AllowedDateRanges = None) -> Union[List[Any], str]:
     """Returns data about trending developers (all programming languages,
     cannot be specified on this endpoint).
     """
@@ -115,8 +117,9 @@ async def trending_developers(since: AllowedDateRanges = None):
 
 @app.get("/developers/{prog_lang}")
 async def trending_developers_by_progr_language(
-    prog_lang: AllowedProgrammingLanguages, since: AllowedDateRanges = None
-):
+    prog_lang: AllowedProgrammingLanguages,
+    since: AllowedDateRanges = None,
+) -> Union[List[Any], str]:
     """Returns data about trending developers. A specific programming
     language can be added as path parameter to specify search.
     """

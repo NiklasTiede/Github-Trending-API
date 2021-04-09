@@ -37,7 +37,7 @@
 
 <h1><img src="docs/example.png" width="30px"#> Examples</h1>
 
-Data you can retrieve from this API. 
+Data you can retrieve from this API.
 
 ## Trending Repositories
 
@@ -107,7 +107,7 @@ See [UptimeRobot](https://stats.uptimerobot.com/5KMN7t0E5M) to ensure yourself t
 
 <h1><img src="docs/tutorial.png" width="25px"#> How to Use</h1>
 
-FastAPI has a fantastic built-in documentation, so feel free to visit and explore the [API](https://gh-trending-api.herokuapp.com) by yourself. Data about trending repositories/developers are provided via the `/repositories` and `/developers` routes. The endpoints are similar to the routes on github. 
+FastAPI has a fantastic built-in documentation, so feel free to visit and explore the [API](https://gh-trending-api.herokuapp.com) by yourself. Data about trending repositories/developers are provided via the `/repositories` and `/developers` routes. The endpoints are similar to the routes on github.
 
 - a path parameter for the programming language can be used to limit the scope of the search to this language
 - a query parameter for the date range (`since`) let you select the trending projects within the specified period of time (daily, weekly or monthly)
@@ -148,4 +148,3 @@ Or pull the [docker image](https://hub.docker.com/r/niklastiede/github-trending-
 ❯ docker pull niklastiede/github-trending-api:1.0.0
 ❯ docker run -p 5000:5000 niklastiede/github-trending-api:1.0.0
 ```
-

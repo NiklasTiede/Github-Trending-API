@@ -11,7 +11,8 @@ import json
 import bs4
 from scraping import filter_articles, scraping_developers
 
-with open("devdata3.html", "r") as f:
+
+with open("devdata3.html") as f:
     articles_html = f.read()
 
 bla = filter_articles(articles_html)

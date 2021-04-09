@@ -1,4 +1,4 @@
-# docker build -t gh-trending-api . 
+# docker build -t gh-trending-api .
 # docker run -p 5000:5000 gh-trending-api:latest
 
 FROM python:3.9.2-alpine3.13

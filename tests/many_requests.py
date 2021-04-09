@@ -17,18 +17,17 @@ url_list = list([URL] * 20)
 
 
 async def fetch(session, url):
-    """requesting a url asynchronously
-    """
+    """requesting a url asynchronously"""
     async with session.get(url, ssl=ssl.SSLContext()) as response:
         return await response.json()
 
 
 async def fetch_all(urls, loop):
-    """performaning multiple requests asynchronously
-    """
+    """performaning multiple requests asynchronously"""
     async with aiohttp.ClientSession(loop=loop) as session:
         results = await asyncio.gather(
-            *[fetch(session, url) for url in urls], return_exceptions=True
+            *[fetch(session, url) for url in urls],
+            return_exceptions=True,
         )
         return results
 
@@ -38,7 +37,9 @@ if __name__ == "__main__":
 
     event_loop = asyncio.get_event_loop()
     urls_duplicates = url_list
-    htmls = event_loop.run_until_complete(fetch_all(urls_duplicates, event_loop))
+    htmls = event_loop.run_until_complete(
+        fetch_all(urls_duplicates, event_loop),
+    )
 
     t1_stop = time.perf_counter()
     print("elapsed:", t1_stop - t1_start)
