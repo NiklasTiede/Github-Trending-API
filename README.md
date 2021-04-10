@@ -23,9 +23,9 @@
     <img src="https://img.shields.io/github/v/release/NiklasTiede/Github-Trending-API" />
   </a>
 
-  <!-- <a alt="codecov" href="">
-    <img src="" />
-  </a> -->
+  <a href="https://app.codecov.io/gh/NiklasTiede/Github-Trending-API">
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/github/NiklasTiede/Github-Trending-API">
+  </a>
 
   <a alt="License" href="">
     <img src="https://img.shields.io/github/license/NiklasTiede/Github-Trending-API" />
@@ -33,6 +33,8 @@
 
 </p>
 
+<!-- <img alt="Codecov" src="https://img.shields.io/codecov/c/github/NiklasTiede/Github-Trending-API">
+![codecov](https://app.codecov.io/gh/NiklasTiede/Github-Trending-API) -->
 
 
 <h1><img src="docs/example.png" width="30px"#> Examples</h1>
