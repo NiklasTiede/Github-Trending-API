@@ -1,27 +1,37 @@
 # Apply to all files without committing:
 #  $ pre-commit run --all-files
+
 # Update this file:
 #  $ pre-commit autoupdate
+
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.4.0
     hooks:
-    # -   id: check-executables-have-shebangs
     -   id: trailing-whitespace
-    -   id: end-of-file-fixer
+    # -   id: end-of-file-fixer
     -   id: check-docstring-first
     -   id: check-yaml
     -   id: debug-statements
     -   id: name-tests-test
         exclude: tests/many_requests.py
     -   id: requirements-txt-fixer
-    # -   id: double-quote-string-fixer
     -   id: detect-private-key
 
+# -   repo: https://github.com/PyCQA/flake8
+#     rev: 3.9.0
+#     hooks:
+#     -   id: flake8
+#         additional_dependencies: [flake8-typing-imports==1.7.0]
 # -   repo: https://github.com/pre-commit/mirrors-autopep8
 #     rev: v1.5.6
 #     hooks:
 #     -   id: autopep8
+# -   repo: https://github.com/asottile/reorder_python_imports
+#     rev: v2.4.0
+#     hooks:
+#     -   id: reorder-python-imports
+#         args: [--py3-plus]
 
 -   repo: https://github.com/asottile/add-trailing-comma
     rev: v2.1.0
@@ -41,35 +51,14 @@ repos:
     -   id: mypy
 
 -   repo: https://github.com/psf/black
-    rev: 20.8b1 # Replace by any tag/version: https://github.com/psf/black/tags
+    rev: 20.8b1
     hooks:
     -   id: black
-        language_version: python3 # Should be a command that runs python3.6+
+        language_version: python3
 
-# -   repo: https://github.com/shellcheck-py/shellcheck-py
-#     rev: v0.7.1.1
-#     hooks:
-#     -   id: shellcheck
 
-# -   repo: https://github.com/Yelp/detect-secrets
-#     rev: v1.0.0
-#     hooks:
-#     -   id: detect-secrets
-#         args: ['--baseline', '.secrets.baseline']
-#         exclude: package.lock.json
-
-# -   repo: https://github.com/pre-commit/mirrors-mypy
-#     rev: v0.812
-#     hooks:
-#     -   id: mypy
 
 # -   repo: https://github.com/PyCQA/pylint
 #     rev: pylint-2.7.4
 #     hooks:
 #     -   id: pylint
-
-# -   repo: https://github.com/asottile/pyupgrade
-#     rev: v2.12.0
-#     hooks:
-#     -   id: pyupgrade
-#         args: [--py39-plus]

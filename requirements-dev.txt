@@ -1,4 +1,4 @@
-# isort, black, pylint, mypy
+# pre-commit, pytest, isort, black, pylint, mypy
 
 appdirs==1.4.4
 astroid==2.5.2

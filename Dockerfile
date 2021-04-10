@@ -14,7 +14,7 @@ RUN apk add --update --no-cache --virtual .build-deps \
     libxml2 \
     libxml2-dev && \
     apk add libxslt-dev && \
-    pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir -r requirements-prod.txt && \
     apk del .build-deps
 
 COPY ./app ./app
