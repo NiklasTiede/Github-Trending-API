@@ -1,9 +1,9 @@
 """Testing FastAPI endpoints.
 """
-
 from fastapi.testclient import TestClient
 
-from app.main import DOMAIN_NAME, app
+from app.main import app
+from app.main import DOMAIN_NAME
 
 client = TestClient(app)
 

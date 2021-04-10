@@ -4,7 +4,6 @@ path and query parameters which are allowed to use.
 """
 # Copyright (c) 2021, Niklas Tiede.
 # All rights reserved. Distributed under the MIT License.
-
 from enum import Enum
 
 

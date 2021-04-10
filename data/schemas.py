@@ -4,8 +4,6 @@ schemas for repositories/developers.
 """
 # Copyright (c) 2021, Niklas Tiede.
 # All rights reserved. Distributed under the MIT License.
-
-
 from dataclasses import dataclass
 from typing import Optional
 

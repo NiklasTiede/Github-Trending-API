@@ -1,16 +1,13 @@
 """Functions for web scraping are tested
 """
-
 import json
 
 import pytest
 
-from app.scraping import (
-    filter_articles,
-    make_soup,
-    scraping_developers,
-    scraping_repositories,
-)
+from app.scraping import filter_articles
+from app.scraping import make_soup
+from app.scraping import scraping_developers
+from app.scraping import scraping_repositories
 
 
 @pytest.mark.parametrize(
@@ -67,7 +64,7 @@ def test_repository_scraping(input_html, expected_json):
         pytest.param(
             "data/devdata3.html",
             "data/devdata3.json",
-            id="15 developers, description of 1 popular repository is missing.",
+            id="15 developers, description of 1 repo is missing.",
         ),
     ],
 )

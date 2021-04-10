@@ -4,8 +4,11 @@ functions to scrape repository/developer data from HTML and store as JSON.
 """
 # Copyright (c) 2021, Niklas Tiede.
 # All rights reserved. Distributed under the MIT License.
-
-from typing import Any, Dict, List, Optional, Union
+from typing import Any
+from typing import Dict
+from typing import List
+from typing import Optional
+from typing import Union
 
 import aiohttp
 import bs4
@@ -129,7 +132,9 @@ def scraping_repositories(
             forks = None
 
         # stars in period
-        if stars_built_section.find("span", class_="d-inline-block float-sm-right"):
+        if stars_built_section.find(
+                "span", class_="d-inline-block float-sm-right",
+        ):
             raw_stars_since = (
                 stars_built_section.find(
                     "span",
@@ -161,11 +166,11 @@ def scraping_repositories(
             ).find_all("a")
             built_by = []
             for contributor in contributors:
-                contrib_data = {}
-                contrib_data["username"] = contributor["href"].strip("/")
-                contrib_data["url"] = "https://github.com" + contributor["href"]
-                contrib_data["avatar"] = contributor.img["src"]
-                built_by.append(dict(contrib_data))
+                contr_data = {}
+                contr_data["username"] = contributor["href"].strip("/")
+                contr_data["url"] = "https://github.com" + contributor["href"]
+                contr_data["avatar"] = contributor.img["src"]
+                built_by.append(dict(contr_data))
         repositories = {
             "rank": rank + 1,
             "username": username,
