@@ -1,12 +1,9 @@
 name: GH Release and Deploy on Heroku
 
-
-on: [push, pull_request]
-
-# on:
-#   push:
-#     tags:
-#       - 'v*.*.*'
+on:
+  push:
+    tags:
+      - 'v*.*.*'
 
 jobs:
   build:
@@ -15,17 +12,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      # - name: Release
-      #   uses: softprops/action-gh-release@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: Publish to Registry
-      #   uses: elgohr/Publish-Docker-Github-Action@master
-      #   with:
-      #     name: niklastiede/testing_workflows
-      #     username: ${{ secrets.DOCKER_USERNAME }}
-      #     password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: niklastiede/github-trending-api
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
