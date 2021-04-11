@@ -3,7 +3,7 @@ name: Continuous Integration
 on: [push, pull_request]
 
 jobs:
-  build-and-test:
+  test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -36,6 +36,14 @@ jobs:
           path_to_write_report: ./coverage/codecov_report.txt
           verbose: true
 
+
+  build-dockerimage:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.9]
+    steps:
+      - uses: actions/checkout@v2
       - name: build dockerimage
         run: |
           docker build -t gh-trending-api .
