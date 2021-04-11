@@ -11,10 +11,6 @@
     <img src="https://img.shields.io/uptimerobot/status/m787484641-cc42e583e4fe0a25564a29e1" />
   </a>
 
-  <!-- <a alt="dockr build" href="">
-    <img src="" />
-  </a> -->
-
   <a alt="Issues" href="https://github.com/NiklasTiede/Github-Trending-API/releases">
     <img src="https://img.shields.io/github/issues/NiklasTiede/Github-Trending-API" />
   </a>
@@ -33,8 +29,6 @@
 
 </p>
 
-<!-- <img alt="Codecov" src="https://img.shields.io/codecov/c/github/NiklasTiede/Github-Trending-API">
-![codecov](https://app.codecov.io/gh/NiklasTiede/Github-Trending-API) -->
 
 
 <h1><img src="docs/example.png" width="30px"#> Examples</h1>
@@ -141,12 +135,17 @@ You can easily clone the project and run it locally:
 ```
 ❯ git clone
 ❯ cd Github-Trending-API
+```
+
+Recreate the dependencies from the `requirements-prod.txt` file with a dependency manager of your choice.
+
+```
 ❯ uvicorn app.main:app --host 0.0.0.0 --port 5000 --reload
 ```
 
 Or pull the [docker image](https://hub.docker.com/r/niklastiede/github-trending-api) and run it:
 
 ```
-❯ docker pull niklastiede/github-trending-api:1.0.0
-❯ docker run -p 5000:5000 niklastiede/github-trending-api:1.0.0
+❯ docker pull niklastiede/github-trending-api:latest
+❯ docker run -p 5000:5000 niklastiede/github-trending-api:latest
 ```
