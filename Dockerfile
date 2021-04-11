@@ -7,7 +7,7 @@ LABEL maintainer="Niklas Tiede <niklastiede2@gmail.com>"
 
 WORKDIR /github-trending-api
 
-COPY ./requirements.txt .
+COPY ./requirements-prod.txt .
 
 RUN apk add --update --no-cache --virtual .build-deps \
     g++ \
