@@ -19,7 +19,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest pytest-cov requests
           if [ -f requirements-prod.txt ]; then pip install -r requirements-prod.txt; fi
-
       - name: Generate coverage report
         run: |
           pytest --cov=app --cov-report=xml

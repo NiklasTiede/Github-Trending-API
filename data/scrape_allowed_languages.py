@@ -4,10 +4,7 @@ Script for collecting data about spoken/programming languages.
 """
 # Copyright (c) 2021, Niklas Tiede.
 # All rights reserved. Distributed under the MIT License.
-
-
 # programming languages
-
 from bs4 import BeautifulSoup
 
 with open("progr_languages.html") as f:
