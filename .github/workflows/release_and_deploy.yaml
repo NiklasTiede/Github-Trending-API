@@ -65,3 +65,14 @@ jobs:
         heroku_app_name: "gh-trending-api"
         heroku_email: "niklastiede2@gmail.com"
         # usedocker: true
+
+  github-release:
+    needs: [test, build-dockerimage]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
