@@ -51,29 +51,30 @@ jobs:
           docker build -t gh-trending-api .
 
 
-  # release-and-deploy:
-  #   needs: [test, build-dockerimage]
+  release-and-deploy:
+    needs: [test, build-dockerimage]
 
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v2
 
   #     # - name: Release
   #     #   uses: softprops/action-gh-release@v1
   #     #   env:
   #     #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  #     - name: Publish to Registry
-  #       uses: elgohr/Publish-Docker-Github-Action@master
-  #       with:
-  #         name: niklastiede/github-trending-api
-  #         username: ${{ secrets.DOCKER_USERNAME }}
-  #         password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: niklastiede/github-trending-api
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
-  #     - name: Deploy on Heroku
-  #     - uses: akhileshns/heroku-deploy@v3.12.12
-  #       with:
-  #         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-  #         heroku_app_name: "gh-trending-api"
-  #         heroku_email: "niklastiede2@gmail.com"
-  #         usedocker: true
+      - name: Deploy on Heroku
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "gh-trending-api"
+          heroku_email: "niklastiede2@gmail.com"
+          usedocker: true
