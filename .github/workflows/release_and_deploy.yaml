@@ -64,7 +64,6 @@ jobs:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "gh-trending-api"
         heroku_email: "niklastiede2@gmail.com"
-        # usedocker: true
 
   github-release:
     needs: [test, build-dockerimage]

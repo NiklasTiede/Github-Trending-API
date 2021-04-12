@@ -2,23 +2,25 @@
 can test if the API works also asynchronously. This script is used manually.
 """
 import asyncio
-import ssl
 import time
 
 import aiohttp
 
-# the_url = "http://0.0.0.0:5000/repositories/c++?since=weekly"
-# the_url = "http://127.0.0.1:8000/repositories/c++?since=weekly"
-URL = """https://gh-trending-api.herokuapp.com/
-repositories?since=weekly&spoken_language_code=de"""
 
+# URL = "https://github.com/trending"
+URL = "http://0.0.0.0:5000/repositories/c++?since=weekly"
+
+# URL = "http://127.0.0.1:8000/repositories/c++?since=weekly"
+# URL = """https://gh-trending-api.herokuapp.com/
+# repositories?since=weekly&spoken_language_code=de"""
 
 url_list = list([URL] * 20)
 
 
 async def fetch(session, url):
     """requesting a url asynchronously"""
-    async with session.get(url, ssl=ssl.SSLContext()) as response:
+    async with session.get(url) as response:
+        print('sending request')
         return await response.json()
 
 
@@ -41,5 +43,8 @@ if __name__ == "__main__":
         fetch_all(urls_duplicates, event_loop),
     )
 
+    for html in htmls:
+        print(html[0:1])
+        print()
     t1_stop = time.perf_counter()
     print("elapsed:", t1_stop - t1_start)
