@@ -1,6 +1,6 @@
 """Scraping
 ===================
-functions to scrape repository/developer data from HTML and store as JSON.
+Functions to scrape repository/developer data (HTML -> list of dicts).
 """
 # Copyright (c) 2021, Niklas Tiede.
 # All rights reserved. Distributed under the MIT License.
@@ -18,9 +18,7 @@ async def get_request(
     *args: str,
     **kwargs: Dict[str, str],
 ) -> Union[str, aiohttp.ClientConnectorError]:
-    """GET request performed with aiohttp to make
-    asynchronous requests.
-    """
+    """Asynchronous GET request with aiohttp."""
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(*args, **kwargs) as resp:
@@ -30,9 +28,9 @@ async def get_request(
 
 
 def filter_articles(raw_html: str) -> str:
-    """Filters html out, which is not enclosed by article-tags.
+    """Filters HTML out, which is not enclosed by article-tags.
     Beautifulsoup is inaccurate and slow when applied on a larger
-    html string, this filtration fixes this.
+    HTML string, this filtration fixes this.
     """
     raw_html_lst = raw_html.split("\n")
 
@@ -57,7 +55,7 @@ def filter_articles(raw_html: str) -> str:
 
 
 def make_soup(articles_html: str) -> bs4.element.ResultSet:
-    """html enclosed by article-tags is converted into a
+    """HTML enclosed by article-tags is converted into a
     soup for further data extraction.
     """
     soup = bs4.BeautifulSoup(articles_html, "lxml")

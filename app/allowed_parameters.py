@@ -1,6 +1,6 @@
 """Allowed Parameters
 ===================
-path and query parameters which are allowed to use.
+Path and query parameters which are allowed when client requests this API.
 """
 # Copyright (c) 2021, Niklas Tiede.
 # All rights reserved. Distributed under the MIT License.
@@ -8,7 +8,7 @@ from enum import Enum
 
 
 class AllowedDateRanges(str, Enum):
-    """optional query parameter, default date range: daily"""
+    """Optional query parameter, default date range: daily"""
 
     daily = "daily"
     weekly = "weekly"
@@ -16,7 +16,7 @@ class AllowedDateRanges(str, Enum):
 
 
 class AllowedSpokenLanguages(str, Enum):
-    """optional query parameter, default language: any
+    """Optional query parameter, default language: any
     identifier (language name) = 2-char-string (abbrev. for urlParam)
     """
 
