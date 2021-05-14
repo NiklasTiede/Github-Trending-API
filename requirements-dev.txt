@@ -1,4 +1,5 @@
 # pre-commit, pytest, flake8, mypy, isort, black
+# python 3.9
 
 appdirs==1.4.4
 astroid==2.5.2
