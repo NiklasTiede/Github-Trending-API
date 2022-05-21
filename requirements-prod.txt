@@ -4,5 +4,5 @@
 aiohttp==3.7.4
 beautifulsoup4==4.9.3
 fastapi==0.65.2
-lxml==4.6.3
+lxml==4.6.5
 uvicorn==0.13.4
