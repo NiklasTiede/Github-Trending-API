@@ -38,7 +38,7 @@ Data you can retrieve from this API.
 ## Trending Repositories
 
 ```json
-❯ curl -X GET "https://gh-trending-api.herokuapp.com/developers" -H  "accept: application/json"
+❯ curl -X GET "https://gh-trending-api.herokuapp.com/repositories" -H  "accept: application/json"
 [
   {
     "rank": 1,
@@ -68,7 +68,7 @@ Data you can retrieve from this API.
 ## Trending Developers
 
 ```json
-❯ curl -X GET "https://gh-trending-api.herokuapp.com/repositories" -H  "accept: application/json"
+❯ curl -X GET "https://gh-trending-api.herokuapp.com/developers" -H  "accept: application/json"
 [
   {
     "rank": 1,
