@@ -98,7 +98,7 @@ This project runs on Python 3.9 and uses...
 - fastAPI | *web framework*
 - uvicorn | *ASGI server*
 
-See [UptimeRobot](https://stats.uptimerobot.com/5KMN7t0E5M) to ensure yourself that this API is reliable.
+Since Heroku removed their free plan I can no longer offer you discovering this API's functionality with a deployed instance!
 
 
 <h1><img src="docs/tutorial.png" width="25px"#> How to Use</h1>
