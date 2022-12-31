@@ -100,6 +100,7 @@ This project runs on Python 3.9 and uses...
 
 Since Heroku removed their free plan I can no longer offer you discovering this API's functionality with a deployed instance!
 
+<!-- https://gh-trending-api.herokuapp.com -->
 
 <h1><img src="docs/tutorial.png" width="25px"#> How to Use</h1>
 
