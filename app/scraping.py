@@ -77,7 +77,7 @@ def scraping_repositories(
             description = None
 
         # relative url
-        rel_url = match.h1.a["href"]
+        rel_url = match.h2.a["href"]
 
         # absolute url:
         repo_url = "https://github.com" + rel_url
