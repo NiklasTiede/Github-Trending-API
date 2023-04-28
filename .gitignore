@@ -30,6 +30,7 @@ __pypackages__/
 # Environments
 .env
 .venv
+venv
 
 # mypy
 .mypy_cache/
