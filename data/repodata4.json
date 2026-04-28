@@ -344,7 +344,7 @@
         "languageColor": "#00ADD8",
         "totalStars": null,
         "forks": null,
-        "starsSince": 0,
+        "starsSince": null,
         "since": "daily",
         "builtBy": [
             {
@@ -728,7 +728,7 @@
         "language": null,
         "languageColor": null,
         "totalStars": 1,
-        "forks": 135,
+        "forks": null,
         "starsSince": 0,
         "since": "daily",
         "builtBy": [

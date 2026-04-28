@@ -62,6 +62,59 @@ def make_soup(articles_html: str) -> bs4.element.ResultSet:
     return soup.find_all("article", class_="Box-row")
 
 
+def _parse_int(raw_text: Optional[str]) -> Optional[int]:
+    """Extract the first integer from GitHub's formatted count labels."""
+    if not raw_text:
+        return None
+    raw_number = raw_text.strip().split()[0].replace(",", "")
+    try:
+        return int(raw_number)
+    except ValueError as missing_number:
+        print(missing_number)
+        return None
+
+
+def _find_repository_link(match: bs4.element.Tag) -> Optional[bs4.element.Tag]:
+    """Find the repository heading link in old h1 and current h2 markup."""
+    headings = match.find_all(["h1", "h2"], class_="h3")
+    for heading in headings:
+        link = heading.find("a", href=True)
+        if link and link["href"].count("/") >= 2:
+            return link
+    return None
+
+
+def _find_repository_meta(match: bs4.element.Tag) -> bs4.element.Tag:
+    """Find the row section that contains language, stars, forks, and builders."""
+    for section in match.find_all("div", class_="f6"):
+        if (
+            section.find("span", itemprop="programmingLanguage")
+            or section.find("a", href=lambda href: href and "stargazers" in href)
+            or "stars" in section.get_text(" ", strip=True)
+        ):
+            return section
+    return match
+
+
+def _find_link_by_href_part(
+    section: bs4.element.Tag,
+    href_parts: List[str],
+) -> Optional[bs4.element.Tag]:
+    """Find the first link whose href contains one of the given fragments."""
+    for link in section.find_all("a", href=True):
+        if any(href_part in link["href"] for href_part in href_parts):
+            return link
+    return None
+
+
+def _find_built_section(section: bs4.element.Tag) -> Optional[bs4.element.Tag]:
+    """Find the contributor avatar wrapper without relying on spacing classes."""
+    for span in section.find_all("span"):
+        if "Built by" in span.get_text(" ", strip=True):
+            return span
+    return None
+
+
 def scraping_repositories(
     matches: bs4.element.ResultSet,
     since: str,
@@ -77,7 +130,10 @@ def scraping_repositories(
             description = None
 
         # relative url
-        rel_url = match.h1.a["href"]
+        repo_link = _find_repository_link(match)
+        if not repo_link:
+            continue
+        rel_url = repo_link["href"]
 
         # absolute url:
         repo_url = "https://github.com" + rel_url
@@ -93,77 +149,51 @@ def scraping_repositories(
         if progr_language:
             language = progr_language.get_text(strip=True)
             lang_color_tag = match.find("span", class_="repo-language-color")
-            lang_color = lang_color_tag["style"].split()[-1]
+            lang_color = (
+                lang_color_tag["style"].split()[-1].rstrip(";")
+                if lang_color_tag
+                else None
+            )
         else:
             lang_color, language = None, None
 
-        stars_built_section = match.div.findNextSibling("div")
+        stars_built_section = _find_repository_meta(match)
 
         # total stars:
-        if stars_built_section.a:
-            raw_total_stars = stars_built_section.a.get_text(strip=True)
-            if "," in raw_total_stars:
-                raw_total_stars = raw_total_stars.replace(",", "")
-        if raw_total_stars:
-            total_stars: Optional[int]
-            try:
-                total_stars = int(raw_total_stars)
-            except ValueError as missing_number:
-                print(missing_number)
-        else:
-            total_stars = None
+        total_stars_link = _find_link_by_href_part(
+            stars_built_section,
+            ["stargazers"],
+        )
+        total_stars = _parse_int(
+            total_stars_link.get_text(strip=True) if total_stars_link else None,
+        )
 
         # forks
-        if stars_built_section.a.findNextSibling("a"):
-            raw_forks = stars_built_section.a.findNextSibling(
-                "a",
-            ).get_text(strip=True)
-            if "," in raw_forks:
-                raw_forks = raw_forks.replace(",", "")
-        if raw_forks:
-            forks: Optional[int]
-            try:
-                forks = int(raw_forks)
-            except ValueError as missing_number:
-                print(missing_number)
-        else:
-            forks = None
+        forks_link = _find_link_by_href_part(
+            stars_built_section,
+            ["forks", "network/members"],
+        )
+        forks = _parse_int(
+            forks_link.get_text(strip=True) if forks_link else None,
+        )
 
         # stars in period
-        if stars_built_section.find(
-                "span", class_="d-inline-block float-sm-right",
-        ):
-            raw_stars_since = (
-                stars_built_section.find(
-                    "span",
-                    class_="d-inline-block float-sm-right",
-                )
-                .get_text(strip=True)
-                .split()[0]
-            )
-            if "," in raw_stars_since:
-                raw_stars_since = raw_stars_since.replace(",", "")
-        if raw_stars_since:
-            stars_since: Optional[int]
-            try:
-                stars_since = int(raw_stars_since)
-            except ValueError as missing_number:
-                print(missing_number)
-        else:
-            stars_since = None
+        raw_stars_since = stars_built_section.find(
+            "span",
+            class_="float-sm-right",
+        )
+        stars_since = _parse_int(
+            raw_stars_since.get_text(strip=True) if raw_stars_since else None,
+        )
 
         # builtby
-        built_section = stars_built_section.find(
-            "span",
-            class_="d-inline-block mr-3",
-        )
+        built_by = []
+        built_section = _find_built_section(stars_built_section)
         if built_section:
-            contributors = stars_built_section.find(
-                "span",
-                class_="d-inline-block mr-3",
-            ).find_all("a")
-            built_by = []
+            contributors = built_section.find_all("a", href=True)
             for contributor in contributors:
+                if not contributor.img:
+                    continue
                 contr_data = {}
                 contr_data["username"] = contributor["href"].strip("/")
                 contr_data["url"] = "https://github.com" + contributor["href"]
