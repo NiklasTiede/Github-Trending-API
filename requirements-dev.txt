@@ -13,7 +13,9 @@ mypy==0.812
 mypy-extensions==0.4.3
 pathspec==0.8.1
 pylint==2.7.4
+pytest==9.0.3
 regex==2021.4.4
+requests==2.32.5
 toml==0.10.2
 typed-ast==1.4.2
 typing-extensions==3.7.4.3
