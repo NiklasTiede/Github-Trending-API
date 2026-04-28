@@ -16,7 +16,7 @@ import bs4
 
 async def get_request(
     *args: str,
-    **kwargs: Dict[str, str],
+    **kwargs: Any,
 ) -> Union[str, aiohttp.ClientConnectorError]:
     """Asynchronous GET request with aiohttp."""
     try:
@@ -85,11 +85,14 @@ def _find_repository_link(match: bs4.element.Tag) -> Optional[bs4.element.Tag]:
 
 
 def _find_repository_meta(match: bs4.element.Tag) -> bs4.element.Tag:
-    """Find the row section that contains language, stars, forks, and builders."""
+    """Find the section with language, stars, forks, and builders."""
     for section in match.find_all("div", class_="f6"):
         if (
             section.find("span", itemprop="programmingLanguage")
-            or section.find("a", href=lambda href: href and "stargazers" in href)
+            or section.find(
+                "a",
+                href=lambda href: href and "stargazers" in href,
+            )
             or "stars" in section.get_text(" ", strip=True)
         ):
             return section
@@ -108,7 +111,7 @@ def _find_link_by_href_part(
 
 
 def _find_built_section(section: bs4.element.Tag) -> Optional[bs4.element.Tag]:
-    """Find the contributor avatar wrapper without relying on spacing classes."""
+    """Find the contributor avatar wrapper."""
     for span in section.find_all("span"):
         if "Built by" in span.get_text(" ", strip=True):
             return span
@@ -165,7 +168,9 @@ def scraping_repositories(
             ["stargazers"],
         )
         total_stars = _parse_int(
-            total_stars_link.get_text(strip=True) if total_stars_link else None,
+            total_stars_link.get_text(strip=True)
+            if total_stars_link
+            else None,
         )
 
         # forks

@@ -1,8 +1,8 @@
 # beautifulsoup4, fastapi, lxml, uvicorn, aiohttp
-# python 3.9
+# python 3.13
 
-aiohttp==3.7.4
-beautifulsoup4==4.9.3
-fastapi==0.65.2
-lxml==4.9.1
-uvicorn==0.13.4
+aiohttp==3.13.5
+beautifulsoup4==4.14.3
+fastapi==0.136.1
+lxml==6.1.0
+uvicorn==0.46.0
