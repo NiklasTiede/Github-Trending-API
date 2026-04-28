@@ -25,24 +25,22 @@ from app.scraping import scraping_repositories
 app = fastapi.FastAPI()
 
 
-DOMAIN_NAME = "https://gh-trending-api.herokuapp.com"
-
-
 @app.get("/")
-def help_routes() -> Dict[str, str]:
+def help_routes(request: fastapi.Request) -> Dict[str, str]:
     """ API endpoints and documentation. """
+    base_url = str(request.base_url).rstrip("/")
     return {
-        "repositories": f"{DOMAIN_NAME}/repositories",
-        "developers": f"{DOMAIN_NAME}/developers",
-        "docs": f"{DOMAIN_NAME}/docs",
-        "redoc": f"{DOMAIN_NAME}/redoc",
+        "repositories": f"{base_url}/repositories",
+        "developers": f"{base_url}/developers",
+        "docs": f"{base_url}/docs",
+        "redoc": f"{base_url}/redoc",
     }
 
 
 @app.get("/repositories")
 async def trending_repositories(
-    since: AllowedDateRanges = None,
-    spoken_language_code: AllowedSpokenLanguages = None,
+    since: AllowedDateRanges | None = None,
+    spoken_language_code: AllowedSpokenLanguages | None = None,
 ) -> Union[List[Any], str]:
     """Returns data about trending repositories (all programming
     languages, cannot be specified on this endpoint).
@@ -68,8 +66,8 @@ async def trending_repositories(
 @app.get("/repositories/{prog_lang}")
 async def trending_repositories_by_progr_language(
     prog_lang: AllowedProgrammingLanguages,
-    since: AllowedDateRanges = None,
-    spoken_language_code: AllowedSpokenLanguages = None,
+    since: AllowedDateRanges | None = None,
+    spoken_language_code: AllowedSpokenLanguages | None = None,
 ) -> Union[List[Any], str]:
     """Returns data about trending repositories. A specific programming
     language can be added as path parameter to specify search.
@@ -94,7 +92,7 @@ async def trending_repositories_by_progr_language(
 
 @app.get("/developers")
 async def trending_developers(
-    since: AllowedDateRanges = None,
+    since: AllowedDateRanges | None = None,
 ) -> Union[List[Any], str]:
     """Returns data about trending developers (all programming languages,
     cannot be specified on this endpoint).
@@ -118,7 +116,7 @@ async def trending_developers(
 @app.get("/developers/{prog_lang}")
 async def trending_developers_by_progr_language(
     prog_lang: AllowedProgrammingLanguages,
-    since: AllowedDateRanges = None,
+    since: AllowedDateRanges | None = None,
 ) -> Union[List[Any], str]:
     """Returns data about trending developers. A specific programming
     language can be added as path parameter to specify search.
