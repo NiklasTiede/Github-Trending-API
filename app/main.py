@@ -4,8 +4,7 @@ API serving data about trending github repositories/developers.
 """
 # Copyright (c) 2021, Niklas Tiede.
 # All rights reserved. Distributed under the MIT License.
-import asyncio
-from typing import Any, Dict, List, Union
+from typing import Any, Dict, List
 
 import fastapi
 import uvicorn
@@ -16,6 +15,7 @@ from app.allowed_parameters import (
     AllowedSpokenLanguages,
 )
 from app.scraping import (
+    UpstreamRequestError,
     filter_articles,
     get_request,
     make_soup,
@@ -24,6 +24,17 @@ from app.scraping import (
 )
 
 app = fastapi.FastAPI()
+
+
+async def fetch_trending_html(url: str, payload: Dict[str, str]) -> str:
+    """Fetch GitHub Trending HTML and translate upstream failures."""
+    try:
+        return await get_request(url, compress=True, params=payload)
+    except UpstreamRequestError as request_error:
+        raise fastapi.HTTPException(
+            status_code=502,
+            detail="Unable to fetch GitHub Trending data",
+        ) from request_error
 
 
 @app.get("/")
@@ -42,7 +53,7 @@ def help_routes(request: fastapi.Request) -> Dict[str, str]:
 async def trending_repositories(
     since: AllowedDateRanges | None = None,
     spoken_language_code: AllowedSpokenLanguages | None = None,
-) -> Union[List[Any], str]:
+) -> List[Any]:
     """Returns data about trending repositories (all programming
     languages, cannot be specified on this endpoint).
     """
@@ -53,12 +64,7 @@ async def trending_repositories(
         payload["spoken_language_code"] = spoken_language_code.value
 
     url = "https://github.com/trending"
-    sem = asyncio.Semaphore()
-    async with sem:
-        raw_html = await get_request(url, compress=True, params=payload)
-    if not isinstance(raw_html, str):
-        return "Unable to connect to Github"
-
+    raw_html = await fetch_trending_html(url, payload)
     articles_html = filter_articles(raw_html)
     soup = make_soup(articles_html)
     return scraping_repositories(soup, since=payload["since"])
@@ -69,7 +75,7 @@ async def trending_repositories_by_progr_language(
     prog_lang: AllowedProgrammingLanguages,
     since: AllowedDateRanges | None = None,
     spoken_language_code: AllowedSpokenLanguages | None = None,
-) -> Union[List[Any], str]:
+) -> List[Any]:
     """Returns data about trending repositories. A specific programming
     language can be added as path parameter to specify search.
     """
@@ -80,12 +86,7 @@ async def trending_repositories_by_progr_language(
         payload["spoken_language_code"] = spoken_language_code.value
 
     url = f"https://github.com/trending/{prog_lang.value}"
-    sem = asyncio.Semaphore()
-    async with sem:
-        raw_html = await get_request(url, compress=True, params=payload)
-    if not isinstance(raw_html, str):
-        return "Unable to connect to Github"
-
+    raw_html = await fetch_trending_html(url, payload)
     articles_html = filter_articles(raw_html)
     soup = make_soup(articles_html)
     return scraping_repositories(soup, since=payload["since"])
@@ -94,7 +95,7 @@ async def trending_repositories_by_progr_language(
 @app.get("/developers")
 async def trending_developers(
     since: AllowedDateRanges | None = None,
-) -> Union[List[Any], str]:
+) -> List[Any]:
     """Returns data about trending developers (all programming languages,
     cannot be specified on this endpoint).
     """
@@ -103,12 +104,7 @@ async def trending_developers(
         payload["since"] = since.value
 
     url = "https://github.com/trending/developers"
-    sem = asyncio.Semaphore()
-    async with sem:
-        raw_html = await get_request(url, compress=True, params=payload)
-    if not isinstance(raw_html, str):
-        return "Unable to connect to Github"
-
+    raw_html = await fetch_trending_html(url, payload)
     articles_html = filter_articles(raw_html)
     soup = make_soup(articles_html)
     return scraping_developers(soup, since=payload["since"])
@@ -118,7 +114,7 @@ async def trending_developers(
 async def trending_developers_by_progr_language(
     prog_lang: AllowedProgrammingLanguages,
     since: AllowedDateRanges | None = None,
-) -> Union[List[Any], str]:
+) -> List[Any]:
     """Returns data about trending developers. A specific programming
     language can be added as path parameter to specify search.
     """
@@ -127,12 +123,7 @@ async def trending_developers_by_progr_language(
         payload["since"] = since.value
 
     url = f"https://github.com/trending/developers/{prog_lang.value}"
-    sem = asyncio.Semaphore()
-    async with sem:
-        raw_html = await get_request(url, compress=True, params=payload)
-    if not isinstance(raw_html, str):
-        return "Unable to connect to Github"
-
+    raw_html = await fetch_trending_html(url, payload)
     articles_html = filter_articles(raw_html)
     soup = make_soup(articles_html)
     return scraping_developers(soup, since=payload["since"])

@@ -4,23 +4,43 @@ Functions to scrape repository/developer data (HTML -> list of dicts).
 """
 # Copyright (c) 2021, Niklas Tiede.
 # All rights reserved. Distributed under the MIT License.
-from typing import Any, Dict, List, Optional, Union
+import asyncio
+from typing import Any, Dict, List, Optional
 
 import aiohttp
 import bs4
+
+REQUEST_TIMEOUT_SECONDS = 10
+USER_AGENT = (
+    "Github-Trending-API/1.0 "
+    "(+https://github.com/NiklasTiede/Github-Trending-API)"
+)
+
+
+class UpstreamRequestError(Exception):
+    """Raised when the GitHub Trending upstream request fails."""
 
 
 async def get_request(
     *args: str,
     **kwargs: Any,
-) -> Union[str, aiohttp.ClientConnectorError]:
+) -> str:
     """Asynchronous GET request with aiohttp."""
+    headers = {"User-Agent": USER_AGENT}
+    headers.update(kwargs.pop("headers", {}))
+    kwargs["headers"] = headers
+    kwargs.setdefault(
+        "timeout",
+        aiohttp.ClientTimeout(total=REQUEST_TIMEOUT_SECONDS),
+    )
+
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(*args, **kwargs) as resp:
+                resp.raise_for_status()
                 return await resp.text()
-    except aiohttp.ClientConnectorError as cce:
-        return cce
+    except (aiohttp.ClientError, asyncio.TimeoutError) as request_error:
+        raise UpstreamRequestError("Unable to connect to GitHub") from request_error
 
 
 def filter_articles(raw_html: str) -> str:

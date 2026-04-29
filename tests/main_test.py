@@ -6,6 +6,7 @@ from fastapi.testclient import TestClient
 
 from app import main
 from app.main import app
+from app.scraping import UpstreamRequestError
 
 client = TestClient(app)
 DATA_DIR = Path(__file__).resolve().parents[1] / "data"
@@ -129,3 +130,33 @@ def test_invalid_path_parameter_returns_validation_error():
     response = client.get("/repositories/not-a-language")
 
     assert response.status_code == 422
+
+
+def test_upstream_request_error_returns_bad_gateway(monkeypatch):
+    """Tests upstream request failures are returned as controlled 502s."""
+
+    async def fake_get_request(*args, **kwargs):
+        raise UpstreamRequestError("timeout")
+
+    monkeypatch.setattr(main, "get_request", fake_get_request)
+
+    response = client.get("/repositories")
+
+    assert response.status_code == 502
+    assert response.json() == {
+        "detail": "Unable to fetch GitHub Trending data",
+    }
+
+
+def test_empty_upstream_html_returns_empty_list(monkeypatch):
+    """Tests empty upstream HTML returns an empty successful result."""
+
+    async def fake_get_request(*args, **kwargs):
+        return ""
+
+    monkeypatch.setattr(main, "get_request", fake_get_request)
+
+    response = client.get("/developers")
+
+    assert response.status_code == 200
+    assert response.json() == []
