@@ -14,7 +14,7 @@ from app.allowed_parameters import (
     AllowedProgrammingLanguages,
     AllowedSpokenLanguages,
 )
-from app.schemas import Developer, Repository
+from app.schemas import Developer, HealthStatus, Repository
 from app.scraping import (
     UpstreamRequestError,
     get_request,
@@ -82,6 +82,12 @@ def help_routes(request: fastapi.Request) -> Dict[str, str]:
         "docs": f"{base_url}/docs",
         "redoc": f"{base_url}/redoc",
     }
+
+
+@app.get("/health", response_model=HealthStatus)
+def health() -> HealthStatus:
+    """Return application health status."""
+    return HealthStatus(status="ok")
 
 
 @app.get("/repositories", response_model=list[Repository])

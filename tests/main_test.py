@@ -26,6 +26,14 @@ def test_help_route():
     }
 
 
+def test_health_route():
+    """Tests if the health route returns application status."""
+    response = client.get("/health")
+
+    assert response.status_code == 200
+    assert response.json() == {"status": "ok"}
+
+
 def test_repositories_route_uses_query_parameters(monkeypatch):
     """Tests the repository endpoint request payload and response parsing."""
     calls = []

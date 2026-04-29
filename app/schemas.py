@@ -2,6 +2,12 @@
 from pydantic import BaseModel
 
 
+class HealthStatus(BaseModel):
+    """Health check response data."""
+
+    status: str
+
+
 class Contributor(BaseModel):
     """Repository contributor data."""
 
