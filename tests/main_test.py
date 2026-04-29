@@ -160,3 +160,33 @@ def test_empty_upstream_html_returns_empty_list(monkeypatch):
 
     assert response.status_code == 200
     assert response.json() == []
+
+
+def test_openapi_documents_repository_response_model():
+    """Tests repository routes expose a typed response schema."""
+    response = client.get("/openapi.json")
+
+    repository_response = response.json()["paths"]["/repositories"]["get"][
+        "responses"
+    ]["200"]["content"]["application/json"]["schema"]
+
+    assert repository_response == {
+        "items": {"$ref": "#/components/schemas/Repository"},
+        "title": "Response Trending Repositories Repositories Get",
+        "type": "array",
+    }
+
+
+def test_openapi_documents_developer_response_model():
+    """Tests developer routes expose a typed response schema."""
+    response = client.get("/openapi.json")
+
+    developer_response = response.json()["paths"]["/developers"]["get"][
+        "responses"
+    ]["200"]["content"]["application/json"]["schema"]
+
+    assert developer_response == {
+        "items": {"$ref": "#/components/schemas/Developer"},
+        "title": "Response Trending Developers Developers Get",
+        "type": "array",
+    }

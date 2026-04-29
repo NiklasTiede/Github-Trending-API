@@ -4,7 +4,7 @@ API serving data about trending github repositories/developers.
 """
 # Copyright (c) 2021, Niklas Tiede.
 # All rights reserved. Distributed under the MIT License.
-from typing import Any, Dict, List
+from typing import Dict, List
 
 import fastapi
 import uvicorn
@@ -14,6 +14,7 @@ from app.allowed_parameters import (
     AllowedProgrammingLanguages,
     AllowedSpokenLanguages,
 )
+from app.schemas import Developer, Repository
 from app.scraping import (
     UpstreamRequestError,
     get_request,
@@ -52,21 +53,23 @@ async def fetch_trending_html(url: str, payload: Dict[str, str]) -> str:
 async def get_repository_trends(
     url: str,
     payload: Dict[str, str],
-) -> List[Any]:
+) -> List[Repository]:
     """Fetch and parse GitHub Trending repository data."""
     raw_html = await fetch_trending_html(url, payload)
     soup = make_soup(raw_html)
-    return scraping_repositories(soup, since=payload["since"])
+    repositories = scraping_repositories(soup, since=payload["since"])
+    return [Repository.model_validate(repository) for repository in repositories]
 
 
 async def get_developer_trends(
     url: str,
     payload: Dict[str, str],
-) -> List[Any]:
+) -> List[Developer]:
     """Fetch and parse GitHub Trending developer data."""
     raw_html = await fetch_trending_html(url, payload)
     soup = make_soup(raw_html)
-    return scraping_developers(soup, since=payload["since"])
+    developers = scraping_developers(soup, since=payload["since"])
+    return [Developer.model_validate(developer) for developer in developers]
 
 
 @app.get("/")
@@ -81,11 +84,11 @@ def help_routes(request: fastapi.Request) -> Dict[str, str]:
     }
 
 
-@app.get("/repositories")
+@app.get("/repositories", response_model=list[Repository])
 async def trending_repositories(
     since: AllowedDateRanges | None = None,
     spoken_language_code: AllowedSpokenLanguages | None = None,
-) -> List[Any]:
+) -> List[Repository]:
     """Returns data about trending repositories (all programming
     languages, cannot be specified on this endpoint).
     """
@@ -93,12 +96,12 @@ async def trending_repositories(
     return await get_repository_trends("https://github.com/trending", payload)
 
 
-@app.get("/repositories/{prog_lang}")
+@app.get("/repositories/{prog_lang}", response_model=list[Repository])
 async def trending_repositories_by_progr_language(
     prog_lang: AllowedProgrammingLanguages,
     since: AllowedDateRanges | None = None,
     spoken_language_code: AllowedSpokenLanguages | None = None,
-) -> List[Any]:
+) -> List[Repository]:
     """Returns data about trending repositories. A specific programming
     language can be added as path parameter to specify search.
     """
@@ -107,10 +110,10 @@ async def trending_repositories_by_progr_language(
     return await get_repository_trends(url, payload)
 
 
-@app.get("/developers")
+@app.get("/developers", response_model=list[Developer])
 async def trending_developers(
     since: AllowedDateRanges | None = None,
-) -> List[Any]:
+) -> List[Developer]:
     """Returns data about trending developers (all programming languages,
     cannot be specified on this endpoint).
     """
@@ -118,11 +121,11 @@ async def trending_developers(
     return await get_developer_trends("https://github.com/trending/developers", payload)
 
 
-@app.get("/developers/{prog_lang}")
+@app.get("/developers/{prog_lang}", response_model=list[Developer])
 async def trending_developers_by_progr_language(
     prog_lang: AllowedProgrammingLanguages,
     since: AllowedDateRanges | None = None,
-) -> List[Any]:
+) -> List[Developer]:
     """Returns data about trending developers. A specific programming
     language can be added as path parameter to specify search.
     """
