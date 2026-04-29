@@ -33,6 +33,9 @@ __pypackages__/
 .env
 .venv
 
+# Build metadata
+*.egg-info/
+
 # mypy
 .mypy_cache/
 .dmypy.json

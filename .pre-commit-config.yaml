@@ -35,11 +35,6 @@ repos:
     -   id: add-trailing-comma
         exclude: data/
 
--   repo: https://github.com/asottile/setup-cfg-fmt
-    rev: v3.2.0
-    hooks:
-    -   id: setup-cfg-fmt
-
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.20.2
     hooks:
