@@ -38,7 +38,7 @@ Data you can retrieve from this API.
 ## Trending Repositories
 
 ```json
-❯ curl -X GET "https://gh-trending-api.herokuapp.com/repositories" -H  "accept: application/json"
+❯ curl -X GET "http://127.0.0.1:1313/repositories" -H  "accept: application/json"
 [
   {
     "rank": 1,
@@ -68,7 +68,7 @@ Data you can retrieve from this API.
 ## Trending Developers
 
 ```json
-❯ curl -X GET "https://gh-trending-api.herokuapp.com/developers" -H  "accept: application/json"
+❯ curl -X GET "http://127.0.0.1:1313/developers" -H  "accept: application/json"
 [
   {
     "rank": 1,
@@ -98,13 +98,11 @@ This project runs on Python 3.13 and uses...
 - fastAPI | *web framework*
 - uvicorn | *ASGI server*
 
-Since Heroku removed their free plan I can no longer offer you discovering this API's functionality with a deployed instance!
-
-<!-- https://gh-trending-api.herokuapp.com -->
+There is currently no hosted public instance of this API.
 
 <h1><img src="docs/tutorial.png" width="25px"#> How to Use</h1>
 
-FastAPI has fantastic built-in documentation, so after starting the app locally you can visit `http://127.0.0.1:5000/docs` and explore the API by yourself. Data about trending repositories/developers are provided via the `/repositories` and `/developers` routes. The endpoints are similar to the routes on github.
+FastAPI has fantastic built-in documentation, so after starting the app locally you can visit `http://127.0.0.1:1313/docs` and explore the API by yourself. Data about trending repositories/developers are provided via the `/repositories` and `/developers` routes. The endpoints are similar to the routes on GitHub.
 
 - a path parameter for the programming language can be used to limit the scope of the search to this language
 - a query parameter for the date range (`since`) let you select the trending projects within the specified period of time (daily, weekly or monthly)
@@ -112,7 +110,7 @@ FastAPI has fantastic built-in documentation, so after starting the app locally 
 
 Here are some examples. Repositories can be queried for 3 parameters...
 
-| example                                                                                                                                   | pogramming lang    | date range         | spoken lang        |
+| example                                                                                                                                   | programming lang   | date range         | spoken lang        |
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------ | ------------------ |
 | `/repositories`                                                               | :x:                | :x:                | :x:                |
 | `/repositories?since=weekly`                                                   | :x:                | :heavy_check_mark: | :x:                |
@@ -122,7 +120,7 @@ Here are some examples. Repositories can be queried for 3 parameters...
 
 ...whereas developers can only be queried for 2 parameters.
 
-| example                                                                                           | pogramming lang    | date range         |
+| example                                                                                           | programming lang   | date range         |
 | ------------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
 | `/developers`                   | :x:                | :x:                |
 | `/developers?since=weekly`      | :x:                | :heavy_check_mark: |
@@ -134,22 +132,21 @@ Here are some examples. Repositories can be queried for 3 parameters...
 You can easily clone the project and run it locally:
 
 ```
-❯ git clone
+❯ git clone https://github.com/NiklasTiede/Github-Trending-API.git
 ❯ cd Github-Trending-API
 ```
 
-Create a virtual environment with Python 3.13 and install the dependencies:
+Install [uv](https://docs.astral.sh/uv/) and sync the locked Python 3.13 environment:
 
 ```
-❯ python3.13 -m venv .venv
-❯ source .venv/bin/activate
-❯ python -m pip install -r requirements-prod.txt
-❯ python -m uvicorn app.main:app --host 0.0.0.0 --port 5000 --reload
+❯ brew install uv
+❯ uv sync --dev
+❯ uv run python -m uvicorn app.main:app --host 127.0.0.1 --port 1313 --reload
 ```
 
-Or pull the [docker image](https://hub.docker.com/r/niklastiede/github-trending-api) and run it:
+Or build and run the Docker image locally:
 
 ```
-❯ docker pull niklastiede/github-trending-api:latest
-❯ docker run -p 5000:5000 niklastiede/github-trending-api:latest
+❯ docker build -t github-trending-api .
+❯ docker run -p 5000:5000 github-trending-api
 ```
