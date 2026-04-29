@@ -4,6 +4,7 @@ API serving data about trending github repositories/developers.
 """
 # Copyright (c) 2021, Niklas Tiede.
 # All rights reserved. Distributed under the MIT License.
+import time
 from typing import Dict, List
 
 import fastapi
@@ -24,6 +25,9 @@ from app.scraping import (
 )
 
 app = fastapi.FastAPI()
+CACHE_TTL_SECONDS = 300
+CacheKey = tuple[str, tuple[tuple[str, str], ...]]
+_trending_html_cache: dict[CacheKey, tuple[float, str]] = {}
 
 
 def build_payload(
@@ -41,13 +45,26 @@ def build_payload(
 
 async def fetch_trending_html(url: str, payload: Dict[str, str]) -> str:
     """Fetch GitHub Trending HTML and translate upstream failures."""
+    cache_key = (url, tuple(sorted(payload.items())))
+    cached_at, cached_html = _trending_html_cache.get(cache_key, (0.0, ""))
+    if cached_html and time.monotonic() - cached_at < CACHE_TTL_SECONDS:
+        return cached_html
+
     try:
-        return await get_request(url, compress=True, params=payload)
+        raw_html = await get_request(url, compress=True, params=payload)
     except UpstreamRequestError as request_error:
         raise fastapi.HTTPException(
             status_code=502,
             detail="Unable to fetch GitHub Trending data",
         ) from request_error
+
+    _trending_html_cache[cache_key] = (time.monotonic(), raw_html)
+    return raw_html
+
+
+def clear_trending_cache() -> None:
+    """Clear cached GitHub Trending HTML responses."""
+    _trending_html_cache.clear()
 
 
 async def get_repository_trends(

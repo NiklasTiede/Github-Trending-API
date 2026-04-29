@@ -2,6 +2,7 @@
 """
 from pathlib import Path
 
+import pytest
 from fastapi.testclient import TestClient
 
 from app import main
@@ -10,6 +11,14 @@ from app.scraping import UpstreamRequestError
 
 client = TestClient(app)
 DATA_DIR = Path(__file__).resolve().parents[1] / "data"
+
+
+@pytest.fixture(autouse=True)
+def clear_trending_cache():
+    """Clears route cache before and after each test."""
+    main.clear_trending_cache()
+    yield
+    main.clear_trending_cache()
 
 
 def test_help_route():
@@ -63,6 +72,24 @@ def test_repositories_route_uses_query_parameters(monkeypatch):
             },
         ),
     ]
+
+
+def test_repositories_route_caches_upstream_html(monkeypatch):
+    """Tests repeated requests reuse cached upstream HTML."""
+    calls = []
+
+    async def fake_get_request(*args, **kwargs):
+        calls.append((args, kwargs))
+        return (DATA_DIR / "repodata2.html").read_text()
+
+    monkeypatch.setattr(main, "get_request", fake_get_request)
+
+    first_response = client.get("/repositories", params={"since": "weekly"})
+    second_response = client.get("/repositories", params={"since": "weekly"})
+
+    assert first_response.status_code == 200
+    assert second_response.status_code == 200
+    assert len(calls) == 1
 
 
 def test_repositories_language_route_uses_enum_value(monkeypatch):
