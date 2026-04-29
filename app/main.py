@@ -78,7 +78,7 @@ async def trending_repositories_by_progr_language(
     if spoken_language_code:
         payload["spoken_language_code"] = spoken_language_code.value
 
-    url = f"https://github.com/trending/{prog_lang}"
+    url = f"https://github.com/trending/{prog_lang.value}"
     sem = asyncio.Semaphore()
     async with sem:
         raw_html = await get_request(url, compress=True, params=payload)
@@ -125,7 +125,7 @@ async def trending_developers_by_progr_language(
     if since:
         payload["since"] = since.value
 
-    url = f"https://github.com/trending/developers/{prog_lang}"
+    url = f"https://github.com/trending/developers/{prog_lang.value}"
     sem = asyncio.Semaphore()
     async with sem:
         raw_html = await get_request(url, compress=True, params=payload)
