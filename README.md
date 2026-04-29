@@ -150,3 +150,15 @@ Or build and run the Docker image locally:
 ❯ docker build -t github-trending-api .
 ❯ docker run -p 5000:5000 github-trending-api
 ```
+
+## Publishing Docker Images
+
+Releases publish the Docker image to Docker Hub when a Git tag matching `v*.*.*` is pushed. The workflow publishes:
+
+- `niklastiede/github-trending-api:latest`
+- `niklastiede/github-trending-api:<tag>`
+
+The GitHub repository needs these Actions secrets:
+
+- `DOCKER_USERNAME`
+- `DOCKER_PASSWORD`
