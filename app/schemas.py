@@ -8,6 +8,22 @@ class HealthStatus(BaseModel):
     status: str
 
 
+class Metadata(BaseModel):
+    """API metadata response data."""
+
+    name: str
+    version: str
+    docs: str
+    redoc: str
+    health: str
+    repositories: str
+    developers: str
+    cacheTtlSeconds: int
+    supportedDateRanges: list[str]
+    supportedProgrammingLanguagesCount: int
+    supportedSpokenLanguagesCount: int
+
+
 class Contributor(BaseModel):
     """Repository contributor data."""
 

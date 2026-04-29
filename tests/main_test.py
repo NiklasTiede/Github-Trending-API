@@ -43,6 +43,26 @@ def test_health_route():
     assert response.json() == {"status": "ok"}
 
 
+def test_metadata_route():
+    """Tests if the metadata route returns API discovery data."""
+    response = client.get("/metadata")
+
+    assert response.status_code == 200
+    assert response.json() == {
+        "name": "Github Trending API",
+        "version": "1.0.2",
+        "docs": "http://testserver/docs",
+        "redoc": "http://testserver/redoc",
+        "health": "http://testserver/health",
+        "repositories": "http://testserver/repositories",
+        "developers": "http://testserver/developers",
+        "cacheTtlSeconds": 300,
+        "supportedDateRanges": ["daily", "weekly", "monthly"],
+        "supportedProgrammingLanguagesCount": len(main.AllowedProgrammingLanguages),
+        "supportedSpokenLanguagesCount": len(main.AllowedSpokenLanguages),
+    }
+
+
 def test_repositories_route_uses_query_parameters(monkeypatch):
     """Tests the repository endpoint request payload and response parsing."""
     calls = []

@@ -15,7 +15,7 @@ from app.allowed_parameters import (
     AllowedProgrammingLanguages,
     AllowedSpokenLanguages,
 )
-from app.schemas import Developer, HealthStatus, Repository
+from app.schemas import Developer, HealthStatus, Metadata, Repository
 from app.scraping import (
     UpstreamRequestError,
     get_request,
@@ -25,6 +25,8 @@ from app.scraping import (
 )
 
 app = fastapi.FastAPI()
+APP_NAME = "Github Trending API"
+APP_VERSION = "1.0.2"
 CACHE_TTL_SECONDS = 300
 CacheKey = tuple[str, tuple[tuple[str, str], ...]]
 _trending_html_cache: dict[CacheKey, tuple[float, str]] = {}
@@ -105,6 +107,25 @@ def help_routes(request: fastapi.Request) -> Dict[str, str]:
 def health() -> HealthStatus:
     """Return application health status."""
     return HealthStatus(status="ok")
+
+
+@app.get("/metadata", response_model=Metadata)
+def metadata(request: fastapi.Request) -> Metadata:
+    """Return API metadata for clients."""
+    base_url = str(request.base_url).rstrip("/")
+    return Metadata(
+        name=APP_NAME,
+        version=APP_VERSION,
+        docs=f"{base_url}/docs",
+        redoc=f"{base_url}/redoc",
+        health=f"{base_url}/health",
+        repositories=f"{base_url}/repositories",
+        developers=f"{base_url}/developers",
+        cacheTtlSeconds=CACHE_TTL_SECONDS,
+        supportedDateRanges=[date_range.value for date_range in AllowedDateRanges],
+        supportedProgrammingLanguagesCount=len(AllowedProgrammingLanguages),
+        supportedSpokenLanguagesCount=len(AllowedSpokenLanguages),
+    )
 
 
 @app.get("/repositories", response_model=list[Repository])
