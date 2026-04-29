@@ -44,38 +44,15 @@ async def get_request(
 
 
 def filter_articles(raw_html: str) -> str:
-    """Filters HTML out, which is not enclosed by article-tags.
-    Beautifulsoup is inaccurate and slow when applied on a larger
-    HTML string, this filtration fixes this.
-    """
-    raw_html_lst = raw_html.split("\n")
-
-    # count number of article tags within the document (varies from 0 to 50):
-    article_tags_count = 0
-    tag = "article"
-    for line in raw_html_lst:
-        if tag in line:
-            article_tags_count += 1
-
-    # copy HTML enclosed by first and last article-tag:
-    articles_arrays, is_article = [], False
-    for line in raw_html_lst:
-        if tag in line:
-            article_tags_count -= 1
-            is_article = True
-        if is_article:
-            articles_arrays.append(line)
-        if not article_tags_count:
-            is_article = False
-    return "".join(articles_arrays)
+    """Return the repository/developer article nodes from a GitHub page."""
+    soup = bs4.BeautifulSoup(raw_html, "lxml")
+    return "".join(str(article) for article in soup.select("article.Box-row"))
 
 
 def make_soup(articles_html: str) -> bs4.element.ResultSet:
-    """HTML enclosed by article-tags is converted into a
-    soup for further data extraction.
-    """
-    soup = bs4.BeautifulSoup(filter_articles(articles_html), "lxml")
-    return soup.find_all("article", class_="Box-row")
+    """Convert GitHub Trending HTML into article nodes for extraction."""
+    soup = bs4.BeautifulSoup(articles_html, "lxml")
+    return soup.select("article.Box-row")
 
 
 def _parse_int(raw_text: Optional[str]) -> Optional[int]:

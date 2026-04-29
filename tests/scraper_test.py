@@ -5,7 +5,6 @@ import json
 import pytest
 
 from app.scraping import (
-    filter_articles,
     make_soup,
     scraping_developers,
     scraping_repositories,
@@ -44,8 +43,7 @@ def test_repository_scraping(input_html, expected_json):
         correct_repo_json = json.loads(file.read())
     with open(input_html) as file:
         raw_html = file.read()
-    articles_html = filter_articles(raw_html)
-    soup = make_soup(articles_html)
+    soup = make_soup(raw_html)
     repo_json = scraping_repositories(soup, since="daily")
     assert repo_json == correct_repo_json
 
@@ -76,7 +74,6 @@ def test_developer_scraping(input_html, expected_json):
         correct_repo_json = json.loads(file.read())
     with open(input_html) as file:
         raw_html = file.read()
-    articles_html = filter_articles(raw_html)
-    soup = make_soup(articles_html)
+    soup = make_soup(raw_html)
     repo_json = scraping_developers(soup, since="daily")
     assert repo_json == correct_repo_json
