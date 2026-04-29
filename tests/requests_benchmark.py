@@ -10,8 +10,7 @@ import aiohttp
 URL = "http://0.0.0.0:5000/repositories/c++?since=weekly"
 
 # URL = "http://127.0.0.1:8000/repositories/c++?since=weekly"
-# URL = """https://gh-trending-api.herokuapp.com/
-# repositories?since=weekly&spoken_language_code=de"""
+# URL = "http://127.0.0.1:1313/repositories?since=weekly&spoken_language_code=de"
 
 url_list = list([URL] * 20)
 

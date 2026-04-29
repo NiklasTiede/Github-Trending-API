@@ -2,38 +2,37 @@
 <p align="center"><img src="docs/trending.png" width="500"></p>
 
 <p align="center">
-...written in Python!
-</p>
-
-<p id="Icons" align="center">
-
-  <a alt="Uptime Robot Status" href="https://stats.uptimerobot.com/5KMN7t0E5M">
-    <img src="https://img.shields.io/uptimerobot/status/m787484641-cc42e583e4fe0a25564a29e1" />
+  <a href="https://github.com/NiklasTiede/Github-Trending-API/actions/workflows/continuous_integration.yaml">
+    <img alt="Continuous Integration" src="https://github.com/NiklasTiede/Github-Trending-API/actions/workflows/continuous_integration.yaml/badge.svg">
   </a>
-
-  <a alt="Issues" href="https://github.com/NiklasTiede/Github-Trending-API/releases">
-    <img src="https://img.shields.io/github/issues/NiklasTiede/Github-Trending-API" />
+  <a href="https://github.com/NiklasTiede/Github-Trending-API/releases">
+    <img alt="GitHub Release" src="https://img.shields.io/github/v/release/NiklasTiede/Github-Trending-API" />
   </a>
-
-  <a alt="Github Release" href="">
-    <img src="https://img.shields.io/github/v/release/NiklasTiede/Github-Trending-API" />
-  </a>
-
   <a href="https://app.codecov.io/gh/NiklasTiede/Github-Trending-API">
     <img alt="Codecov" src="https://img.shields.io/codecov/c/github/NiklasTiede/Github-Trending-API">
   </a>
-
-  <a alt="License" href="">
-    <img src="https://img.shields.io/github/license/NiklasTiede/Github-Trending-API" />
+  <a href="https://github.com/NiklasTiede/Github-Trending-API/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/NiklasTiede/Github-Trending-API" />
   </a>
-
 </p>
 
+GitHub Trending API is a small FastAPI service that scrapes GitHub Trending and returns JSON data for trending repositories and developers. It is based on the idea of [huchenme/github-trending-api](https://github.com/huchenme/github-trending-api), but implemented in Python.
 
+There is currently no hosted public instance of this API. Run it locally or use the Docker image.
 
-<h1><img src="docs/example.png" width="30px"#> Examples</h1>
+## Features
 
-Data you can retrieve from this API.
+- Trending repository and developer endpoints.
+- Optional `since` filters: `daily`, `weekly`, `monthly`.
+- Optional repository `spoken_language_code` filter.
+- Typed OpenAPI responses via Pydantic models.
+- Short in-memory cache for upstream GitHub Trending HTML responses.
+- `/health` and `/metadata` operational endpoints.
+- Docker image with non-root runtime user and healthcheck.
+
+## Examples
+
+Data you can retrieve from this API after starting it locally.
 
 ## Trending Repositories
 
@@ -50,7 +49,7 @@ Data you can retrieve from this API.
     "languageColor": "#3572A5",
     "totalStars": 21977,
     "forks": 2214,
-    "StarsSince": 462,
+    "starsSince": 462,
     "since": "daily",
     "builtBy": [
       {
@@ -61,7 +60,7 @@ Data you can retrieve from this API.
       ...
     ]
   },
-...
+  ...
 ]
 ```
 
@@ -83,30 +82,33 @@ Data you can retrieve from this API.
       "url": "https://github.com/felangel/bloc"
     }
   },
-...
+  ...
 ]
 ```
 
----
+## API
 
-The motivation behind this API for me was to learn web scraping and how to create an API. It is based on the idea of the [github-trending-api](https://github.com/huchenme/github-trending-api) except that this one is written in python and it is available :wink:!
+FastAPI exposes interactive documentation at `http://127.0.0.1:1313/docs` after startup.
 
-This project runs on Python 3.13 and uses...
+| endpoint | description |
+| --- | --- |
+| `/` | route discovery |
+| `/health` | minimal health check |
+| `/metadata` | API metadata, cache TTL, supported date ranges, parameter counts |
+| `/repositories` | trending repositories |
+| `/repositories/{prog_lang}` | trending repositories for a programming language |
+| `/developers` | trending developers |
+| `/developers/{prog_lang}` | trending developers for a programming language |
 
-- beautifulsoup4 | *scraping*
-- aiohttp | *async GET requests*
-- fastAPI | *web framework*
-- uvicorn | *ASGI server*
+A path parameter for the programming language can limit the scope of the search. The allowed values currently come from the project's `AllowedProgrammingLanguages` enum.
 
-There is currently no hosted public instance of this API.
+The `since` query parameter selects the date range:
 
-<h1><img src="docs/tutorial.png" width="25px"#> How to Use</h1>
+- `daily`
+- `weekly`
+- `monthly`
 
-FastAPI has fantastic built-in documentation, so after starting the app locally you can visit `http://127.0.0.1:1313/docs` and explore the API by yourself. Data about trending repositories/developers are provided via the `/repositories` and `/developers` routes. The endpoints are similar to the routes on GitHub.
-
-- a path parameter for the programming language can be used to limit the scope of the search to this language
-- a query parameter for the date range (`since`) let you select the trending projects within the specified period of time (daily, weekly or monthly)
-- moreover, repositories can be limited to a spoken language (`spoken_language_code`)
+Repositories can also be limited to a spoken language with `spoken_language_code`.
 
 Here are some examples. Repositories can be queried for 3 parameters...
 
@@ -127,7 +129,7 @@ Here are some examples. Repositories can be queried for 3 parameters...
 | `/developers/c++`               | :heavy_check_mark: | :x:                |
 | `/developers/c++?since=weekly`  | :heavy_check_mark: | :heavy_check_mark: |
 
-## Running from Source
+## Local Development
 
 You can easily clone the project and run it locally:
 
@@ -144,12 +146,33 @@ Install [uv](https://docs.astral.sh/uv/) and sync the locked Python 3.13 environ
 ❯ uv run python -m uvicorn app.main:app --host 127.0.0.1 --port 1313 --reload
 ```
 
+Useful commands:
+
+```
+❯ uv run pytest
+❯ uv run pre-commit run --all-files
+❯ uv run ruff check app tests
+```
+
+The Makefile wraps common commands:
+
+```
+❯ make run
+❯ make test
+❯ make pre-commit
+❯ make docker-build
+```
+
+## Docker
+
 Or build and run the Docker image locally:
 
 ```
 ❯ docker build -t github-trending-api .
 ❯ docker run -p 5000:5000 github-trending-api
 ```
+
+The container exposes port `5000`, runs as a non-root user, and includes a Docker healthcheck against `/health`.
 
 ## Publishing Docker Images
 

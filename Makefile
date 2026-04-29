@@ -4,7 +4,7 @@
 .PHONY: run
 
 run: ## run App on uvicorn server
-	python -m uvicorn app.main:app --host 127.0.0.1 --port 1313 --reload
+	uv run python -m uvicorn app.main:app --host 127.0.0.1 --port 1313 --reload
 
 
 
