@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "github-trending-api"
-version = "1.0.2"
+version = "2.0.0"
 description = "API providing data about trending repositories/developers on GitHub"
 readme = "README.md"
 requires-python = ">=3.13"

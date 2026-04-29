@@ -26,7 +26,7 @@ from app.scraping import (
 
 app = fastapi.FastAPI()
 APP_NAME = "GitHub Trending API"
-APP_VERSION = "1.0.2"
+APP_VERSION = "2.0.0"
 CACHE_TTL_SECONDS = 300
 CacheKey = tuple[str, tuple[tuple[str, str], ...]]
 _trending_html_cache: dict[CacheKey, tuple[float, str]] = {}
