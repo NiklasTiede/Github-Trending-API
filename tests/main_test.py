@@ -49,7 +49,7 @@ def test_metadata_route():
 
     assert response.status_code == 200
     assert response.json() == {
-        "name": "Github Trending API",
+        "name": "GitHub Trending API",
         "version": "1.0.2",
         "docs": "http://testserver/docs",
         "redoc": "http://testserver/redoc",

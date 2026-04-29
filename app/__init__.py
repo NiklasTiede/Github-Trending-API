@@ -1,1 +1,1 @@
-"""Github Trending API application package."""
+"""GitHub Trending API application package."""

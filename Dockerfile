@@ -4,7 +4,7 @@
 FROM python:3.13-slim
 
 LABEL maintainer="Niklas Tiede <niklastiede2@gmail.com>" \
-      org.opencontainers.image.title="Github Trending API" \
+      org.opencontainers.image.title="GitHub Trending API" \
       org.opencontainers.image.description="API providing data about trending repositories and developers on GitHub" \
       org.opencontainers.image.source="https://github.com/NiklasTiede/Github-Trending-API" \
       org.opencontainers.image.licenses="MIT"

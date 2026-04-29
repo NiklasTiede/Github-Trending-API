@@ -25,7 +25,7 @@ from app.scraping import (
 )
 
 app = fastapi.FastAPI()
-APP_NAME = "Github Trending API"
+APP_NAME = "GitHub Trending API"
 APP_VERSION = "1.0.2"
 CACHE_TTL_SECONDS = 300
 CacheKey = tuple[str, tuple[tuple[str, str], ...]]
