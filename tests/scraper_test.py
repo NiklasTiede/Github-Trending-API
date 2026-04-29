@@ -4,10 +4,12 @@ import json
 
 import pytest
 
-from app.scraping import filter_articles
-from app.scraping import make_soup
-from app.scraping import scraping_developers
-from app.scraping import scraping_repositories
+from app.scraping import (
+    filter_articles,
+    make_soup,
+    scraping_developers,
+    scraping_repositories,
+)
 
 
 @pytest.mark.parametrize(

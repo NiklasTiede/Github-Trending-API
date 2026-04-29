@@ -32,6 +32,8 @@ __pypackages__/
 # Environments
 .env
 .venv
+.pre-commit-cache/
+.uv-cache/
 
 # Build metadata
 *.egg-info/

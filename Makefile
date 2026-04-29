@@ -10,19 +10,25 @@ run: ## run App on uvicorn server
 
 # ------------- Test/Lint  ------------------------------------
 
-.PHONY: pre-commit pre-commit-update lint test
+.PHONY: sync pre-commit pre-commit-update lint lint-fix test
+
+sync: ## install project and development dependencies with uv
+	uv sync --dev
 
 pre-commit:
-	pre-commit run --all-files
+	uv run pre-commit run --all-files
 
 pre-commit-update:
-	pre-commit autoupdate
+	uv run pre-commit autoupdate
 
-lint: ## check style with flake8
-	flake8 app tests
+lint: ## check style with Ruff
+	uv run ruff check app tests
+
+lint-fix: ## fix lint issues with Ruff
+	uv run ruff check --fix app tests
 
 test: ## run tests quickly with the default Python
-	pytest -v
+	uv run pytest -v
 
 
 

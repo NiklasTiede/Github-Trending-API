@@ -5,22 +5,23 @@ API serving data about trending github repositories/developers.
 # Copyright (c) 2021, Niklas Tiede.
 # All rights reserved. Distributed under the MIT License.
 import asyncio
-from typing import Any
-from typing import Dict
-from typing import List
-from typing import Union
+from typing import Any, Dict, List, Union
 
 import fastapi
 import uvicorn
 
-from app.allowed_parameters import AllowedDateRanges
-from app.allowed_parameters import AllowedProgrammingLanguages
-from app.allowed_parameters import AllowedSpokenLanguages
-from app.scraping import filter_articles
-from app.scraping import get_request
-from app.scraping import make_soup
-from app.scraping import scraping_developers
-from app.scraping import scraping_repositories
+from app.allowed_parameters import (
+    AllowedDateRanges,
+    AllowedProgrammingLanguages,
+    AllowedSpokenLanguages,
+)
+from app.scraping import (
+    filter_articles,
+    get_request,
+    make_soup,
+    scraping_developers,
+    scraping_repositories,
+)
 
 app = fastapi.FastAPI()
 

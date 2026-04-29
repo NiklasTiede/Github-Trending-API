@@ -6,7 +6,6 @@ import time
 
 import aiohttp
 
-
 # URL = "https://github.com/trending"
 URL = "http://0.0.0.0:5000/repositories/c++?since=weekly"
 
@@ -25,7 +24,7 @@ async def fetch(session, url):
 
 
 async def fetch_all(urls, loop):
-    """performaning multiple requests asynchronously"""
+    """performing multiple requests asynchronously"""
     async with aiohttp.ClientSession(loop=loop) as session:
         results = await asyncio.gather(
             *[fetch(session, url) for url in urls],

@@ -15,25 +15,13 @@ repos:
     -   id: debug-statements
     -   id: name-tests-test
         exclude: tests/requests_benchmark.py
-    -   id: requirements-txt-fixer
     -   id: detect-private-key
 
--   repo: https://github.com/PyCQA/flake8
-    rev: 7.3.0
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.12
     hooks:
-    -   id: flake8
-
--   repo: https://github.com/asottile/reorder_python_imports
-    rev: v3.16.0
-    hooks:
-    -   id: reorder-python-imports
-        args: [--py3-plus]
-
--   repo: https://github.com/asottile/add-trailing-comma
-    rev: v4.0.0
-    hooks:
-    -   id: add-trailing-comma
-        exclude: data/
+    -   id: ruff-check
+        args: [--fix]
 
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.20.2

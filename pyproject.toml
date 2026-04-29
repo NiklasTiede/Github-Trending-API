@@ -27,14 +27,14 @@ dependencies = [
     "uvicorn>=0.46.0",
 ]
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
-    "flake8==7.3.0",
     "httpx==0.28.1",
     "mypy==1.20.2",
     "pre-commit==4.6.0",
     "pytest==9.0.3",
     "pytest-cov==7.0.0",
+    "ruff==0.15.12",
 ]
 
 [project.urls]
@@ -46,6 +46,14 @@ include = ["app*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 88
+extend-exclude = ["data"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
 
 [tool.mypy]
 check_untyped_defs = true
