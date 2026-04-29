@@ -1,5 +1,14 @@
-app/__pycache__
-app/.mypy_cache
+.git
+.mypy_cache
+.pre-commit-cache
+.pytest_cache
+.uv-cache
+.venv
+__pycache__
+*.egg-info
+.coverage
+coverage.xml
+htmlcov
 **/*.pyc
 **/*.pyo
 **/*.pyd
