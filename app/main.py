@@ -16,7 +16,6 @@ from app.allowed_parameters import (
 )
 from app.scraping import (
     UpstreamRequestError,
-    filter_articles,
     get_request,
     make_soup,
     scraping_developers,
@@ -24,6 +23,19 @@ from app.scraping import (
 )
 
 app = fastapi.FastAPI()
+
+
+def build_payload(
+    since: AllowedDateRanges | None = None,
+    spoken_language_code: AllowedSpokenLanguages | None = None,
+) -> Dict[str, str]:
+    """Build GitHub Trending query parameters."""
+    payload = {"since": "daily"}
+    if since:
+        payload["since"] = since.value
+    if spoken_language_code:
+        payload["spoken_language_code"] = spoken_language_code.value
+    return payload
 
 
 async def fetch_trending_html(url: str, payload: Dict[str, str]) -> str:
@@ -35,6 +47,26 @@ async def fetch_trending_html(url: str, payload: Dict[str, str]) -> str:
             status_code=502,
             detail="Unable to fetch GitHub Trending data",
         ) from request_error
+
+
+async def get_repository_trends(
+    url: str,
+    payload: Dict[str, str],
+) -> List[Any]:
+    """Fetch and parse GitHub Trending repository data."""
+    raw_html = await fetch_trending_html(url, payload)
+    soup = make_soup(raw_html)
+    return scraping_repositories(soup, since=payload["since"])
+
+
+async def get_developer_trends(
+    url: str,
+    payload: Dict[str, str],
+) -> List[Any]:
+    """Fetch and parse GitHub Trending developer data."""
+    raw_html = await fetch_trending_html(url, payload)
+    soup = make_soup(raw_html)
+    return scraping_developers(soup, since=payload["since"])
 
 
 @app.get("/")
@@ -57,17 +89,8 @@ async def trending_repositories(
     """Returns data about trending repositories (all programming
     languages, cannot be specified on this endpoint).
     """
-    payload = {"since": "daily"}
-    if since:
-        payload["since"] = since.value
-    if spoken_language_code:
-        payload["spoken_language_code"] = spoken_language_code.value
-
-    url = "https://github.com/trending"
-    raw_html = await fetch_trending_html(url, payload)
-    articles_html = filter_articles(raw_html)
-    soup = make_soup(articles_html)
-    return scraping_repositories(soup, since=payload["since"])
+    payload = build_payload(since, spoken_language_code)
+    return await get_repository_trends("https://github.com/trending", payload)
 
 
 @app.get("/repositories/{prog_lang}")
@@ -79,17 +102,9 @@ async def trending_repositories_by_progr_language(
     """Returns data about trending repositories. A specific programming
     language can be added as path parameter to specify search.
     """
-    payload = {"since": "daily"}
-    if since:
-        payload["since"] = since.value
-    if spoken_language_code:
-        payload["spoken_language_code"] = spoken_language_code.value
-
+    payload = build_payload(since, spoken_language_code)
     url = f"https://github.com/trending/{prog_lang.value}"
-    raw_html = await fetch_trending_html(url, payload)
-    articles_html = filter_articles(raw_html)
-    soup = make_soup(articles_html)
-    return scraping_repositories(soup, since=payload["since"])
+    return await get_repository_trends(url, payload)
 
 
 @app.get("/developers")
@@ -99,15 +114,8 @@ async def trending_developers(
     """Returns data about trending developers (all programming languages,
     cannot be specified on this endpoint).
     """
-    payload = {"since": "daily"}
-    if since:
-        payload["since"] = since.value
-
-    url = "https://github.com/trending/developers"
-    raw_html = await fetch_trending_html(url, payload)
-    articles_html = filter_articles(raw_html)
-    soup = make_soup(articles_html)
-    return scraping_developers(soup, since=payload["since"])
+    payload = build_payload(since)
+    return await get_developer_trends("https://github.com/trending/developers", payload)
 
 
 @app.get("/developers/{prog_lang}")
@@ -118,15 +126,9 @@ async def trending_developers_by_progr_language(
     """Returns data about trending developers. A specific programming
     language can be added as path parameter to specify search.
     """
-    payload = {"since": "daily"}
-    if since:
-        payload["since"] = since.value
-
+    payload = build_payload(since)
     url = f"https://github.com/trending/developers/{prog_lang.value}"
-    raw_html = await fetch_trending_html(url, payload)
-    articles_html = filter_articles(raw_html)
-    soup = make_soup(articles_html)
-    return scraping_developers(soup, since=payload["since"])
+    return await get_developer_trends(url, payload)
 
 
 if __name__ == "__main__":

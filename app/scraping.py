@@ -74,7 +74,7 @@ def make_soup(articles_html: str) -> bs4.element.ResultSet:
     """HTML enclosed by article-tags is converted into a
     soup for further data extraction.
     """
-    soup = bs4.BeautifulSoup(articles_html, "lxml")
+    soup = bs4.BeautifulSoup(filter_articles(articles_html), "lxml")
     return soup.find_all("article", class_="Box-row")
 
 
